@@ -13,5 +13,14 @@ namespace ChateauDuPet.UI.MainProfissional
 
     public partial class VagaProfissional
     {
+
+        /// <summary>
+        /// Controle rptAlbuns.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptAlbuns;
     }
 }

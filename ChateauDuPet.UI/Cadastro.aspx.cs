@@ -16,60 +16,71 @@ namespace ChateauDuPet.UI
 
         }
 
-        protected void btnCadastrar_Click(object sender, EventArgs e)
+        protected void BtnCadastrar_Click(object sender, EventArgs e)
         {
-             
 
 
-            if (DLLTipoUSer.SelectedItem.ToString() == "Profissional")
+
+
+            try 
             {
-                
-                //instanciado obj DTO
-                ProfissionalDTO objDTO= new ProfissionalDTO();
-                ProfissionalBLL  objCad = new ProfissionalBLL();
-
-                objDTO.Nome = txtNome.Text;
-                objDTO.CPF = txtCpf.Text;
-                objDTO.Email = txtEmail.Text;
-                objDTO.Senha = senhaC.Text;
-                objDTO.Telefone = txtTelefone.Text;
-                objDTO.Nascimento = txtData.Text;
-                objDTO.Sexo = DDLSexo.Text;
-                objDTO.User = txtUser.Text;
-                objDTO.Termos = DateTime.Now;
-                objDTO.Privacidade = DateTime.Now;
-                objDTO.FKTipoUser = Convert.ToInt32(DLLTipoUSer.SelectedValue);
 
 
-                objCad.CadastrarProfissional(objDTO);
+                if (DLLTipoUSer.SelectedItem.ToString() == "Profissional")
+                {
 
-                Response.Redirect("MainPro.aspx");
+                    //instanciado obj DTO
+                    ProfissionalDTO objDTO = new ProfissionalDTO();
+                    ProfissionalBLL objCad = new ProfissionalBLL();
 
-                
+                    objDTO.Nome = txtNome.Text;
+                    objDTO.CPF = txtCpf.Text;
+                    objDTO.Email = txtEmail.Text;
+                    objDTO.Senha = senhaC.Text;
+                    objDTO.Telefone = txtTelefone.Text;
+                    objDTO.Nascimento = txtData.Text;
+                    objDTO.Sexo = DDLSexo.Text;
+                    objDTO.User = txtUser.Text;
+                    objDTO.Termos = DateTime.Now;
+                    objDTO.Privacidade = DateTime.Now;
+                    objDTO.FKTipoUser = Convert.ToInt32(DLLTipoUSer.SelectedValue);
 
-            }
-            if (DLLTipoUSer.SelectedItem.ToString() == "Empresa")
-            { 
-                EmpresaDTO objDTO = new EmpresaDTO();
-                EmpresaBLL objCad = new EmpresaBLL();
+
+                    objCad.CadastrarProfissional(objDTO);
+
+                    Response.Redirect("MainPro.aspx");
 
 
-                objDTO.Recrutador = txtNome.Text;
-                objDTO.CPF = txtCpf.Text;
-                objDTO.Email = txtEmail.Text;
-                objDTO.SenhaEmpresa = senhaC.Text;
-                objDTO.Telefone = txtTelefone.Text;
-                objDTO.Nascimento = txtData.Text;
-                objDTO.Sexo = DDLSexo.Text;
-                objDTO.User = txtUser.Text;
-                objDTO.Termos = DateTime.Now;
-                objDTO.Privacidade = DateTime.Now;
-                objDTO.FKTipoUser = Convert.ToInt32(DLLTipoUSer.SelectedValue);
-                objCad.CadastrarEmpresa(objDTO);
+
+                }
+                if (DLLTipoUSer.SelectedItem.ToString() == "Empresa")
+                {
+                    EmpresaDTO objDTO = new EmpresaDTO();
+                    EmpresaBLL objCad = new EmpresaBLL();
+
+
+                    objDTO.Recrutador = txtNome.Text;
+                    objDTO.CPF = txtCpf.Text;
+                    objDTO.Email = txtEmail.Text;
+                    objDTO.SenhaEmpresa = senhaC.Text;
+                    objDTO.Telefone = txtTelefone.Text;
+                    objDTO.Nascimento = txtData.Text;
+                    objDTO.Sexo = DDLSexo.Text;
+                    objDTO.User = txtUser.Text;
+                    objDTO.Termos = DateTime.Now;
+                    objDTO.Privacidade = DateTime.Now;
+                    objDTO.FKTipoUser = Convert.ToInt32(DLLTipoUSer.SelectedValue);
+                    objCad.CadastrarEmpresa(objDTO);
 
                     Response.Redirect("MainEmpre.aspx");
 
                 }
+            }       
+            catch
+            {
+                lblMensagem.Text = "Ocorreu um erro ao enviar o cadastro. Tente novamente mais tarde" +
+                    "ou entre em <href=Contato.aspx>contato com a empresa.</a>";
             }
-    }
+}
+}
 }

@@ -32,8 +32,8 @@
               });
 </script>
 </head>
-<body>  
-    <div class="container-fluid ">
+<body  class="container-fluid ">  
+    <div >
         <header>
             <nav class="navbar navbar-expand-md navbar-light     container-xxl ">
                 <div class="container-lg">
@@ -69,8 +69,7 @@
             <main  class=" container">
               
                     <form id="form1" runat="server" >    
-  
-        <div class="col-md-7 col-lg-8"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
           <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
         </svg> 
         <span class="mb-3" >Cadastro</span>
@@ -78,7 +77,8 @@
          <div class="row g-1"> 
             <div class="col-md-6">
               <label id="lblNome" class="form-label">Seu Nome</label>
-              <asp:TextBox  Cssclass="form-control" id="txtNome" runat="server"    TabIndex="1" />
+              <asp:TextBox  Cssclass="form-control" id="txtNome" runat="server"    TabIndex="1" MaxLength="100" />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtNome" ErrorMessage="Campo Nome é obrigatório" ForeColor="red" />
               
             </div>   
                
@@ -89,6 +89,8 @@
                 <span class="input-group-text">@</span>
                 <asp:TextBox runat="server" Cssclass="form-control" id="txtUser" MaxLength="15"   TabIndex="2" />
                </div>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtUser" ErrorMessage="Campo Usuario é obrigatório" ForeColor="red" />
+
             </div> 
             
             <div class="col-md-5">
@@ -100,25 +102,35 @@
             <asp:ListItem    Value="2" Text="Profissional" />
         </asp:DropDownList>
               </div>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="DLLTipoUSer"  ErrorMessage="Campo Tipo Usuario é obrigatório" ForeColor="red" />
+
             </div> 
             
                   <div class="col-md-6">
               <label  class="form-label">Data de Nascimento </label>
               <asp:TextBox runat="server" Cssclass="form-control" id="txtData" TextMode="Date" TabIndex="4"  />
+        <asp:RequiredFieldValidator ID="rfvDataN" runat="server" ControlToValidate="txtData" ErrorMessage="Campo Data é obrigatório" ForeColor="red" />
+
                       </div>
                   <div class="col-md-6">
               <label  class="form-label">CPF</label>
-              <asp:TextBox runat="server" Cssclass="form-control  Cpf" id="txtCpf" MaxLength="11"  TabIndex="5"     />
-                      </div>
+              <asp:TextBox runat="server" Cssclass=" cpf form-control"  ID="txtCpf" MaxLength="11"  TabIndex="5"     />
+        <asp:RequiredFieldValidator ID="rfvCpf" runat="server" ControlToValidate="txtCpf" ErrorMessage="Campo CPF é obrigatório" ForeColor="red" />
+                      
+                  </div>
                   <div class="col-md-5">
-              <label  class="form-label">Telefone *</label>
-              <asp:TextBox runat="server" Cssclass="form-control  " id="txtTelefone"   TabIndex="6"  />
+              <label  class="form-label">Telefone </label>
+              <asp:TextBox runat="server" Cssclass="form-control  " id="txtTelefone"   TabIndex="6" MaxLength="11"  />
+        <asp:RequiredFieldValidator ID="rfvTelefone" runat="server" ControlToValidate="txtTelefone" ErrorMessage="Campo Telefone é obrigatório" ForeColor="red" />
+
                       </div>
          
                
             <div class="col-5">
-              <label id="lblemail" class="form-label">Email *</label>
-              <asp:TextBox runat="server" CssClass="form-control" id="txtEmail"  TabIndex="7"/> 
+              <label id="lblemail" class="form-label">Email </label>
+              <asp:TextBox runat="server" CssClass="form-control" id="txtEmail"  TabIndex="7" MaxLength="100" TextMode="Email"/> 
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Campo Email é obrigatório" ForeColor="red" />
+
                </div>
              <div class="col-md-6">
               <label for="username" class="form-label">Sexo</label>
@@ -128,101 +140,38 @@
             <asp:ListItem    Value="Masculino" Text="Masculino" />
             <asp:ListItem    Value="Feminino" Text="Feminino" />
         </asp:DropDownList>
+
               </div>
             </div> 
             
             <div class="col-md-5">
               <label id="lblSenha" class="form-label">Senha *</label>
-              <asp:TextBox runat="server" CssClass="form-control" name="senha" id="senha"   placeholder="Senha"   TabIndex="6" TextMode="Password"/>
+              <asp:TextBox runat="server" CssClass="form-control senha" id="senha"       TabIndex="6" TextMode="Password"/>
                  
                 </div> 
              <div class="col-md-6">
              <label id="lblSenhaa" class="form-label">Confirmar Senha *</label>
-              <asp:TextBox runat="server" CssClass="form-control" name="senhaC" id="senhaC" placeholder="Confirmar Senha"   TabIndex="6" TextMode="Password"/>
+              <asp:TextBox runat="server" CssClass="form-control senhaC" id="senhaC"   TabIndex="6" TextMode="Password"/>
                 </div>
           
          </div>
             
             <hr />
-             <div class="row g-3">
-                    <h2 ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-        </svg>  Endereço <span class="text-muted ">(opcional)</span></h2> 
-            <div class="col-md-7">
-              <label  class="form-label">Endereço</label>
-              <asp:TextBox runat="server" CssClass="form-control" id="txtEndereco" />
-             </div>
-                  <div class="col-md-3">
-              <label  class="form-label">Número </label>
-              <asp:TextBox runat="server" Cssclass="form-control" id="txtNumero"  />
-                
-            </div>
-                  <div class="col-md-5">
-              <label  class="form-label">Complemento <span class="text-muted">(opcional)</span></label>
-              <asp:TextBox runat="server" CssClass="form-control" id="txtComplemento" />
-             </div>
-             
-            <div class="col-md-5">
-              <label  class="form-label">Bairro </label>
-              <asp:TextBox runat="server" Cssclass="form-control" id="txtBairro"  />
-                
-            </div>
               
-            <div class="col-md-7">
-              <label  class="form-label">Cidade </label>
-              <asp:TextBox runat="server" Cssclass="form-control" id="txtCidade"  />
-                
-            </div> 
-
-            <div class="col-md-3">
-              <label  class="form-label">UF</label>
-              <asp:DropDownList Runat="server" CssClass="form-select" id="txtEstado">
-                    <asp:ListItem   Value="RO" Text="RO" />
-                <asp:ListItem  Value="AC" Text="AC" />
-            <asp:ListItem    Value="AM" Text="AM" />
-            <asp:ListItem    Value="RR" Text="RR" />
-            <asp:ListItem    Value="PA" Text="PA" />
-            <asp:ListItem    Value="AP" Text="AP" />
-            <asp:ListItem    Value="TO" Text="TO" />
-            <asp:ListItem    Value="MA" Text="MA" />
-            <asp:ListItem    Value="PI" Text="PI" />
-            <asp:ListItem    Value="CE" Text="CE" />
-            <asp:ListItem    Value="RN" Text="RN" />
-            <asp:ListItem    Value="PB" Text="PB" />
-            <asp:ListItem    Value="PE" Text="PE" />
-            <asp:ListItem    Value="AL" Text="AL" />
-            <asp:ListItem    Value="SE" Text="SE" />
-            <asp:ListItem    Value="BA" Text="BA" />
-            <asp:ListItem    Value="MG" Text="MG" />
-            <asp:ListItem    Value="ES" Text="ES" />
-            <asp:ListItem    Value="RJ" Text="RJ" />
-            <asp:ListItem    Value="SP" Text="SP" />
-            <asp:ListItem    Value="PR" Text="PR" />
-            <asp:ListItem    Value="SC" Text="SC" />
-            <asp:ListItem    Value="RS" Text="RS" />
-            <asp:ListItem    Value="MS" Text="MS" />
-            <asp:ListItem    Value="MT" Text="MT" />
-            <asp:ListItem    Value="GO" Text="GO" />
-            <asp:ListItem    Value="DF" Text="DF" />
-              </asp:DropDownList>
-
-            </div>
                   
           <div class="form-check">
             <asp:CheckBox  runat="server"  id="cbOfertas" />
             <label class="form-check-label" id=""> <a href="#" > Aceito</a> receber ofertas em meu Email</label>
          
               <br />
-            <asp:CheckBox runat="server"   id="txtTermos"/>
-            <label class="form-check-label" id="lblTermos"><a href="#" > Aceito</a>  os termos </label>
+            <asp:CheckBox runat="server"   id="cbTermos"/>
+            <asp:Label runat="server" CSsclass="form-check-label" id="txtTermos"><a href="#" > Aceito</a>  os termos </asp:Label>
               <br />
-              <br />
-          <asp:button runat="server" ID="btnCadastrar" OnClick="btnCadastrar_Click" Cssclass=" btn btn-primary btn-sm   w3-margin-right"  Text="Cadastrar"     Width="100px"  />
-          
+          <asp:button runat="server" ID="btnCadastrar" OnClick="BtnCadastrar_Click" Cssclass=" btn btn-primary btn-sm   w3-margin-right"  Text="Cadastrar"     Width="100px"  />
+          <br />
+        <asp:Label ID="lblMensagem" runat="server" CssClass="text-light lead" />
           </div>
                  <br />
-            </div>
-            </div>
         </form>
   
   </main>
@@ -252,7 +201,7 @@
                                 <label class="menu" id="Contato"> <a>Contato</a></label>
                                 <hr />
                                 <label>
-                                    <lable style="margin: 10px 10px 10px 10px">
+                                    <label style="margin: 10px 10px 10px 10px">
                                         <a type="button" class="btn btn-success" target="_blank" href="https://api.whatsapp.com/send?phone=5511991770311&text=Ol%C3%A1!%20Estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20da%20Chateau%20du%20Pet" style="  ">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
                                                 <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
@@ -260,7 +209,7 @@
                                             Iniciar Conversa
                                         </a>
 
-                                    </lable>
+                                    </label>
                                     <label style="margin: 10px 10px 10px 10px">
                                         <a class=" text-decoration-none" href="https://www.facebook.com/Chateau-Du-Pet-113685650407870" target="_blank" rel="noopener">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -300,7 +249,7 @@
                                 <label class="menu"> <a style="color:white;">Endereço</a></label>
                                 <br /><br />
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14629.541702315722!2d-46.600461!3d-23.554597!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce594b95eddcef%3A0xcafbdac5346df73!2sR.%20do%20Orat%C3%B3rio%2C%20426%20-%20Mooca%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003116-000%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1618190538335!5m2!1spt-BR!2sus"
-                                        class=" container-fluid " height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                                        class=" container-fluid " height="300" style="border:0;"  >
                                 </iframe>
 
                             </div>

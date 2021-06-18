@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChateauDuPet.DAL", "Chateau
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChateauDuPet.SITE", "ChateauDuPet.SITE\ChateauDuPet.SITE.csproj", "{FC7A5D0F-7F6E-4A98-8421-93B6F59E0EA5}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WebApplication5", "..\..\..\source\repos\WebApplication5\WebApplication5.vbproj", "{454E2F5B-71FB-4937-A448-565C73BECCA8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,10 +39,6 @@ Global
 		{FC7A5D0F-7F6E-4A98-8421-93B6F59E0EA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC7A5D0F-7F6E-4A98-8421-93B6F59E0EA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC7A5D0F-7F6E-4A98-8421-93B6F59E0EA5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{454E2F5B-71FB-4937-A448-565C73BECCA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{454E2F5B-71FB-4937-A448-565C73BECCA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{454E2F5B-71FB-4937-A448-565C73BECCA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{454E2F5B-71FB-4937-A448-565C73BECCA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

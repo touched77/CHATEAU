@@ -4,25 +4,33 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
- 
-     <h2 class="mb-4">Perfil </h2>
+ <img src="..." class="rounded float-end" alt="...">
+     <h2 class="mb-4">@USuario </h2>
                     <a  class="img logo rounded-circle mb-5"data-toggle="collapse" style="background-image: url(imagens/pp.png);"></a>
    
-       
-            <br />
-              <label id="lblNome" class="form-label">Seu Nome</label>
-              <asp:TextBox  Cssclass="form-control" id="txtNome" runat="server"    TabIndex="1" />
+        
+            <hr /> <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+        Perfil
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+           <label id="lblNome" class="form-label">Seu Nome</label>
+              <asp:TextBox  Cssclass="form-control" id="TextBox1" runat="server"    TabIndex="1" />
               
         
               <label id="lbluser" class="form-label">Usuario</label>
               <div class="input-group has-validation">
                 <span class="input-group-text">@</span>
-                <asp:TextBox runat="server" Cssclass="form-control" id="txtUser" MaxLength="15"   TabIndex="2" />
+                <asp:TextBox runat="server" Cssclass="form-control" id="TextBox2" MaxLength="15"   TabIndex="2" />
                </div>
           
               <label for="username" class="form-label">Tipo de Usuario</label>
               <div class="input-group has-validation">  
-        <asp:DropDownList ID="DLLTipoUSer" runat="server" CssClass="form-select "  TabIndex="3">
+        <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-select "  TabIndex="3">
             <asp:ListItem     Text="Selecione uma opção" />
             <asp:ListItem    Value="1" Text="Empresa" />
             <asp:ListItem    Value="2" Text="Profissional" />
@@ -32,42 +40,44 @@
             
 
               <label  class="form-label">Data de Nascimento </label>
-              <asp:TextBox runat="server" Cssclass="form-control" id="txtData" TextMode="Date" TabIndex="4"  />
+              <asp:TextBox runat="server" Cssclass="form-control" id="TextBox3" TextMode="Date" TabIndex="4"  />
                  
                  
               <label  class="form-label">CPF</label>
-              <asp:TextBox runat="server" Cssclass="form-control  Cpf" id="txtCpf" MaxLength="11"  TabIndex="5"     />
+              <asp:TextBox runat="server" Cssclass="form-control  Cpf" id="TextBox4" MaxLength="11"  TabIndex="5"     />
            
                   
               <label  class="form-label">Telefone *</label>
-              <asp:TextBox runat="server" Cssclass="form-control  " id="txtTelefone"   TabIndex="6"  />
+              <asp:TextBox runat="server" Cssclass="form-control  " id="TextBox5"   TabIndex="6"  />
                     
          
                
               <label id="lblemail" class="form-label">Email *</label>
-              <asp:TextBox runat="server" CssClass="form-control" id="txtEmail"  TabIndex="7"/> 
+              <asp:TextBox runat="server" CssClass="form-control" id="TextBox6"  TabIndex="7"/> 
             
             
               <label for="username" class="form-label">Sexo</label>
               <div class="input-group has-validation">  
-        <asp:DropDownList ID="DDLSexo" runat="server" CssClass="form-select "  TabIndex="8">
+        <asp:DropDownList ID="DropDownList2" runat="server" CssClass="form-select "  TabIndex="8">
             <asp:ListItem     Text="Selecione uma opção" />
             <asp:ListItem    Value="Masculino" Text="Masculino" />
             <asp:ListItem    Value="Feminino" Text="Feminino" />
         </asp:DropDownList>
               </div>
            
-            
-              <label id="lblSenha" class="form-label">Senha *</label>
-              <asp:TextBox runat="server" CssClass="form-control" name="senha" id="senha"   placeholder="Senha"   TabIndex="9" TextMode="Password"/>
-                 
-              
-             <label id="lblSenhaa" class="form-label">Confirmar Senha *</label>
-              <asp:TextBox runat="server" CssClass="form-control" name="senhaC" id="senhaC" placeholder="Confirmar Senha"   TabIndex="10" TextMode="Password"/>
-       
-            
-            <hr />
-           <h2 >Endereço <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+        </svg>  Endereço
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">    <h2 >Endereço <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
           <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
         </svg></span></h2> 
        
@@ -75,7 +85,9 @@
               <asp:TextBox runat="server" CssClass="form-control" id="txtEndereco" />
          
               <label  class="form-label">Número </label>
-              <asp:TextBox runat="server" Cssclass="form-control" id="txtNumero"  />
+              <asp:TextBox runat="server" Cssclass="form-control" id="txtNumero"  /> 
+                <label  class="form-label">CEP </label>
+              <asp:TextBox runat="server" Cssclass="form-control" id="txtCep"  />
                
         
               <label  class="form-label">Complemento <span class="text-muted">(opcional)</span></label>
@@ -120,15 +132,33 @@
             <asp:ListItem    Value="GO" Text="GO" />
             <asp:ListItem    Value="DF" Text="DF" />
               </asp:DropDownList>
+          <button type="button" class="btn btn-secondary float-end">Example Button floated right</button>
+</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+       Experiencias
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-bod"> </div>
+    </div>
+  </div>
 
-               
-         <asp:ListBox runat="server" ></asp:ListBox>
-    
-       
-              
-                    <asp:Image ImageUrl='<%#Eval("UrlImagemAlbum")%>' Width="100" Height="100" runat="server" />
-            
-         
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-heading">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+       Certificados
+      </button>
+    </h2>
+    <div id="cx" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-bod"> </div>
+    </div>
+  </div>
+</div>
     
       
 </asp:Content>

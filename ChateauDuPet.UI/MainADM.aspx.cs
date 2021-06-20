@@ -7,16 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace ChateauDuPet.UI
 {
-    public partial class MainADM : System.Web.UI.Page
+    public partial class MainAdm : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        internal void Show()
-        {
-            throw new NotImplementedException();
         }
     }
 }

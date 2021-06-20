@@ -12,10 +12,9 @@
     <link href="css/home.css" rel="stylesheet" />
     <link href="Imagens/pp.png" rel="icon"/>
     <title>Cadastro</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="Scripts/jquery.mask.min.js"></script>
     
-
-
-
 <script type="text/javascript">
 
     $(document).ready(function () {
@@ -33,7 +32,7 @@
 </script>
 </head>
 <body  class="container-fluid ">  
-    <div >
+
         <header>
             <nav class="navbar navbar-expand-md navbar-light     container-xxl ">
                 <div class="container-lg">
@@ -63,76 +62,60 @@
                         </ul>
                     </div>
                 </div><a type="button" class="btn btn-outline-danger d-none d-md-block" href="Login.aspx" style="  float:right;margin:10px 0 0 10px">Login</a>
-                <a type="button" class="btn btn-outline-danger d-none d-md-block" href="Cadastro.aspx" style="  float:right;margin:10px 0 0 10px">Cadastrar</a>
             </nav>
         </header>
-            <main  class=" container">
+            <main  class=" container-xxl">
               
-                    <form id="form1" runat="server" >    
+                    <form id="form1" runat="server" class=" container-fluid" >    
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
           <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
         </svg> 
-        <span class="mb-3" >Cadastro</span>
+        <span class="mb-3">Cadastro</span>
             <br />
-         <div class="row g-1"> 
-            <div class="col-md-6">
+      
               <label id="lblNome" class="form-label">Seu Nome</label>
               <asp:TextBox  Cssclass="form-control" id="txtNome" runat="server"    TabIndex="1" MaxLength="100" />
         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtNome" ErrorMessage="Campo Nome é obrigatório" ForeColor="red" />
-              
-            </div>   
-               
-        
-            <div class="col-md-5">
+            
               <label id="lbluser" class="form-label">Usuario</label>
               <div class="input-group has-validation">
                 <span class="input-group-text">@</span>
                 <asp:TextBox runat="server" Cssclass="form-control" id="txtUser" MaxLength="15"   TabIndex="2" />
-               </div>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtUser" ErrorMessage="Campo Usuario é obrigatório" ForeColor="red" />
-
-            </div> 
-            
-            <div class="col-md-5">
+               </div> 
+ 
               <label for="username" class="form-label">Tipo de Usuario</label>
               <div class="input-group has-validation">  
-        <asp:DropDownList ID="DLLTipoUSer" runat="server" CssClass="form-select "  TabIndex="3">
+       <asp:DropDownList ID="DLLTipoUSer" runat="server" CssClass="form-select"  TabIndex="3">
             <asp:ListItem     Text="Selecione uma opção" />
             <asp:ListItem    Value="1" Text="Empresa" />
             <asp:ListItem    Value="2" Text="Profissional" />
         </asp:DropDownList>
-              </div>
+                  
         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="DLLTipoUSer"  ErrorMessage="Campo Tipo Usuario é obrigatório" ForeColor="red" />
+              </div> 
 
-            </div> 
-            
-                  <div class="col-md-6">
+           
+             
               <label  class="form-label">Data de Nascimento </label>
               <asp:TextBox runat="server" Cssclass="form-control" id="txtData" TextMode="Date" TabIndex="4"  />
         <asp:RequiredFieldValidator ID="rfvDataN" runat="server" ControlToValidate="txtData" ErrorMessage="Campo Data é obrigatório" ForeColor="red" />
 
-                      </div>
-                  <div class="col-md-6">
+                   
               <label  class="form-label">CPF</label>
-              <asp:TextBox runat="server" Cssclass=" cpf form-control"  ID="txtCpf" MaxLength="11"  TabIndex="5"     />
+              <asp:TextBox runat="server" Cssclass="form-control cpf"  ID="txtCpf" MaxLength="11"  TabIndex="5"    />
         <asp:RequiredFieldValidator ID="rfvCpf" runat="server" ControlToValidate="txtCpf" ErrorMessage="Campo CPF é obrigatório" ForeColor="red" />
-                      
-                  </div>
-                  <div class="col-md-5">
+               
+                 
               <label  class="form-label">Telefone </label>
               <asp:TextBox runat="server" Cssclass="form-control  " id="txtTelefone"   TabIndex="6" MaxLength="11"  />
         <asp:RequiredFieldValidator ID="rfvTelefone" runat="server" ControlToValidate="txtTelefone" ErrorMessage="Campo Telefone é obrigatório" ForeColor="red" />
-
-                      </div>
-         
-               
-            <div class="col-5">
+  
+                
               <label id="lblemail" class="form-label">Email </label>
               <asp:TextBox runat="server" CssClass="form-control" id="txtEmail"  TabIndex="7" MaxLength="100" TextMode="Email"/> 
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Campo Email é obrigatório" ForeColor="red" />
-
-               </div>
-             <div class="col-md-6">
+                         
               <label for="username" class="form-label">Sexo</label>
               <div class="input-group has-validation">  
         <asp:DropDownList ID="DDLSexo" runat="server" CssClass="form-select "  TabIndex="8">
@@ -142,21 +125,15 @@
         </asp:DropDownList>
 
               </div>
-            </div> 
-            
-            <div class="col-md-5">
+           
+             
               <label id="lblSenha" class="form-label">Senha *</label>
               <asp:TextBox runat="server" CssClass="form-control senha" id="senha"       TabIndex="6" TextMode="Password"/>
                  
-                </div> 
-             <div class="col-md-6">
+              
              <label id="lblSenhaa" class="form-label">Confirmar Senha *</label>
               <asp:TextBox runat="server" CssClass="form-control senhaC" id="senhaC"   TabIndex="6" TextMode="Password"/>
-                </div>
-          
-         </div>
-            
-            <hr />
+      <br/>  
               
                   
           <div class="form-check">
@@ -171,6 +148,7 @@
           <br />
         <asp:Label ID="lblMensagem" runat="server" CssClass="text-light lead" />
           </div>
+                   
                  <br />
         </form>
   
@@ -260,7 +238,7 @@
                 </div>
             </div>
         </footer>
-    </div>
+    
     
     <!--script -->
 

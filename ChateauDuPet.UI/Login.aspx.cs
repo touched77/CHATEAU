@@ -18,11 +18,9 @@ namespace ChateauDuPet.UI
 
         }
 
-        protected void btnEntrar_Click(object sender, EventArgs e)
+        protected void BtnEntrar_Click(object sender, EventArgs e)
         {
 
-            string objEmail = txtEmail.Text.Trim();
-            string objSenha = txtSenha.Text.Trim();
               
 
             if (DDLList.SelectedItem.ToString() == "Profissional")
@@ -82,7 +80,7 @@ namespace ChateauDuPet.UI
             }  
         }
 
-        protected void btnCancelar_Click(object sender, EventArgs e)
+        protected void BtnCancelar_Click(object sender, EventArgs e)
         {
 
         }

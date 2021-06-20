@@ -18,8 +18,7 @@ namespace ChateauDuPet.UI
 
         protected void BtnCadastrar_Click(object sender, EventArgs e)
         {
-
-
+            txtNome.Text.Trim();
 
 
             try 

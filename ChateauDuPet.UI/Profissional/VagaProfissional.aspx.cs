@@ -11,13 +11,10 @@ namespace ChateauDuPet.UI.MainProfissional
 {
     public partial class VagaProfissional : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            VagaBLL objBLL = new VagaBLL();
+        protected void Page_Load(object sender, EventArgs e) 
+        { 
 
-            //associar a lista retornada ao repeater
-            rptVaga.DataSource = objBLL.ListarVaga();
-            rptVaga.DataBind();
+
 
         }
     }

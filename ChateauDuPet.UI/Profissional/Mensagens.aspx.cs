@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ChateauDuPet.UI.Empresa
+namespace ChateauDuPet.UI.Profissional
 {
-    public partial class Projetos : System.Web.UI.Page
+    public partial class Mensagens : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

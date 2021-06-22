@@ -72,7 +72,8 @@ namespace ChateauDuPet.DAL
                     obj.CEP = dr["DsCEP"].ToString();
                     obj.Bairro = dr["DsBairro"].ToString();
                     obj.Cidade = dr["DsCidade"].ToString();
-                    obj.UF = dr["DsUF"].ToString(); obj.Termos = Convert.ToDateTime(dr["DtTermos"]);
+                    obj.UF = dr["DsUF"].ToString(); 
+                    obj.Termos = Convert.ToDateTime(dr["DtTermos"]);
                     obj.Privacidade = Convert.ToDateTime(dr["DsPrivacidade"]);
                     obj.UrlImage = dr["UrlImage"].ToString();
                     obj.FKTipoUser = Convert.ToInt32(dr["FKTipoUser"]);

@@ -16,7 +16,7 @@ namespace ChateauDuPet.DAL
             try
             {
                 Conectar();
-                cmd = new SqlCommand("INSERT INTO VAGA Vaga,Experiencia,Registro,Descricao,Sexo,Validade,DataPublicacao,FKEmpresa) VALUES (@v1,@v2,@v3,@v4,@v5,@v6,@v7,@v8,)", conn);
+                cmd = new SqlCommand("INSERT INTO VAGA (nmVaga,Experiencia,Registro,Descricao,Sexo,Validade,DataPublicacao,FKEmpresa) VALUES (@v1,@v2,@v3,@v4,@v5,@v6,@v7,@v8)", conn);
                 cmd.Parameters.AddWithValue("@v1", objCad.Vaga);
                 cmd.Parameters.AddWithValue("@v2", objCad.Experiencia);
                 cmd.Parameters.AddWithValue("@v3", objCad.Registro);
@@ -60,7 +60,7 @@ namespace ChateauDuPet.DAL
                     obj.Descricao = dr["DsDescricao"].ToString();
                     obj.Sexo = dr["DsSexo"].ToString();
                     obj.Validade= dr["Validade"].ToString();
-                    obj.DataPublicacao= dr["DataPublicacao"].ToString();
+                    obj.DataPublicacao = Convert.ToDateTime(dr["DataPublicacao"]);
                     obj.FKEmpresa = Convert.ToInt32(dr["FKEmpresa"]);
                     
                     Lista.Add(obj);
@@ -177,7 +177,7 @@ namespace ChateauDuPet.DAL
                     obj.Descricao = dr["DsDescricao"].ToString();
                     obj.Sexo = dr["DsSexo"].ToString();
                     obj.Validade = dr["Validade"].ToString();
-                    obj.DataPublicacao = dr["DataPublicacao"].ToString();
+                    obj.DataPublicacao = Convert.ToDateTime(dr["DataPublicacao"]);
                     obj.FKEmpresa = Convert.ToInt32(dr["FKEmpresa"]);
 
                     Lista.Add(obj);

@@ -21,7 +21,7 @@ SELECT dsEmail, SenhaADM, FKTipoUser FROM Administrativo WHERE dsEmail='medeiros
 -- Consulte TipoUser para ver numeração de tipo de usuário --
 
 SELECT * FROM TipoUser
-
+select * from vaga
 -------------------------------------------------------------
 ALTER TABLE  Empresa ADD DsUser VARCHAR(50) NULL
 CREATE TABLE [dbo].[Administrativo]
@@ -181,21 +181,20 @@ drop table vaga
 CREATE TABLE [dbo].[Vaga]
 (
     [IdVaga] INT PRIMARY KEY IDENTITY (1,1) NOT NULL,
-    [NmVaga] NVARCHAR(100) NOT NULL ,
-    [DsExperiencia] NVARCHAR (50) NOT NULL,
-    [DsTipoRegistro] NVARCHAR(15) NOT NULL ,
-    [DsDescricao] NVARCHAR (4000) NOT NULL, 
-    [DsSexo] NVARCHAR (20) NOT NULL, 
-    [Validade] NVARCHAR (20) NOT NULL, 
-    [DataPublicacao] DATETIME NOT NULL ,
+    [NmVaga] NVARCHAR(100)  NULL ,
+    [DsExperiencia] NVARCHAR (50)  NULL,
+    [DsTipoRegistro] NVARCHAR(15)  NULL ,
+    [DsDescricao] NVARCHAR (4000)  NULL, 
+    [DsSexo] NVARCHAR (20)  NULL, 
+    [Validade] NVARCHAR (20)  NULL, 
+    [DataPublicacao] DATETIME  NULL ,
     [FKEmpresa] INT NOT NULL ,
-    [FKCandidatos] int not null,
-    FOREIGN KEY (FKEmpresa) REFERENCES [Empresa](IdEmpresa),
-    FOREIGN KEY (FKCandidatos) REFERENCES [Candidatos](IdCandidatos),
+    [FKCandidatos] int  null,
+    FOREIGN KEY (FKEmpresa) REFERENCES [Empresa](IdEmpresa), 
        
 );
 
- INSERT INTO [Vaga] VALUES ('Médico Veterinário','No minimo 1 ano','CLT','responsável por cuidar e tratar bichos tanto de pequeno quanto de grande porte, podendo atender animais domésticos, como gato e cachorro, e também os silvestres','Indiferente','1 Mês','06-02-2021',1);
+ INSERT INTO [Vaga] VALUES ('Médico Veterinário','No minimo 1 ano','CLT','responsável por cuidar e tratar bichos tanto de pequeno quanto de grande porte, podendo atender animais domésticos, como gato e cachorro, e também os silvestres','Indiferente','1 Mês','06-02-2021',1,2);
  INSERT INTO [Vaga] VALUES ('Zootécnico','No minimo 1 ano','CLT','deve estar apto para planejar e coordenar a criação de bovinos, suínos, ovinos e aves','Indiferente','1 Mês','06-02-2021',3);
  INSERT INTO [Vaga] VALUES ('Ecologista ','No minimo 2 ano','CLT','deve prezar pela manutenção dos ecossistemas e das cadeias alimentares','Indiferente','1 Mês','06-02-2021',4);
  INSERT INTO [Vaga] VALUES ('Oceanógrafo','No minimo 2 ano','CLT','preparados para lidar com as diferentes espécies do mar','Indiferente','1 Mês','06-02-2021',5);
@@ -211,10 +210,11 @@ CREATE TABLE [dbo].[Candidatos]
     IdCandidatos int PRIMARY KEY  identity (1,1) not null,
     IdProfissional int NOT NULL,
     DsData DATETIME NOT NULL,
-   IdVaga  INT NOT NULL ,
+   FKVaga  INT NOT NULL ,
     idEmpresa INT NOT NULL ,
      FOREIGN KEY (IdEmpresa) REFERENCES [Empresa](IdEmpresa),
-   foreign key (idProfissional) references  [Profissional](IdProfissional)
+   foreign key (idProfissional) references  [Profissional](IdProfissional),
+    FOREIGN KEY (FKvaga) REFERENCES Vaga (idvaga)
 );
  select * from candidatos 
 insert  into Candidatos (idprofissional,DsData,IdVaga,idEmpresa) values (6,28/08/2000,1,2);

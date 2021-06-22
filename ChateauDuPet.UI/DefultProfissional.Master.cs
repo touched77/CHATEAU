@@ -12,12 +12,7 @@ namespace ChateauDuPet.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         { //
-            VagaBLL objBLL = new VagaBLL();
-
-
-            rptVagas.DataSource = objBLL.ListarVaga();
-            rptVagas.DataBind();
-             
+           
              
 
 

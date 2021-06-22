@@ -117,23 +117,33 @@
     <Content Include="css\Serviços.css" />
     <Content Include="css\Sobre .css" />
     <Content Include="css\w3.css" />
-    <Content Include="Empresa\Feed.aspx" />
-    <Content Include="Empresa\Projetos.aspx" />
     <Content Include="Empresa\Vagas.aspx" />
     <Content Include="Imagens\-1-Recuperado.png" />
     <Content Include="Imagens\15.png" />
+    <Content Include="Imagens\1624081833559.jpg" />
+    <Content Include="Imagens\1624081878901.jpg" />
+    <Content Include="Imagens\1624082007356.jpg" />
     <Content Include="Imagens\Analytics_SVG.svg" />
     <Content Include="Imagens\Medica.png" />
     <Content Include="Imagens\pp.png" />
+    <Content Include="Imagens\undraw_accept_tasks_po1c.svg" />
+    <Content Include="Imagens\undraw_city_life_gnpr.svg" />
     <Content Include="Imagens\undraw_Co_workers_re_1i6i.png" />
     <Content Include="Imagens\undraw_Co_workers_re_1i6i.svg" />
     <Content Include="Imagens\undraw_Dog_walking_re_l61p %281%29.svg" />
     <Content Include="Imagens\undraw_emails_6uqr.svg" />
+    <Content Include="Imagens\undraw_female_avatar_w3jk.svg" />
     <Content Include="Imagens\undraw_friends_r511.svg" />
+    <Content Include="Imagens\undraw_Goals_re_lu76.svg" />
     <Content Include="Imagens\undraw_Hiking_re_k0bc.svg" />
+    <Content Include="Imagens\undraw_ideas_s70l.svg" />
+    <Content Include="Imagens\undraw_join_of2w.svg" />
+    <Content Include="Imagens\undraw_male_avatar_323b.svg" />
     <Content Include="Imagens\undraw_meet_the_team_e5b7.svg" />
     <Content Include="Imagens\undraw_mobile_login_ikmv.svg" />
+    <Content Include="Imagens\undraw_online_cv_qy9w.svg" />
     <Content Include="Imagens\undraw_Playful_cat_re_bxiu.svg" />
+    <Content Include="Imagens\undraw_real_time_collaboration_c62i.svg" />
     <Content Include="Imagens\undraw_Security_on_re_e491.svg" />
     <Content Include="Imagens\undraw_Sharing_articles_re_jnkp.svg" />
     <Content Include="Imagens\undraw_swipe_profiles1_i6mr.svg" />
@@ -141,7 +151,6 @@
     <Content Include="Imagens\undraw_welcome_cats_thqn.svg" />
     <Content Include="Imagens\wavesOpacity.svg" />
     <Content Include="Index.aspx" />
-    <Content Include="Index.html" />
     <Content Include="JavaScript.js" />
     <Content Include="jquery-3.6.0.min.js" />
     <Content Include="Login.aspx" />
@@ -170,9 +179,7 @@
     <Content Include="MainAdm.aspx" />
     <Content Include="MainEmpre.aspx" />
     <Content Include="MainPro.aspx" />
-    <Content Include="obj\Debug\ChateauDuPet.UI.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\ChateauDuPet.UI.dll" />
-    <Content Include="obj\Debug\ChateauDuPet.UI.pdb" />
+    <Content Include="Profissional\Mensagens.aspx" />
     <Content Include="Profissional\Perfil-Profissional.aspx" />
     <Content Include="Profissional\Profissional.css" />
     <Content Include="Profissional\Profissional.js" />
@@ -195,6 +202,7 @@
     <Content Include="Scripts\esm\popper.js" />
     <Content Include="Scripts\esm\popper.min.js" />
     <Content Include="Defult.Master" />
+    <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -287,9 +295,7 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Serviços.aspx" />
-    <Content Include="Serviços.html" />
     <Content Include="Sobre.aspx" />
-    <Content Include="Sobre.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -327,20 +333,6 @@
     </Compile>
     <Compile Include="DefultProfissional.Master.designer.cs">
       <DependentUpon>DefultProfissional.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Empresa\Feed.aspx.cs">
-      <DependentUpon>Feed.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Empresa\Feed.aspx.designer.cs">
-      <DependentUpon>Feed.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Empresa\Projetos.aspx.cs">
-      <DependentUpon>Projetos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Empresa\Projetos.aspx.designer.cs">
-      <DependentUpon>Projetos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Empresa\Vagas.aspx.cs">
       <DependentUpon>Vagas.aspx</DependentUpon>
@@ -391,7 +383,13 @@
     <Compile Include="MainPro.aspx.designer.cs">
       <DependentUpon>MainPro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Profissional\Mensagens.aspx.cs">
+      <DependentUpon>Mensagens.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profissional\Mensagens.aspx.designer.cs">
+      <DependentUpon>Mensagens.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Profissional\Perfil-Profissional.aspx.cs">
       <DependentUpon>Perfil-Profissional.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -435,6 +433,13 @@
     <Compile Include="Sobre.aspx.designer.cs">
       <DependentUpon>Sobre.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="BootstrapJs\bootstrap.bundle.js.map" />
@@ -460,11 +465,6 @@
     <Content Include="bootstrapPag\bootstrap.min.css.map" />
     <Content Include="bootstrapPag\bootstrap.rtl.css.map" />
     <Content Include="bootstrapPag\bootstrap.rtl.min.css.map" />
-    <Content Include="obj\Debug\ChateauDuPet.UI.csproj.CopyComplete" />
-    <Content Include="obj\Debug\ChateauDuPet.UI.csproj.CoreCompileInputs.cache" />
-    <Content Include="obj\Debug\ChateauDuPet.UI.csprojAssemblyReference.cache" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="packages.config" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
@@ -503,7 +503,7 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\" />
     <Folder Include="Profissional\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>

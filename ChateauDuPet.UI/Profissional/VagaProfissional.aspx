@@ -41,14 +41,14 @@
                     
     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary">USer</strong>
-          <h3 class="mb-0">Featured post</h3>
-          <div class="mb-1 text-muted">Publicado</div>
-          <p class="card-text mb-auto">Informaçoes gerais</p>
-          <a href="#" class="stretched-link">Continue reading</a>
+          <strong class="d-inline-block mb-2 text-primary"><%# DataBinder.Eval(Container.DataItem, "NmVaga") %></strong>
+          <h3 class="mb-0"><%# DataBinder.Eval(Container.DataItem, "Id") %></h3>
+          <div class="mb-1 text-muted"><%# DataBinder.Eval(Container.DataItem, "") %> </div>
+          <p class="card-text mb-auto"><%# DataBinder.Eval(Container.DataItem, "Descricao") %></p>
+          <a href="VagaProfissional.aspx" class="stretched-link">ver mais</a>
         </div>
         <div class="col-auto d-none d-lg-block">
-            a
+        <%# DataBinder.Eval(Container.DataItem, "Validade") %> </div>
         </div>
       </div>
                 </ItemTemplate>

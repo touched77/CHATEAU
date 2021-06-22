@@ -15,13 +15,11 @@ namespace ChateauDuPet.UI
         {
 
         }
-
         protected void BtnCadastrar_Click(object sender, EventArgs e)
         {
-            txtNome.Text.Trim();
 
 
-            try 
+            try
             {
 
 
@@ -74,12 +72,11 @@ namespace ChateauDuPet.UI
                     Response.Redirect("MainEmpre.aspx");
 
                 }
-            }       
+            }
             catch
             {
                 lblMensagem.Text = "Ocorreu um erro ao enviar o cadastro. Tente novamente mais tarde" +
-                    "ou entre em <href=Contato.aspx>contato com a empresa.</a>";
             }
-}
-}
+        }
+    }
 }

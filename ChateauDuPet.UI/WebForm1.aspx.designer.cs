@@ -7,11 +7,11 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace ChateauDuPet.UI.Empresa
+namespace ChateauDuPet.UI
 {
 
 
-    public partial class Feed
+    public partial class WebForm1
     {
     }
 }

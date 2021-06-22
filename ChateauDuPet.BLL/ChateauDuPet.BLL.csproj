@@ -44,6 +44,7 @@
     <Compile Include="AdministrativoBLL.cs" />
     <Compile Include="AutenticaBLL.cs" />
     <Compile Include="CertificadoBLL.cs" />
+    <Compile Include="EmailBLL.cs" />
     <Compile Include="EmpresaBLL.cs" />
     <Compile Include="ExperienciaBLL.cs" />
     <Compile Include="ProfissionalBLL.cs" />

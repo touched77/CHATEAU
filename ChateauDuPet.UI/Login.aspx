@@ -2,7 +2,8 @@
 
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml">
     
-    <head runat="server"><meta http-equiv="Content-Type" 
+    <head runat="server">
+        <meta http-equiv="Content-Type" 
     content="text/html; charset=utf-8"/>
         <!-- Incluidos-->
         <link href="Content/bootstrap.min.css" rel="stylesheet" />
@@ -61,7 +62,7 @@
       <br />
     <asp:RequiredFieldValidator runat="server" id="Validacao" Cssclass="Card" ControlToValidate="DDLList"/>
     <asp:Button ID="btnEntrar" runat="server" TabIndex="3" Text="Entrar" CssClass="w-100 btn btn-lg btn-primary " OnClick="BtnEntrar_Click" />
-    <p class="mt-5 mb-3 text-muted">&copy; 2020 - 2021 @CHATEAUDUPET</p>    <a  runat="server" href="Cadastro.aspx"  class="mt-5 mb-3 link-danger" > Cadastre-se!</a>
+    <p class="mt-5 mb-3 text-muted">&copy; 2020 - 2021 @CHATEAUDUPET</p>    <a  runat="server" href="Cadasro.aspx"  class="mt-5 mb-3 link-danger" > Cadastre-se!</a>
      </div>
          
         </main>

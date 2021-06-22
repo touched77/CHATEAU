@@ -72,8 +72,6 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
               
             </asp:ContentPlaceHolder>
-  
-
         
             <div class="custom-shape-divider-bottom-1618516495">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -183,5 +181,7 @@
     
     <script src="jquery-3.6.0.min.js"></script>
     <script src="BootstrapJs/bootstrap.bundle.min.js"></script>
+  
+
 </body>
 </html>

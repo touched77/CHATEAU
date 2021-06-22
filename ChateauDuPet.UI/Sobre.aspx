@@ -95,7 +95,7 @@
         <asp:RequiredFieldValidator ID="rfvMensagem" runat="server" ControlToValidate="txtMensagem" ErrorMessage="Campo Mensagem é obrigatório" ForeColor="Yellow" />
 
         <br /><br />
-        <asp:Button ID="btnEnviar" runat="server" Text="Enviar" CssClass="btn btn-secondary" OnClick="btnEnviar_Click" />
+        <asp:Button ID="BtnEnviar" runat="server" Text="Enviar" CssClass="btn btn-secondary" OnClick="btnEnviar_Click" />
 
         <br /><br />
         <asp:Label ID="lblMensagem" runat="server" CssClass="text-light lead" />

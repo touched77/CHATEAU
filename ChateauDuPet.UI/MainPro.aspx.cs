@@ -14,10 +14,16 @@ namespace ChateauDuPet.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            int idProfissional = Convert.ToInt32(Request.QueryString["id"]);
+            ProfissionalDTO profissionalDTO = new ProfissionalDTO();
+
+            ProfissionalDTO profissionalDTO = objBLL.SelecionarPro(idProfissional);
+
             VagaBLL objBLL = new VagaBLL();
 
             VagaDTO objDTO = new VagaDTO();
             
+
 
 
         }

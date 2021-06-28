@@ -73,6 +73,7 @@
 
                 </span>
                 <hr />      <br />
+                 
         <asp:Label runat="server" Text="Nome" AssociatedControlID="txtNome" CssClass="text-light lead" />
              <asp:TextBox runat="server" ID="txtNome" Width="90%" CssClass="text-light lead" />
                 <asp:RequiredFieldValidator ID="rfvNome" runat="server" ControlToValidate="txtNome" ErrorMessage="Campo Nome é obrigatório!" ForeColor="Yellow" />
@@ -91,15 +92,14 @@
 
         <br />
         <asp:Label runat="server" Text="Mensagem" AssociatedControlID="txtMensagem" CssClass="text-light lead" />
-        <asp:TextBox ID="txtMensagem" CssClass="form-control" runat="server" Width="90%" Height="120" TextMode="MultiLine" />
-        <asp:RequiredFieldValidator ID="rfvMensagem" runat="server" ControlToValidate="txtMensagem" ErrorMessage="Campo Mensagem é obrigatório" ForeColor="Yellow" />
+        <asp:TextBox ID="txtMensagem" CssClass="form-control" runat="server" Width="90%" Height="120px" TextMode="MultiLine" />
+        <asp:RequiredFieldValidator ID="rfvMensagem" runat="server" ControlToValidate="txtMensagem" ErrorMessage="Campo Mensagem é obrigatório" ForeColor="Yel" />
 
         <br /><br />
-        <asp:Button ID="BtnEnviar" runat="server" Text="Enviar" CssClass="btn btn-secondary" OnClick="btnEnviar_Click" />
+        <asp:Button ID="BtnEnviar" runat="server" Text="Enviar" CssClass="Btn btn-secondary" OnClick="BtnEnviar_Click" />
 
         <br /><br />
         <asp:Label ID="lblMensagem" runat="server" CssClass="text-light lead" />
-
         <br /><br />
         <br /><br />
             </div>

@@ -94,7 +94,7 @@
     <Content Include="bootstrapPag\bootstrap.min.css" />
     <Content Include="bootstrapPag\bootstrap.rtl.css" />
     <Content Include="bootstrapPag\bootstrap.rtl.min.css" />
-    <Content Include="Cadastro.aspx" />
+    <Content Include="confirmação.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -179,6 +179,7 @@
     <Content Include="MainAdm.aspx" />
     <Content Include="MainEmpre.aspx" />
     <Content Include="MainPro.aspx" />
+    <Content Include="Mensagens.aspx" />
     <Content Include="Profissional\Mensagens.aspx" />
     <Content Include="Profissional\Perfil-Profissional.aspx" />
     <Content Include="Profissional\Profissional.css" />
@@ -203,6 +204,9 @@
     <Content Include="Scripts\esm\popper.min.js" />
     <Content Include="Defult.Master" />
     <Content Include="WebForm1.aspx" />
+    <Content Include="PagADM\ListarEmpresa.Master" />
+    <Content Include="PagADM\ListarClientes.Master" />
+    <Content Include="Configurações.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -299,12 +303,19 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastro.aspx.cs">
-      <DependentUpon>Cadastro.aspx</DependentUpon>
+    <Compile Include="Configurações.Master.cs">
+      <DependentUpon>Configurações.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cadastro.aspx.designer.cs">
-      <DependentUpon>Cadastro.aspx</DependentUpon>
+    <Compile Include="Configurações.Master.designer.cs">
+      <DependentUpon>Configurações.Master</DependentUpon>
+    </Compile>
+    <Compile Include="confirmação.aspx.cs">
+      <DependentUpon>confirmação.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="confirmação.aspx.designer.cs">
+      <DependentUpon>confirmação.aspx</DependentUpon>
     </Compile>
     <Compile Include="Defult.Master.cs">
       <DependentUpon>Defult.Master</DependentUpon>
@@ -382,6 +393,27 @@
     </Compile>
     <Compile Include="MainPro.aspx.designer.cs">
       <DependentUpon>MainPro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mensagens.aspx.cs">
+      <DependentUpon>Mensagens.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mensagens.aspx.designer.cs">
+      <DependentUpon>Mensagens.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagADM\ListarClientes.Master.cs">
+      <DependentUpon>ListarClientes.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagADM\ListarClientes.Master.designer.cs">
+      <DependentUpon>ListarClientes.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PagADM\ListarEmpresa.Master.cs">
+      <DependentUpon>ListarEmpresa.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagADM\ListarEmpresa.Master.designer.cs">
+      <DependentUpon>ListarEmpresa.Master</DependentUpon>
     </Compile>
     <Compile Include="Profissional\Mensagens.aspx.cs">
       <DependentUpon>Mensagens.aspx</DependentUpon>

@@ -23,7 +23,7 @@ namespace ChateauDuPet.UI
             objDTO.NomeRemetente = txtNome.Text;
             objDTO.EmailRemetente = txtEmail.Text;
             objDTO.NomeDestinatario = "SITE MUSICAOS";
-            objDTO.EmailDestinatario = "medeiros0441@gmail.com";
+            objDTO.EmailDestinatario = txtEmail.Text;
             objDTO.Assunto = "Contato via Site";
             objDTO.Mensagem = txtMensagem.Text + " - NOME: " + txtNome.Text + " - FONE: " + txtTelefone.Text;
 
@@ -36,7 +36,6 @@ namespace ChateauDuPet.UI
 
                 lblMensagem.Text = "E-mail enviado com Sucesso!";
 
-                txtNome.Text = "";
                 txtEmail.Text = "";
                 txtTelefone.Text = "";
                 txtMensagem.Text = "";

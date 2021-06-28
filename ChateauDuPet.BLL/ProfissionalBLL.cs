@@ -35,6 +35,18 @@ namespace ChateauDuPet.BLL
         {
             return objDAL.Autenticar(objEmailP, objSenhaP);
         }
+
+        //selecionar
+        public ProfissionalDTO SelecionarPro(int objSeleciona)
+        {
+            return objDAL.Selecionar(objSeleciona);
+        }
+
+
+        public void EditarPro (ProfissionalDTO objEdita)
+        {
+            objDAL.Editar(objEdita);
+        }
     }
 }
 

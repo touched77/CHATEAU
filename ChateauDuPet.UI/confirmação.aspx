@@ -66,7 +66,7 @@
             </nav>
         </header>
         
-    <form id="form1" runat="server">
+    
 
 
     
@@ -85,7 +85,6 @@
             <br />
             <div class="CentroContato container-xxl" style="  width:80%; ">
               
-                       
       
               <label id="lblNome" class="form-label">Seu Nome</label>
               <asp:TextBox  Cssclass="form-control" id="txtNome" runat="server"  TabIndex="1" MaxLength="100" />
@@ -119,7 +118,7 @@
                    
               <label  class="form-label">CPF</label>
               <asp:TextBox runat="server" Cssclass="form-control cpf"  ID="txtCpf" MaxLength="11"  TabIndex="5"    />
-        <asp:RequiredFieldValidator ID="rfvCpf" runat="server" ControlToValidate="txtCpf" ErrorMessage="Campo CPF é obrigatório" ForeColor="red" />
+        <asp:RequiredFieldValidator ID="rfvCpf" runat="server" ControlToValidate="txtCpf" Enabled="false" ErrorMessage="Campo CPF é obrigatório" ForeColor="red" />
                
                  
               <label id="lblTelefone"  class="form-label">Telefone </label>
@@ -129,6 +128,8 @@
               <label id="lblEmail" class="form-label">Email</label> 
               <asp:TextBox runat="server" CssClass="form-control" id="txtEmail"  TabIndex="7" MaxLength="100" TextMode="Email"/> 
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Campo Email é obrigatório" ForeColor="red" />
+                  <asp:RegularExpressionValidator ID="gevEmailValido" runat="server" ControlToValidate="txtEmail" 
+            ErrorMessage="O E-mail é inválido!" ForeColor="Yellow" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
                          
               <label for="username" class="form-label">Sexo</label>
               <div class="input-group has-validation">  
@@ -157,10 +158,12 @@
               <br />
             <asp:CheckBox runat="server"   id="cbTermos"/>
             <asp:Label runat="server" CSsclass="form-check-label" id="txtTermos"><a href="#" > Aceito</a>  os termos </asp:Label>
-              <Button runat="server" class=""  ID="BtnCadastrar"  OnClick="BtnCadastrar" />
+              <button runat="server" class=""  id="BtnCadastrar"  onclick="BtnCadastrar" />
                        
               <br />
         <asp:Label ID="lblMensagem" runat="server" CssClass="text-light lead" />
+         
+              
           </div>
                    
                  <br />
@@ -206,8 +209,7 @@
   </div>
                  
             </main>
-
-    </form>
+     
     
         
             <div class="custom-shape-divider-bottom-1618516495">
@@ -233,7 +235,7 @@
                                 <label class="menu" id="Contato"> <a>Contato</a></label>
                                 <hr />
                                 <label>
-                                    <Label style="margin: 10px 10px 10px 10px">
+                                    <label style="margin: 10px 10px 10px 10px">
                                         <a type="button" class="btn btn-success" target="_blank" href="https://api.whatsapp.com/send?phone=5511991770311&text=Ol%C3%A1!%20Estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20da%20Chateau%20du%20Pet" style="  ">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
                                                 <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
@@ -241,7 +243,7 @@
                                             Iniciar Conversa
                                         </a>
 
-                                    </Label>
+                                    </label>
                                     <label style="margin: 10px 10px 10px 10px">
                                         <a class=" text-decoration-none" href="https://www.facebook.com/Chateau-Du-Pet-113685650407870" target="_blank" rel="noopener">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">

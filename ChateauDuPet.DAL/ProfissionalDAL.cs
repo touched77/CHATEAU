@@ -16,7 +16,7 @@ namespace ChateauDuPet.DAL
             try
             {
                 Conectar(); cmd = new SqlCommand("  INSERT INTO Profissional(NmProfissional,DsEmail,NroCPF,SenhaProfissional,NroTelefone,FKTipoUser,DsUser,DtNascimento,DsSexo,DtTermos,DsPrivacidade) " +
-                    " VALUES(@Nome, @Email, @CPF, @Senha, @Tel, @TipoUSer, @User, @DtNascimento, @Sexo,@Termos,@Privacidade ); ", conn);
+                    " VALUES(@Nome, @Email, @CPF, @Senha, @Tel, @TipoUSer, @@User, @DtNascimento, @Sexo,@Termos,@Privacidade ); ", conn);
                 cmd.Parameters.AddWithValue("@Nome", objCad.Nome);
                 cmd.Parameters.AddWithValue("@Email", objCad.Email);
                 cmd.Parameters.AddWithValue("@CPF", objCad.CPF);
@@ -77,6 +77,8 @@ namespace ChateauDuPet.DAL
                     obj.Privacidade = Convert.ToDateTime(dr["DsPrivacidade"]);
                     obj.UrlImage = dr["UrlImage"].ToString();
                     obj.FKTipoUser = Convert.ToInt32(dr["FKTipoUser"]);
+                    obj.User = dr["DsUser"].ToString();
+
 
                     Lista.Add(obj);
                 }
@@ -143,6 +145,100 @@ namespace ChateauDuPet.DAL
             }
         }
 
+        //Selecionar
+        public ProfissionalDTO Selecionar(int IdProfissional)
+        {
+            try
+            {
+                Conectar();
+                cmd = new SqlCommand("SELECT * FROM Profissional  WHERE IdProfissional = @v1", conn);
+                cmd.Parameters.AddWithValue("@v1", IdProfissional);
+                dr = cmd.ExecuteReader();
+
+                ProfissionalDTO obj = new ProfissionalDTO();
+
+                if (dr.Read())
+                {
+                    obj.IdProfissional = Convert.ToInt32(dr["IdProfissional"]);
+                    obj.Nome = Convert.ToString(dr["NmProfissional"]);
+                    obj.Email = Convert.ToString(dr["DsEmail"]);
+                    obj.CPF = Convert.ToString(dr["NroCPF"]);
+                    obj.Senha = Convert.ToString(dr["SenhaProfissional"]);
+                    obj.Telefone = Convert.ToString(dr["NroTelefone"]);
+                    obj.Biografia = Convert.ToString(dr["DsBiografia"]);
+                    obj.Nascimento = Convert.ToString(dr["DtNascimento"]);
+                    obj.FormacaoEscolar = Convert.ToString(dr["FormacaoEscolar"]);
+                    obj.Sexo = Convert.ToString(dr["DsSexo"]);
+                    obj.Endereco = Convert.ToString(dr["DsEndereco"]);
+                    obj.NroEndereco = Convert.ToString(dr["NroEndereco"]);
+                    obj.Complemento = Convert.ToString(dr["DsComplemento"]);
+                    obj.CEP = Convert.ToString(dr["[DsCEP"]);
+                    obj.Bairro = Convert.ToString(dr["DsBairro"]);
+                    obj.Cidade = Convert.ToString(dr["DsCidade"]);
+                    obj.UF = Convert.ToString(dr["DsUF"]);
+                    obj.Termos = Convert.ToDateTime(dr["DtTermos"]);
+                    obj.Privacidade = Convert.ToDateTime(dr["Dsprivacidade"]);
+                    obj.UrlImage = Convert.ToString(dr["urlimage"]);
+                    obj.FKTipoUser = Convert.ToInt32(dr["FkTipoUSer"]);
+                    obj.User = Convert.ToString(dr["DsUSer"]);
+
+
+                }
+                return obj;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro ao selecionar Profissional" + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+
+        }
+            //Editar - Update
+            public void Editar(ProfissionalDTO objEdita)
+            {
+                try
+                {
+                    Conectar();
+                    cmd = new SqlCommand("update  profissional set  NmProfissional =@2, DsEmail =@3, NroCPF =@4, SenhaProfissional =@5, NroTelefone =@6," +
+                        " DsBiografia =@7, DtNascimento =@8, FormacaoEscolar =@9,    DsSexo =@10,    DsEndereco =@11,    NroEndereco =@12,  DsComplemento =@13,    DsCEP =@14, " +
+                        "   DsBairro =@15,    DsCidade =@16,    DsUF =@17,   UrlImage =@20, DsUser =@11 where= idProfissional=@1", conn);
+
+                    cmd.Parameters.AddWithValue("@v1", objEdita.IdProfissional);
+                    cmd.Parameters.AddWithValue("@v2", objEdita.Nome);
+                    cmd.Parameters.AddWithValue("@v3", objEdita.Email);
+                    cmd.Parameters.AddWithValue("@v4", objEdita.CPF);
+                    cmd.Parameters.AddWithValue("@v5", objEdita.Senha);
+                    cmd.Parameters.AddWithValue("@v6", objEdita.Telefone);
+                    cmd.Parameters.AddWithValue("@v7", objEdita.Biografia);
+                    cmd.Parameters.AddWithValue("@v8", objEdita.Nascimento);
+                    cmd.Parameters.AddWithValue("@v9", objEdita.FormacaoEscolar);
+                    cmd.Parameters.AddWithValue("@v9", objEdita.Sexo);
+                    cmd.Parameters.AddWithValue("@v9", objEdita.Endereco);
+                    cmd.Parameters.AddWithValue("@v9", objEdita.NroEndereco);
+                    cmd.Parameters.AddWithValue("@v9", objEdita.Complemento);
+                    cmd.Parameters.AddWithValue("@v9", objEdita.CEP);
+                    cmd.Parameters.AddWithValue("@v9", objEdita.Bairro);
+                    cmd.Parameters.AddWithValue("@v9", objEdita.Cidade);
+                    cmd.Parameters.AddWithValue("@v9", objEdita.UF);
+                    cmd.Parameters.AddWithValue("@v9", objEdita.UrlImage);
+                    cmd.Parameters.AddWithValue("@v9", objEdita.User);
+
+
+                cmd.ExecuteNonQuery();
+            }
+                catch (Exception ex)
+                {
+                    throw new Exception("Erro ao Editar Vaga !" + ex.Message);
+                }
+                finally
+                {
+                    Desconectar();
+                }
+            } 
 
     }
 }

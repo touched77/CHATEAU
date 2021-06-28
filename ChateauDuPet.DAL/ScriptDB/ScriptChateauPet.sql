@@ -43,7 +43,7 @@ update  Administrativo set Usuario='medeiros0441@gmail.com'
 SELECT * FROM Administrativo 
 
 ------------------------------------------------------------
-
+select * from Profissional
 drop database ChateauDuPetASP
 
 CREATE TABLE [dbo].[Profissional]
@@ -72,15 +72,56 @@ CREATE TABLE [dbo].[Profissional]
     FOREIGN KEY (FKTipoUser) REFERENCES [TipoUser](IdTipoUser),
 );
 
+CREATE TABLE [dbo].[Profissional]
+(
+    [IdProfissional] INT PRIMARY KEY IDENTITY (1,1) NOT NULL,
+    [NmProfissional] NVARCHAR(100) NOT NULL,
+    [DsEmail] NVARCHAR(100) NOT NULL ,
+    [NroCPF] NVARCHAR(11) NOT NULL,
+    [SenhaProfissional] NVARCHAR(15) NOT NULL, 
+    [NroTelefone] NVARCHAR(11) NOT NULL,
+    [DsBiografia] NVARCHAR(300) NOT NULL ,
+    [DtNascimento] DATETIME NOT NULL ,
+    [FormacaoEscolar] NVARCHAR(30) NOT NULL, 
+    [DsSexo] NVARCHAR(20) NOT NULL ,
+    [DsEndereco] NVARCHAR(100) NOT NULL, 
+    [NroEndereco] NVARCHAR(6) NOT NULL, 
+    [DsComplemento] NVARCHAR(50) NOT NULL, 
+    [DsCEP] NVARCHAR(10) NOT NULL,
+    [DsBairro] NVARCHAR(50) NOT NULL,
+    [DsCidade] NVARCHAR(50) NOT NULL ,
+    [DsUF] NVARCHAR(2) NOT NULL ,
+    [DtTermos] DATETIME NOT NULL, 
+    [DsPrivacidade] DATETIME NOT NULL, 
+    [UrlImage] varchar(max) NOT NULL ,
+    [FKTipoUser] INT NOT NULL ,
+    FOREIGN KEY (FKTipoUser) REFERENCES [TipoUser](IdTipoUser),
+    );
+    update  profissional set IdProfissional=@1,NmProfissional =@2,DsEmail =@3 ,  NroCPF  =@4, SenhaProfissional =@5,  NroTelefone=@6,
+    DsBiografia =@7 ,
+    DtNascimento =@8 ,
+    FormacaoEscolar =@9, 
+    DsSexo =@10 ,
+    DsEndereco =@11, 
+    NroEndereco =@12, 
+    DsComplemento =@13, 
+    DsCEP =@14,
+    DsBairro =@15,
+    DsCidade =@16 ,
+    DsUF =@17 ,
+    DtTermos =@18, 
+    DsPrivacidade=@19 ,
+    UrlImage=@20, DsUser=@
+ 
 INSERT INTO [Profissional] VALUES ('Jucelino Silva','JucelinoSilv@hotmail.com','44455566677','020500','911290115','No ramo de pet desde a infancia, apaixonado por animais','09/03/1995','Superior Completo','Masculino','Rua Alemeada Filho','47','Casa 3','08180180','Lajeado','São Paulo','SP','02/06/2021','02/06/2021','~/Images/Ricardo.jpg',2);
 INSERT INTO [Profissional] VALUES ('Armando Pereira','ArmandosPereira@Outlook.com','33355566622','045322','911290117','Desde criança apaixonado pelos bichos do mundo','05/01/1995','Superior Completo','Masculino','Rua Quatro','155','Sem Complemento','08180150','Sao Martinho','São Paulo','SP','02/06/2021','02/06/2021','~/Images/dwassw.jpg',2);
 INSERT INTO [Profissional] VALUES ('Jessica Ferreira','JeehFera@Outlook.com','33655894588','022200','911290112','Apaixonada por bichinhos fofinhos e defensora dos mesmos ','01/01/1995','Superior Completo','Feminino','Rua Dom Miguel','208','Casa 1','08180080','Sao Afoxe','São Paulo','SP','02/06/2021','02/06/2021','~/Images/Jeh.jpg',2);
 INSERT INTO [Profissional] VALUES ('Caroline Cordeiro','CaahCord12@Gmail.com','57626543899','090320','955869445','Amante da profissao desde sempre e pra sempre','02/02/1995','Superior Completo','Feminino','Rua Seven','455','Ap35','08180155','Valinhos','São Paulo','SP','02/06/2021','02/06/2021','~/Images/CaaCord.jpg',2);
 INSERT INTO [Profissional] VALUES ('Caroline Cordeiro','CaahCord12@Gmail.com','57626543899','090320','955869445','sexo',  2);
   
+  select * from Profissional
   
-  
-  INSERT INTO Profissional(NmProfissional,DsEmail,NroCPF,SenhaProfissional,NroTelefone,FKTipoUser,DsUser,DtNascimento,DsSexo,DtTermos,DsPrivacidade,UrlImage) 
+  upDate  Profissional set NmProfissional='oi' where IdProfissional=1 , DsEmail=@2,NroCPF=@3,SenhaProfissional=@4,NroTelefone=@5,FKTipoUser=@6,DsUser=@7,DtNascimento@8,DsSexo=@9,DtTermos=@11,DsPrivacidade=@12,UrlImage=@13) 
   VALUES (@Nome,@Email,@CPF,@Senha,@Tel,@TipoUSer,@User,@DtNascimento,@Sexo,2);
 
 -- Consulte Profissional para ver a informação de cada Profissional --

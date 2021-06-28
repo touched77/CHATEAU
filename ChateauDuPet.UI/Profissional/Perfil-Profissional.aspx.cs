@@ -12,28 +12,27 @@ namespace ChateauDuPet.UI.MainProfissional
     public partial class Perfil_Profissional : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        { 
+        {
+            int idProfissional = Convert.ToInt32(Request.QueryString["id"]);
 
-        //    ProfissionalBLL objBLL = new ProfissionalBLL();
-        //    ProfissionalDTO objDTO = new ProfissionalDTO();
-        //    rpt= REPETER 
-        //    rptPro.DataSource = objBLL.ListaProfissional();
-        //     rptPro.DataBind();
+            ProfissionalBLL objBLL = new ProfissionalBLL();
+            ProfissionalDTO objDTO = new ProfissionalDTO();
+            
+            ProfissionalDTO profissionalDTO = objBLL.SelecionarPro(idProfissional);
 
-        //    //buscar nome do gênero
+           txtNome.Text = profissionalDTO.Nome;
+            lblEmail.Text = profissionalDTO.Email;
+           lblTel.Text = profissionalDTO.Telefone;
+            lblBiografia.Text = profissionalDTO.Biografia;
+            img_pro.ImageUrl = profissionalDTO.UrlImage.Replace("~",".");
 
-        //    CertificadoDTO objDTO = new CertificadoDTO(); 
-        //    CertificadoBLL objBLL = new CertificadoBLL();
-
-
-        //     .DataSource = objBLL.ListaProfissional();
-             
-        //    ExperienciaDTO objDTO = new ExperienciaDTO();
-        //    ExperienciaBLL objBLL = new ExperienciaBLL();
+            CertificadoDTO objCerDTO = new CertificadoDTO();
+            CertificadoBLL objCerBLL = new CertificadoBLL();
 
 
-        //    rptVagas.DataSource = objBLL.ListaProfissional();
-        //    rptVagas.DataBind();
+
+            ExperienciaDTO objExpDTO = new ExperienciaDTO();
+            ExperienciaBLL objExpBLL = new ExperienciaBLL();
 
 
         }

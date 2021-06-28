@@ -19,6 +19,7 @@ namespace ChateauDuPet.DTO
         public string FormacaoEscolar { get; set; }
         public string Sexo { get; set; }
         public string Endereco { get; set; }
+        public string NroEndereco { get; set; }
         public string Complemento { get; set; }
         public string CEP { get; set; }
         public string Bairro { get; set; }

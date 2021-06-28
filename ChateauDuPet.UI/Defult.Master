@@ -7,9 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <link href="Imagens/pp.png" rel="icon"type="image/png" sizes="16x16" />
-
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+     
     <link href="bootstrapPag/bootstrap.min.css" rel="stylesheet" />
     <title> Chateau </title>
     <link href="css/Padrao.css" rel="stylesheet" />
@@ -36,10 +34,11 @@
             $(".placeholderDate").mask("00/00/0000", { placeholder: "__/__/____" });
         });
     </script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
-<body>  
-    <div class="container-fluid ">
-        <header>
+<body>            <header>
             <nav class="navbar navbar-expand-md navbar-light     container-xxl ">
                 <div class="container-lg">
                     <img src="Imagens/pp.png" width="100" style=" max-height:500px;" class="d-block my-1" /> 
@@ -67,11 +66,17 @@
                 </div><a type="button" class="btn btn-outline-danger d-none d-md-block" href="/Login.aspx" style="  float:right;margin:10px 0 0 10px">Login</a>
                 <a type="button" class="btn btn-outline-danger d-none d-md-block   " href="Cadastro.aspx" style="float:right;margin:10px 0 0 10px">Cadastro</a>
             </nav>
-        </header>
+        </header> 
+
+
         
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-              
+        
+                        <form id="form1" runat="server" class="container-fluid">
+        
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> 
             </asp:ContentPlaceHolder>
+                            </form>
+
         
             <div class="custom-shape-divider-bottom-1618516495">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -156,27 +161,7 @@
                 </div>
             </div>
         </footer>
-    </div>
-
-    <script>
-        function openCity(cityName, elmnt, color) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].style.backgroundColor = "";
-            }
-            document.getElementById(cityName).style.display = "block";
-            elmnt.style.backgroundColor = color;
-
-        }
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
-    </script>
-
+    
 
     
     <script src="jquery-3.6.0.min.js"></script>

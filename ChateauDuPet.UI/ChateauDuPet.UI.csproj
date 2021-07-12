@@ -94,7 +94,7 @@
     <Content Include="bootstrapPag\bootstrap.min.css" />
     <Content Include="bootstrapPag\bootstrap.rtl.css" />
     <Content Include="bootstrapPag\bootstrap.rtl.min.css" />
-    <Content Include="confirmação.aspx" />
+    <Content Include="Clientes.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -124,9 +124,30 @@
     <Content Include="Imagens\1624081878901.jpg" />
     <Content Include="Imagens\1624082007356.jpg" />
     <Content Include="Imagens\Analytics_SVG.svg" />
+    <Content Include="Imagens\close-up-portrait-of-pleased-girl-with-short-brown-hair-embracing-funny-beagle-dog-with-eyes-closed.jpg" />
+    <Content Include="Imagens\fot.jpg" />
+    <Content Include="Imagens\a.png" />
+    <Content Include="Imagens\icones\at.svg" />
+    <Content Include="Imagens\icones\bookmark-check.svg" />
+    <Content Include="Imagens\icones\cash-coin.svg" />
+    <Content Include="Imagens\icones\chat-dots.svg" />
+    <Content Include="Imagens\icones\clock-history.svg" />
+    <Content Include="Imagens\icones\columns-gap.svg" />
+    <Content Include="Imagens\icones\cursor.svg" />
+    <Content Include="Imagens\icones\geo-alt.svg" />
+    <Content Include="Imagens\icones\hash.svg" />
+    <Content Include="Imagens\icones\node-plus.svg" />
+    <Content Include="Imagens\icones\printer.svg" />
+    <Content Include="Imagens\icones\search.svg" />
+    <Content Include="Imagens\icones\share-fill.svg" />
+    <Content Include="Imagens\icones\shop-window.svg" />
+    <Content Include="Imagens\icones\trash.svg" />
+    <Content Include="Imagens\icones\whatsapp.svg" />
     <Content Include="Imagens\Medica.png" />
     <Content Include="Imagens\pp.png" />
     <Content Include="Imagens\undraw_accept_tasks_po1c.svg" />
+    <Content Include="Imagens\undraw_add_friends_re_3xte.svg" />
+    <Content Include="Imagens\undraw_Agreement_re_d4dv.svg" />
     <Content Include="Imagens\undraw_city_life_gnpr.svg" />
     <Content Include="Imagens\undraw_Co_workers_re_1i6i.png" />
     <Content Include="Imagens\undraw_Co_workers_re_1i6i.svg" />
@@ -141,12 +162,19 @@
     <Content Include="Imagens\undraw_male_avatar_323b.svg" />
     <Content Include="Imagens\undraw_meet_the_team_e5b7.svg" />
     <Content Include="Imagens\undraw_mobile_login_ikmv.svg" />
+    <Content Include="Imagens\undraw_Mobile_payments_re_7udl.svg" />
     <Content Include="Imagens\undraw_online_cv_qy9w.svg" />
+    <Content Include="Imagens\undraw_People_search_re_5rre.svg" />
     <Content Include="Imagens\undraw_Playful_cat_re_bxiu.svg" />
+    <Content Include="Imagens\undraw_Push_notifications_re_t84m %281%29.svg" />
+    <Content Include="Imagens\undraw_Push_notifications_re_t84m.svg" />
     <Content Include="Imagens\undraw_real_time_collaboration_c62i.svg" />
     <Content Include="Imagens\undraw_Security_on_re_e491.svg" />
     <Content Include="Imagens\undraw_Sharing_articles_re_jnkp.svg" />
+    <Content Include="Imagens\undraw_Social_growth_re_tjy9.svg" />
     <Content Include="Imagens\undraw_swipe_profiles1_i6mr.svg" />
+    <Content Include="Imagens\undraw_Swipe_profiles_re_tvqm %281%29.svg" />
+    <Content Include="Imagens\undraw_Swipe_profiles_re_tvqm.svg" />
     <Content Include="Imagens\undraw_Walking_outside_re_56xo.svg" />
     <Content Include="Imagens\undraw_welcome_cats_thqn.svg" />
     <Content Include="Imagens\wavesOpacity.svg" />
@@ -203,7 +231,7 @@
     <Content Include="Scripts\esm\popper.js" />
     <Content Include="Scripts\esm\popper.min.js" />
     <Content Include="Defult.Master" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="Cadastro.aspx" />
     <Content Include="PagADM\ListarEmpresa.Master" />
     <Content Include="PagADM\ListarClientes.Master" />
     <Content Include="Configurações.Master" />
@@ -303,19 +331,19 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clientes.aspx.cs">
+      <DependentUpon>Clientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clientes.aspx.designer.cs">
+      <DependentUpon>Clientes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Configurações.Master.cs">
       <DependentUpon>Configurações.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Configurações.Master.designer.cs">
       <DependentUpon>Configurações.Master</DependentUpon>
-    </Compile>
-    <Compile Include="confirmação.aspx.cs">
-      <DependentUpon>confirmação.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="confirmação.aspx.designer.cs">
-      <DependentUpon>confirmação.aspx</DependentUpon>
     </Compile>
     <Compile Include="Defult.Master.cs">
       <DependentUpon>Defult.Master</DependentUpon>
@@ -465,12 +493,12 @@
     <Compile Include="Sobre.aspx.designer.cs">
       <DependentUpon>Sobre.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Cadastro.aspx.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Cadastro.aspx.designer.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

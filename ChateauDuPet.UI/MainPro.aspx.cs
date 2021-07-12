@@ -17,7 +17,6 @@ namespace ChateauDuPet.UI
             int idProfissional = Convert.ToInt32(Request.QueryString["id"]);
             ProfissionalDTO profissionalDTO = new ProfissionalDTO();
 
-            ProfissionalDTO profissionalDTO = objBLL.SelecionarPro(idProfissional);
 
             VagaBLL objBLL = new VagaBLL();
 

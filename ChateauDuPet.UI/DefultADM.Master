@@ -4,19 +4,19 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="Imagens/pp.png" rel="icon"type="image/png" sizes="16x16" />
-     
-    <title>Profissional</title>   
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Imagens/pp.png" rel="icon" type="image/png" sizes="16x16" />
+
+    <title>Profissional</title>
     <link href="bootstrapPag/bootstrap.min.css" rel="stylesheet" />
-    <link href="Profissional/Profissional.css" rel="stylesheet" />       
+    <link href="Profissional/Profissional.css" rel="stylesheet" />
     <link href="css/Padrao.css" rel="stylesheet" />
     <link href="css/Animações.css" rel="stylesheet" />
     <link href="css/home.css" rel="stylesheet" />
-       <!-- Bootstrap core CSS -->
-    
-       <link href="css/w3.css" rel="stylesheet" /> 
+    <!-- Bootstrap core CSS -->
+
+    <link href="css/w3.css" rel="stylesheet" />
     <script src="Scripts/jquery-3.5.1.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/jquery.mask.min.js"></script>
@@ -36,138 +36,145 @@
         });
     </script>
 
-    
-<script>
-    function w3_open() {
-        document.getElementById("main").style.marginLeft = "20%";
-        document.getElementById("mySidebar").style.width = "20%";
-        document.getElementById("mySidebar").style.display = "block";
-        document.getElementById("openNav").style.display = 'none';
-    }
-    function w3_close() {
-        document.getElementById("main").style.marginLeft = "0%";
-        document.getElementById("mySidebar").style.display = "none";
-        document.getElementById("openNav").style.display = "inline-block";
-    }
-    var myCollapse = document.getElementById('myCollapse')
-    var bsCollapse = new bootstrap.Collapse(myCollapse, {
-        toggle: false
-    })
 
-</script>
+    <script>
+        function w3_open() {
+            document.getElementById("main").style.marginLeft = "20%";
+            document.getElementById("mySidebar").style.width = "20%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+        var myCollapse = document.getElementById('myCollapse')
+        var bsCollapse = new bootstrap.Collapse(myCollapse, {
+            toggle: false
+        })
+
+    </script>
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 
-  </head>
-   
-<body class="container-fluid" >     
-    
-      <div class=" text-white w3-sidebar  w3-bar-block flex-column   w3-animate-left"
-          id="mySidebar" style="width: 280px; height:100%; display:none;background-color:#0d294e"> 
-    <asp:Image  runat="server"  ImageUrl="Imagens/pp.png"  width="200" 
-        height="200" class="d-flex  "/>
-              <button class="w3-bar-item w3-button w3-large"  onclick="w3_close()">  &times;</button>
- <hr>
-           
+</head>
+
+<body class="container-fluid">
+
+    <div class=" text-white w3-sidebar  w3-bar-block flex-column   w3-animate-left"
+        id="mySidebar" style="width: 280px; height: 100%; display: none; background-color: #0d294e">
+        <asp:Image runat="server" ImageUrl="Imagens/pp.png" Width="200"
+            Height="200" class="d-flex  " />
+        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">&times;</button>
+        <hr>
 
 
-    <ul class="nav nav-pills flex-column mb-auto"   >
-      <li class="nav-item">
-        <a href="MainPro" class="nav-link active" aria-current="page">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
-              <path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>
-              </svg>        
-          Home
-        </a>
-      </li>
-      <li>
-        <a href="Perfil.aspx" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use  ></use></svg>
-          Perfil
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use href="progetos.aspx"></use></svg>
-          Projetos
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use href="Mensagens.aspx"></use></svg>
-          Mensagens
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use href="Configuração.aspx"></use></svg>
-          Configurações
-        </a>
-      </li>
-    </ul>  
 
-           </div>
-      
-<div id="main" >
-      
-            <nav class="navbar navbar-expand-md navbar-light ">
-                <div class="container-lg">
-                   
-           <button id="openNav" class="w3-button    w3-xlarge" onclick="w3_open()">&#9776;</button>  
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="MainPro" class="nav-link active" aria-current="page">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+                        <path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z" />
+                    </svg>
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="Perfil.aspx" class="nav-link text-white">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use></use></svg>
+                    Perfil
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-white">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use href="progetos.aspx"></use></svg>
+                    Projetos
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-white">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use href="Mensagens.aspx"></use></svg>
+                    Mensagens
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-white">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use href="Configuração.aspx"></use></svg>
+                    Configurações
+                </a>
+            </li>
+        </ul>
 
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav menu    ">
-                            <li class="nav-item col-6 col-md-auto">
-                                <a class="nav-link p-2" href="index.aspx">Home</a>
-                            </li>
-                            <li class="nav-item col-6 col-md-auto">
-                                <a class="nav-link p-2" href="Serviços.aspx">Serviços</a>
-                            </li>
-                            <li class="nav-item col-6 col-md-auto">
-                                <a class="nav-link p-2" href="sobre.aspx">Sobre</a>
-                            </li>
-                             
-                      
-                        </ul>
-                    </div>
-                </div>  </nav>
-         
+    </div>
 
- 
-     <form  ID="Form"   runat="server" >
+    <div id="main">
+
+        <nav class="navbar navbar-expand-md navbar-light ">
+            <div class="container-lg">
+
+                <button id="openNav" class="w3-button    w3-xlarge" onclick="w3_open()">&#9776;</button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav menu    ">
+                        <li class="nav-item col-6 col-md-auto">
+                            <a class="nav-link p-2" href="index.aspx">Home</a>
+                        </li>
+                        <li class="nav-item col-6 col-md-auto">
+                            <a class="nav-link p-2" href="Serviços.aspx">Serviços</a>
+                        </li>
+                        <li class="nav-item col-6 col-md-auto">
+                            <a class="nav-link p-2" href="sobre.aspx">Sobre</a>
+                        </li>
 
 
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
-      </form>
-      <br /><br />  
-            <div class="custom-shape-divider-bottom-1618516495">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
-                </svg>
+                    </ul>
+                </div>
             </div>
+        </nav>
+
+
+
+        <form id="Form" runat="server">
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </form>
+        <br />
+        <br />
+        <div class="custom-shape-divider-bottom-1618516495">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
         <footer>
 
             <div class="FaixaF ">
-                <div class=" CentroF " style=" margin:auto;">
-                    <div class="bd-example container-xxl " style="min-height:100px;   padding: 0 20px 0 20px">
-                         
+                <div class=" CentroF " style="margin: auto;">
+                    <div class="bd-example container-xxl " style="min-height: 100px; padding: 0 20px 0 20px">
 
-                        <h4 style="text-align:center; font-size:10px;"> © 2021 Copyright</h4>
+
+                        <h4 style="text-align: center; font-size: 10px;">© 2021 Copyright</h4>
                     </div>
                 </div>
             </div>
         </footer>
-     
-       
-      
-  </div>
-	      
-    
+
+
+
+    </div>
+
+
     <script src="jquery-3.6.0.min.js"></script>
     <script src="BootstrapJs/bootstrap.bundle.min.js"></script>
-<script src="Profissional/Profissional.js"></script>
-      <script src="Profissional.js"></script> 
+    <script src="Profissional/Profissional.js"></script>
+    <script src="Profissional.js"></script>
 </body>
 </html>
- 

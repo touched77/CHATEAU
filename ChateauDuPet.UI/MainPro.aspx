@@ -8,7 +8,7 @@
     <asp:Repeater ID="rptVagas" runat="server">
         <ItemTemplate>
 
-            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <%--  <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                     <strong class="d-inline-block mb-2 text-primary"><%# DataBinder.Eval(Container.DataItem, "NmVaga") %></strong>
                     <h3 class="mb-0"><%# DataBinder.Eval(Container.DataItem, "Id") %></h3>
@@ -19,7 +19,7 @@
                 <div class="col-auto d-none d-lg-block">
                     <%# DataBinder.Eval(Container.DataItem, "Validade") %>
                 </div>
-            </div>
+            </div>--%>
             </div>
            
         </ItemTemplate>

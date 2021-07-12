@@ -20,11 +20,11 @@ namespace ChateauDuPet.UI.MainProfissional
             
             ProfissionalDTO profissionalDTO = objBLL.SelecionarPro(idProfissional);
 
-           txtNome.Text = profissionalDTO.Nome;
-            lblEmail.Text = profissionalDTO.Email;
-           lblTel.Text = profissionalDTO.Telefone;
-            lblBiografia.Text = profissionalDTO.Biografia;
-            img_pro.ImageUrl = profissionalDTO.UrlImage.Replace("~",".");
+           //txtNome.Text = profissionalDTO.Nome;
+           // lblEmail.Text = profissionalDTO.Email;
+           //lblTel.Text = profissionalDTO.Telefone;
+           // lblBiografia.Text = profissionalDTO.Biografia;
+           // img_pro.ImageUrl = profissionalDTO.UrlImage.Replace("~",".");
 
             CertificadoDTO objCerDTO = new CertificadoDTO();
             CertificadoBLL objCerBLL = new CertificadoBLL();

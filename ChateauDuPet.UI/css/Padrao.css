@@ -26,6 +26,26 @@
 
     width:100%;
 }
+
+
+.mnA  {
+     text-decoration:none;
+    color: #ecf2fc;
+    font-size: 12px;
+}
+
+    .mnA ::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: #1EC491;
+        transition: .5s ease-out;
+    }
+
+    .mnA :hover::after {
+        width: 100%;
+    }
 /*Main*/
 
 

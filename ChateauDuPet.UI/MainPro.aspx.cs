@@ -14,16 +14,25 @@ namespace ChateauDuPet.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int idProfissional = Convert.ToInt32(Request.QueryString["id"]);
-            ProfissionalDTO profissionalDTO = new ProfissionalDTO();
+              
 
 
-            VagaBLL objBLL = new VagaBLL();
+            int idVagaM = Convert.ToInt32(Request.QueryString["id"]);
+            VagaBLL objVagaBLL = new VagaBLL();
 
             VagaDTO objDTO = new VagaDTO();
-            
+
+            CardVaga.DataSource = objVagaBLL.FiltrarVaga();
+            CardVaga.DataBind();
 
 
+            //request no parametro da query string
+            int idProfissional = Convert.ToInt32(Request.QueryString["id"]);
+
+            ProfissionalBLL objProPefil = new ProfissionalBLL();
+
+            ProfissionalDTO profissionalDTO = new ProfissionalDTO();
+            rptPro.DataSource = objProPefil.FiltrarID(idProfissional);
 
         }
     }

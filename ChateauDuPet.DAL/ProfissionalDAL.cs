@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ChateauDuPet.DAL
 {
-   public class ProfissionalDAL:Conexao
+    public class ProfissionalDAL : Conexao
     {
         //inserir - create
         public void Cadastrar(ProfissionalDTO objCad)
@@ -16,7 +16,7 @@ namespace ChateauDuPet.DAL
             try
             {
                 Conectar(); cmd = new SqlCommand("  INSERT INTO Profissional(NmProfissional,DsEmail,NroCPF,SenhaProfissional,NroTelefone,FKTipoUser,DsUser,DtNascimento,DsSexo,DtTermos,DsPrivacidade) " +
-                    " VALUES(@Nome, @Email, @CPF, @Senha, @Tel, @TipoUSer, @@User, @DtNascimento, @Sexo,@Termos,@Privacidade ); ", conn);
+                    " VALUES(@Nome, @Email, @CPF, @Senha, @Tel, @TipoUSer, @User, @DtNascimento, @Sexo,@Termos,@Privacidade ); ", conn);
                 cmd.Parameters.AddWithValue("@Nome", objCad.Nome);
                 cmd.Parameters.AddWithValue("@Email", objCad.Email);
                 cmd.Parameters.AddWithValue("@CPF", objCad.CPF);
@@ -24,10 +24,10 @@ namespace ChateauDuPet.DAL
                 cmd.Parameters.AddWithValue("@Tel", objCad.Telefone);
                 cmd.Parameters.AddWithValue("@TipoUser", objCad.FKTipoUser);
                 cmd.Parameters.AddWithValue("@User", objCad.User);
-                cmd.Parameters.AddWithValue("@DtNascimento", objCad.Nascimento); 
+                cmd.Parameters.AddWithValue("@DtNascimento", objCad.Nascimento);
                 cmd.Parameters.AddWithValue("@Sexo", objCad.Sexo);
                 cmd.Parameters.AddWithValue("@Termos", objCad.Termos);
-                cmd.Parameters.AddWithValue("@Privacidade", objCad.Privacidade); 
+                cmd.Parameters.AddWithValue("@Privacidade", objCad.Privacidade);
 
                 cmd.ExecuteNonQuery();
             }
@@ -42,6 +42,104 @@ namespace ChateauDuPet.DAL
             }
         }
 
+
+
+        public List<ProfissionalDTO> Filtrar()
+        {
+            try
+            {
+                Conectar();
+                cmd = new SqlCommand("Select idProfissional,NmProfissional,DsEmail,NroCPF,NroTelefone," +
+                            "DsBiografia,DtNascimento,FormacaoEscolar,Sexo,DsEndereco,NroEndereco,DsComplemento,DsCEP," +
+                            "DsBairro,DsCidade,DsUF,UrlImage,DsUser from profissional", conn);
+                dr = cmd.ExecuteReader();
+                List<ProfissionalDTO> Listar = new List<ProfissionalDTO>();
+                while (dr.Read())
+                {
+                    ProfissionalDTO obj = new ProfissionalDTO();
+                    obj.IdProfissional = Convert.ToInt32(dr["IdProfissional"]);
+                    obj.Nome = dr["NmProfissional"].ToString();
+                    obj.Email = dr["DsEmail"].ToString();
+                    obj.CPF = dr["NroCPF"].ToString();
+                    obj.Telefone = dr["NroTelefone"].ToString();
+                    obj.Biografia = dr["DsBiografia"].ToString();
+                    obj.Nascimento = dr["DtNascimento"].ToString();
+                    obj.FormacaoEscolar = dr["FormacaoEscolar"].ToString();
+                    obj.Sexo = dr["Sexo"].ToString();
+                    obj.Endereco = dr["DsEndereco"].ToString();
+                    obj.NroEndereco = dr["NroEndereco"].ToString();
+                    obj.Complemento = dr["DsComplemento"].ToString();
+                    obj.CEP = dr["DsCEP"].ToString();
+                    obj.Bairro = dr["DsBairro"].ToString();
+                    obj.Cidade = dr["DsCidade"].ToString();
+                    obj.UF = dr["DsUF"].ToString();
+                    obj.UrlImage = dr["UrlImage"].ToString();
+                    obj.User = dr["DsUser"].ToString();
+                    Listar.Add(obj);
+
+
+                }
+                return Listar;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao Listar Profissional!" + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+
+        }
+
+        public List<ProfissionalDTO> FiltrarPro(int idProfissional)
+        {
+            try
+            {
+                Conectar();
+                cmd = new SqlCommand("Select idProfissional,NmProfissional,DsEmail,NroCPF,NroTelefone," +
+                            "DsBiografia,DtNascimento,FormacaoEscolar,Sexo,DsEndereco,NroEndereco,DsComplemento,DsCEP," +
+                            "DsBairro,DsCidade,DsUF,UrlImage,DsUser from profissional where idprofissional=@v1", conn);
+                cmd.Parameters.AddWithValue("@v1", idProfissional);
+                dr = cmd.ExecuteReader();
+                List<ProfissionalDTO> Listar = new List<ProfissionalDTO>();
+                while (dr.Read())
+                {
+                    ProfissionalDTO obj = new ProfissionalDTO();
+                    obj.IdProfissional = Convert.ToInt32(dr["IdProfissional"]);
+                    obj.Nome = dr["NmProfissional"].ToString();
+                    obj.Email = dr["DsEmail"].ToString();
+                    obj.CPF = dr["NroCPF"].ToString();
+                    obj.Telefone = dr["NroTelefone"].ToString();
+                    obj.Biografia = dr["DsBiografia"].ToString();
+                    obj.Nascimento = dr["DtNascimento"].ToString();
+                    obj.FormacaoEscolar = dr["FormacaoEscolar"].ToString();
+                    obj.Sexo = dr["Sexo"].ToString();
+                    obj.Endereco = dr["DsEndereco"].ToString();
+                    obj.NroEndereco = dr["NroEndereco"].ToString();
+                    obj.Complemento = dr["DsComplemento"].ToString();
+                    obj.CEP = dr["DsCEP"].ToString();
+                    obj.Bairro = dr["DsBairro"].ToString();
+                    obj.Cidade = dr["DsCidade"].ToString();
+                    obj.UF = dr["DsUF"].ToString();
+                    obj.UrlImage = dr["UrlImage"].ToString();
+                    obj.User = dr["DsUser"].ToString();
+                    Listar.Add(obj);
+
+
+                }
+                return Listar;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao Listar Profissional!" + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+
+        }
         //Listar
         public List<ProfissionalDTO> Listar()
         {
@@ -101,7 +199,7 @@ namespace ChateauDuPet.DAL
             {
                 Conectar();
                 cmd = new SqlCommand("DELETE FROM Profissional WHERE IdProfissional=@v10", conn);
-                cmd.Parameters.AddWithValue("@v20", objExclui);
+                cmd.Parameters.AddWithValue("@v10", objExclui);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)

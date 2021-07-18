@@ -209,7 +209,7 @@
     <Content Include="MainPro.aspx" />
     <Content Include="Mensagens.aspx" />
     <Content Include="Profissional\Mensagens.aspx" />
-    <Content Include="Profissional\Perfil-Profissional.aspx" />
+    <Content Include="Perfil-Profissional.aspx" />
     <Content Include="Profissional\Profissional.css" />
     <Content Include="Profissional\Profissional.js" />
     <Content Include="Profissional\Projetos.aspx" />
@@ -328,6 +328,7 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Serviços.aspx" />
     <Content Include="Sobre.aspx" />
+    <Content Include="Vagas.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -450,11 +451,11 @@
     <Compile Include="Profissional\Mensagens.aspx.designer.cs">
       <DependentUpon>Mensagens.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Profissional\Perfil-Profissional.aspx.cs">
+    <Compile Include="Perfil-Profissional.aspx.cs">
       <DependentUpon>Perfil-Profissional.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Profissional\Perfil-Profissional.aspx.designer.cs">
+    <Compile Include="Perfil-Profissional.aspx.designer.cs">
       <DependentUpon>Perfil-Profissional.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profissional\Projetos.aspx.cs">
@@ -499,6 +500,13 @@
     </Compile>
     <Compile Include="Cadastro.aspx.designer.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vagas.aspx.cs">
+      <DependentUpon>Vagas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vagas.aspx.designer.cs">
+      <DependentUpon>Vagas.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

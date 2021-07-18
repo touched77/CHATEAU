@@ -17,7 +17,7 @@ namespace ChateauDuPet.DAL
             try
             {
                 Conectar();
-                cmd = new SqlCommand("INSERT INTO Empresa(NmRecrutador,NroCPF,DsEmail,NroTelefone,SenhaEmpresa,DtNascimento,DsSexo,DtTermos,DsPrivacidade,FKTipoUser) VALUES (@v1,@v2,@v3,@v4,@v5,@v6,@v7,@v8,@v9,@v10)", conn);
+                cmd = new SqlCommand("INSERT INTO Empresa(NmRecrutador,NroCPF,DsEmail,NroTelefone,SenhaEmpresa,DtNascimento,DsSexo,DtTermos,DsPrivacidade,FKTipoUser,dsuser) VALUES (@v1,@v2,@v3,@v4,@v5,@v6,@v7,@v8,@v9,@v10,@11)", conn);
                 cmd.Parameters.AddWithValue("@v1", objCad.Recrutador);
                 cmd.Parameters.AddWithValue("@v2", objCad.CPF);
                 cmd.Parameters.AddWithValue("@v3", objCad.Email);
@@ -28,6 +28,8 @@ namespace ChateauDuPet.DAL
                 cmd.Parameters.AddWithValue("@v8", objCad.Termos);
                 cmd.Parameters.AddWithValue("@v9", objCad.Privacidade); 
                 cmd.Parameters.AddWithValue("@v10", objCad.FKTipoUser);
+                cmd.Parameters.AddWithValue("@11", objCad.User);
+
 
                 cmd.ExecuteNonQuery();
             }

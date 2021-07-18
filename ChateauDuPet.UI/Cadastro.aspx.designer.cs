@@ -177,13 +177,13 @@ namespace ChateauDuPet.UI
         protected global::System.Web.UI.WebControls.TextBox senhaC;
 
         /// <summary>
-        /// Controle cbOfertas.
+        /// Controle cbPolitica.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbOfertas;
+        protected global::System.Web.UI.WebControls.CheckBox cbPolitica;
 
         /// <summary>
         /// Controle cbTermos.
@@ -213,15 +213,6 @@ namespace ChateauDuPet.UI
         protected global::System.Web.UI.WebControls.Label lblMensagem;
 
         /// <summary>
-        /// Controle BtnCadastrar.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnCadastrar;
-
-        /// <summary>
         /// Controle BtnCancelar.
         /// </summary>
         /// <remarks>
@@ -229,5 +220,14 @@ namespace ChateauDuPet.UI
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnCancelar;
+
+        /// <summary>
+        /// Controle BtnCadastrar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnCadastrar;
     }
 }

@@ -31,15 +31,13 @@
                         <label id="lbluser" class="form-label">Usuario</label>
                         <div class="input-group has-validation">
                             <span class="input-group-text">@</span>
-                            <asp:TextBox runat="server" CssClass="form-control" ID="txtUser" MaxLength="15" TabIndex="2" />
+                            <asp:TextBox runat="server" CssClass="form-control" Width="70%" ID="txtUser" MaxLength="15" TabIndex="2" />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtUser" ErrorMessage="Campo Usuario é obrigatório" ForeColor="red" />
-
-
-                        </div>
-                        <br />
+                            </div>
+                           <br />
                         <label for="username" class="form-label">Tipo de Usuario</label>
-                        <div class="input-group has-validation">
-                            <asp:DropDownList ID="DLLTipoUSer" runat="server" CssClass="form-select" TabIndex="3">
+                        <div class="input-group has-validation "  >
+                            <asp:DropDownList ID="DLLTipoUSer" Width="70%" runat="server" CssClass="form-select" TabIndex="3">
                                 <asp:ListItem Text="Selecione uma opção" />
                                 <asp:ListItem Value="1" Text="Empresa" />
                                 <asp:ListItem Value="2" Text="Profissional" />
@@ -47,32 +45,25 @@
 
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="DLLTipoUSer" ErrorMessage="Campo Tipo Usuario é obrigatório" ForeColor="red" />
                         </div>
-                        <br />
-
-
-
+                            <br />
                         <label class="form-label">Data de Nascimento </label>
                         <asp:TextBox runat="server" CssClass="form-control" ID="txtData" TextMode="Date" TabIndex="4" />
                         <asp:RequiredFieldValidator ID="rfvDataN" runat="server" ControlToValidate="txtData" ErrorMessage="Campo Data é obrigatório" ForeColor="red" />
                         <br />
                         <label class="form-label">CPF</label>
-                        <asp:TextBox runat="server" CssClass="form-control cpf" ID="txtCpf" MaxLength="11" TabIndex="5" />
+                        <asp:TextBox runat="server" CssClass="form-control cpf" ID="txtCpf" MaxLength="11" TabIndex="5"  />
                         <asp:RequiredFieldValidator ID="rfvCpf" runat="server" ControlToValidate="txtCpf" Enabled="false" ErrorMessage="Campo CPF é obrigatório" ForeColor="red" />
-                        <br />
-
-
+                            <br />
                         <label id="lblTelefone" class="form-label">Telefone </label>
-                        <asp:TextBox runat="server" CssClass="form-control  " ID="txtTelefone" AutoCompleteType="Office" TabIndex="6" MaxLength="11" />
+                        <asp:TextBox runat="server" CssClass="form-control  " ID="txtTelefone" AutoCompleteType="Office"  TabIndex="6" MaxLength="11" />
                         <asp:RequiredFieldValidator ID="rfvTelefone" runat="server" ControlToValidate="txtTelefone" ErrorMessage="Campo Telefone é obrigatório" ForeColor="red" />
-                        <br />
-
+                           <br />
                         <label id="lblEmail" class="form-label">Email</label>
                         <asp:TextBox runat="server" CssClass="form-control" ID="txtEmail" TabIndex="7" MaxLength="100" TextMode="Email" />
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Campo Email é obrigatório" ForeColor="red" />
                         <asp:RegularExpressionValidator ID="gevEmailValido" runat="server" ControlToValidate="txtEmail"
                             ErrorMessage="O E-mail é inválido!" ForeColor="red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
-                        <br />
-
+                           <br />
                         <label for="username" class="form-label">Sexo</label>
                         <div class="input-group has-validation">
                             <asp:DropDownList ID="DDLSexo" runat="server" CssClass="form-select " TabIndex="8">
@@ -81,32 +72,31 @@
                                 <asp:ListItem Value="Feminino" Text="Feminino" />
                             </asp:DropDownList>
 
-                        </div>
-
-
+                        </div>    <br />
                         <label id="lblSenha" class="form-label">Senha *</label>
-                        <asp:TextBox runat="server" CssClass="form-control senha" ID="senha" TabIndex="6" TextMode="Password" />
-
+                        <asp:TextBox runat="server" CssClass="form-control senha" ID="senha" TabIndex="9" TextMode="Password" />
+                           <br />
 
                         <label id="lblSenhaa" class="form-label">Confirmar Senha *</label>
-                        <asp:TextBox runat="server" CssClass="form-control senhaC" ID="senhaC" TabIndex="6" TextMode="Password" />
+                        <asp:TextBox runat="server" CssClass="form-control senhaC" ID="senhaC" TabIndex="10" TextMode="Password" />
                         <br />
 
 
                         <div class="form-check">
-                            <asp:CheckBox runat="server" ID="cbOfertas" />
-                            <label class="form-check-label" id=""><a href="#">Aceito</a> receber ofertas em meu Email</label>
+                            <asp:CheckBox runat="server" ID="cbPolitica" />
+                            <label class="form-check-label" id=""><a  data-bs-target="#modalTermos" class="link" data-bs-toggle="modal">Aceito</a> receber ofertas em meu Email</label>
 
                             <br />
                             <asp:CheckBox runat="server" ID="cbTermos" />
-                            <asp:Label runat="server" CssClass="form-check-label" ID="txtTermos"><a href="#" > Aceito</a>  os termos </asp:Label>
+                            <asp:Label runat="server" CssClass="form-check-label" ID="txtTermos"><a class="link" data-bs-target="#modalTermos" data-bs-toggle="modal" > Aceito</a>  os termos </asp:Label>
                             <br />
                             <br />
 
                             <asp:Label runat="server" ID="lblMensagem" ForeColor="Red" />
                             <br />
-                            <asp:Button runat="server" ID="BtnCadastrar" CssClass="btn menu" OnClick="BtnCadastrar_Click1" />
-                            <asp:Button runat="server" ID="BtnCancelar" CssClass="btn" />
+                            <asp:Button runat="server" ID="BtnCancelar" CssClass="btn" OnClick="BtnCancelar_Click"  Text="Cancelar" />
+                            <asp:Button runat="server" ID="BtnCadastrar" CssClass="btn  btn-primary" OnClick="BtnCadastrar_Click"  Text="Cadastrar" />
+                            
                             <br />
 
 
@@ -148,11 +138,11 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
+                        </div>
                     </div>
-
-                </div>
-            </div>
-        </div>
+                    </div>
+                     
 
     </main>
 

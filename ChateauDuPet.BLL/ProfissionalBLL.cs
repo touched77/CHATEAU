@@ -47,6 +47,16 @@ namespace ChateauDuPet.BLL
         {
             objDAL.Editar(objEdita);
         }
+
+        public List<ProfissionalDTO> FiltarP()
+        {
+            return objDAL.Filtrar();
+        }
+    
+        public List<ProfissionalDTO> FiltrarID(int idprofissional)
+        {
+           return objDAL.FiltrarPro(idprofissional);
+        }
     }
 }
 

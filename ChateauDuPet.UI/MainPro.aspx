@@ -4,112 +4,82 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <asp:Repeater ID="CardVaga" runat="server" >  
+        <ItemTemplate> 
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+      <asp:Label runat="server" ID="txtVaga" CssClass="card-title" ><%# DataBinder.Eval(Container.DataItem, "Vaga") %></asp:Label>
+    <asp:Label runat="server" ID="txtUser" class="card-subtitle mb-2 text-muted"><%# DataBinder.Eval(Container.DataItem, "Validade") %></asp:Label>
+    <asp:Label runat="server" ID="txtSobre" class="card-text"><%# DataBinder.Eval(Container.DataItem, "Descricao") %></asp:Label>
+  
+<a   class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <%# DataBinder.Eval(Container.DataItem, "IdVaga")%>  Ver mais</a>
+  </div>
+</div>
 
-    <asp:Repeater ID="rptVagas" runat="server">
-        <ItemTemplate>
-
-          <%--  <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col p-4 d-flex flex-column position-static">
-                    <strong class="d-inline-block mb-2 text-primary"><%# DataBinder.Eval(Container.DataItem, "NmVaga") %></strong>
-                    <h3 class="mb-0"><%# DataBinder.Eval(Container.DataItem, "Id") %></h3>
-                    <div class="mb-1 text-muted"><%# DataBinder.Eval(Container.DataItem, "NmVaga") %> </div>
-                    <p class="card-text mb-auto"><%# DataBinder.Eval(Container.DataItem, "Descricao") %></p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver mais</button>
-                </div>
-                <div class="col-auto d-none d-lg-block">
-                    <%# DataBinder.Eval(Container.DataItem, "Validade") %>
-                </div>
-            </div>--%>
-            </div>
-           
         </ItemTemplate>
-    </asp:Repeater>
-    <!-- Button trigger modal -->
+        </asp:Repeater>
+    <asp:Repeater ID="rptPro" runat="server">
+                <ItemTemplate>
 
-    <asp:Repeater ID="RptVagaCompl" runat="server">
-        <ItemTemplate>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel"><%# DataBinder.Eval(Container.DataItem, "NmVaga") %></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                    <div class="card" style="width: 18rem;">
+                        <a href="Perfil-Profissional.aspx?id=<%# DataBinder.Eval(Container.DataItem, "IdProfissional") %>">
+                            <img class="card-img-top" src="<%# DataBinder.Eval(Container.DataItem, "UrlImage").ToString().Replace("~", ".") %>" alt="Card image cap">
+                        </a>
+                        <div class="card-body">
+                            <a href="Album.aspx?id=<%# DataBinder.Eval(Container.DataItem, "IdProfissional") %>">
+                                <h5 class="card-title"><%# DataBinder.Eval(Container.DataItem, "Nome") %></h5>
+                            </a>
+                            <p class="card-text">
+                                <%# DataBinder.Eval(Container.DataItem, "Biografia") %>  
+                                -  <%# DataBinder.Eval(Container.DataItem, "FormacaoEscolar") %>
+                            </p>
+                            <span class="badge badge-info"><%# DataBinder.Eval(Container.DataItem, "User") %></span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </ItemTemplate>
-    </asp:Repeater>
 
-
-
-    <h2 class="mb-4">Feed  </h2>
-
+                </ItemTemplate>
+            </asp:Repeater>
+    <!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-fullscreen-sm-down" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div><div class="modal-body">
+  <div class="modal-lg">
     <div class="row">
-        <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-            <h2>Heading</h2>
-            <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-            <p><a class="btn btn-secondary" href="#">View details »</a></p>
-        </div>
-        <!-- /.col-lg-4 -->
-
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Launch demo modal
-        </button>
-        
-           
- 
+      <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
     </div>
-    <!-- /.col-lg-4 -->
-
-
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-        </div>
-        <div class="col-md-5">
-            <img src="Imagens/1624081878901.jpg" />
-        </div>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            ver vaga
-        </button>
+    <div class="row">
+      <div class="col-md-3 ms-auto">.col-md-3 .ms-auto</div>
+      <div class="col-md-2 ms-auto">.col-md-2 .ms-auto</div>
     </div>
-
-
-
-
-    <asp:Repeater ID="Repeater1" runat="server">
-        <ItemTemplate>
-
-            <div class="row featurette">
-                <div class="col-md-5">
-                    <h2 class="featurette-heading"   runat="server"  ="<%# DataBinder.Eval(Container.DataItem, "Nome") %>"> </h2>
-                    <p class="lead"><%# DataBinder.Eval(Container.DataItem, "Biografia") %>" </p>
-                </div>
-                <div class="col-md-3">
-                    <image src="<%# DataBinder.Eval(Container.DataItem, "UrlImage") %>" />
-                </div>
-            </div>
-
-        </ItemTemplate>
-    </asp:Repeater>
-
-
-
-
-
-
+    <div class="row">
+      <div class="col-md-6 ms-auto">.col-md-6 .ms-auto</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-9">
+        Level 1: .col-sm-9
+        <div class="row">
+          <div class="col-8 col-sm-6">
+            Level 2: .col-8 .col-sm-6
+          </div>
+          <div class="col-4 col-sm-6">
+            Level 2: .col-4 .col-sm-6
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
 </asp:Content>

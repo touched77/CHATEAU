@@ -35,5 +35,19 @@ namespace ChateauDuPet.BLL
         {
             objDAL.Editar(objEdita);
         }
+
+
+        public ExperienciaDTO SelecionaExperiencia(int idProfissional)
+        {
+            return objDAL.SelecionaExp(idProfissional);
+        }
+        public List<ExperienciaDTO> FiltroExpID(int idProfissional)
+        {
+            return objDAL.FiltroExpID(idProfissional);
+        }
+        public List<ExperienciaDTO> FiltroC()
+        {
+            return objDAL.FiltroExp();
+        }
     }
 }

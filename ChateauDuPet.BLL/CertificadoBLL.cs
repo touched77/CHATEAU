@@ -35,5 +35,17 @@ namespace ChateauDuPet.BLL
         {
             objDAL.Excluir(objExclui);
         }
+        public  CertificadoDTO SelecionarCertificado(int idProfissional)
+        {
+            return objDAL.SelecionarCertificado(idProfissional);
+        }
+        public List<CertificadoDTO> FiltroCerID (int idProfissional)
+        {
+            return objDAL.FiltroCerID(idProfissional);
+        }
+        public List<CertificadoDTO> FiltroC()
+        {
+            return objDAL.FiltroCertificado();
+        }
     }
 }

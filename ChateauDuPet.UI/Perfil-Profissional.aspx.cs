@@ -20,20 +20,58 @@ namespace ChateauDuPet.UI.MainProfissional
             
             ProfissionalDTO profissionalDTO = objBLL.SelecionarPro(idProfissional);
 
-           //txtNome.Text = profissionalDTO.Nome;
-           // lblEmail.Text = profissionalDTO.Email;
-           //lblTel.Text = profissionalDTO.Telefone;
-           // lblBiografia.Text = profissionalDTO.Biografia;
-           // img_pro.ImageUrl = profissionalDTO.UrlImage.Replace("~",".");
+            txtNome.Text = profissionalDTO.Nome;
+            lblEmail.Text = profissionalDTO.Email;
+            lblTel.Text = profissionalDTO.Telefone;
+            lblBiografiaPro.Text = profissionalDTO.Biografia;
+            imagePro.ImageUrl = profissionalDTO.UrlImage.Replace("~", ".");
+            lblFormacaoEscolar.Text = profissionalDTO.FormacaoEscolar;
+            lblSexo.Text = profissionalDTO.Sexo;
+            lblEndereco.Text = profissionalDTO.Endereco;
+            lblNumero.Text = profissionalDTO.NroEndereco;
+            lblComplemento.Text = profissionalDTO.Complemento;
+            lblCep.Text = profissionalDTO.CEP;
+            lblBairro.Text = profissionalDTO.Bairro;
+            lblCidade.Text = profissionalDTO.Cidade;
+            lblUF.Text = profissionalDTO.UF;
+            lbluser.Text = profissionalDTO.User;
+            
+
+            ProfissionalBLL objProPefil = new ProfissionalBLL();
+
+            ProfissionalDTO ListProfissional = new ProfissionalDTO();
+            rptPro.DataSource = objProPefil.FiltarP();
+            rptPro.DataBind();
+
 
             CertificadoDTO objCerDTO = new CertificadoDTO();
             CertificadoBLL objCerBLL = new CertificadoBLL();
+            rptCertificados.DataSource = objCerBLL.FiltroC();
+            rptCertificados.DataBind();
 
 
+
+            //CertificadoDTO objcertificadoDTO = objCerBLL.SelecionarCertificado(idProfissional);  
+
+            //lblCurso.Text = objcertificadoDTO.Curso;
+            //lblInstituicao.Text = objcertificadoDTO.Instituicao;
+            //lblDataInicio.Text = objcertificadoDTO.DataInicio;
+            //lblDataConclusao.Text = objcertificadoDTO.DataConclusao;
+            //lblDescricao.Text = objcertificadoDTO.Descricao;
 
             ExperienciaDTO objExpDTO = new ExperienciaDTO();
             ExperienciaBLL objExpBLL = new ExperienciaBLL();
+            rptExperiencias.DataSource = objExpBLL.FiltroExpID(idProfissional);
+            rptExperiencias.DataBind();
 
+
+
+            //lblCargo.Text = objExpDTO.Cargo;
+            //lblEmpresa.Text = objExpDTO.Empresa;
+            //lblTipoContrato.Text = objExpDTO.TipoContrato;
+            //lblLocalidade.Text = objExpDTO.Localidade;
+            //lblDataInicio.Text = objExpDTO.DataInicio;
+            //lblDataFinal.Text = objExpDTO.DataFinal;
 
         }
 

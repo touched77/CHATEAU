@@ -121,8 +121,6 @@ INSERT INTO [Profissional] VALUES ('Caroline Cordeiro','CaahCord12@Gmail.com','5
   
   select * from Profissional
   
-  upDate  Profissional set NmProfissional='oi' where IdProfissional=1 , DsEmail=@2,NroCPF=@3,SenhaProfissional=@4,NroTelefone=@5,FKTipoUser=@6,DsUser=@7,DtNascimento@8,DsSexo=@9,DtTermos=@11,DsPrivacidade=@12,UrlImage=@13) 
-  VALUES (@Nome,@Email,@CPF,@Senha,@Tel,@TipoUSer,@User,@DtNascimento,@Sexo,2);
 
 -- Consulte Profissional para ver a informação de cada Profissional --
 select * from Certificado;
@@ -156,6 +154,8 @@ INSERT INTO [Experiencia] VALUES ('Tecnico de Raio X','aoInves Raio X Med','CLT'
 SELECT * FROM Experiencia 
 
 ----------------------------------------------------------------------
+SELECT * FROM Certificado  WHERE [FKProfissional] = 4
+
 
 CREATE TABLE [dbo].[Certificado]
 (

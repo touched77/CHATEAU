@@ -32,7 +32,12 @@ namespace ChateauDuPet.UI
             ProfissionalBLL objProPefil = new ProfissionalBLL();
 
             ProfissionalDTO profissionalDTO = new ProfissionalDTO();
-            rptPro.DataSource = objProPefil.FiltrarID(idProfissional);
+            rptPro.DataSource = objProPefil.FiltarP();
+            rptPro.DataBind();
+
+
+
+
 
         }
     }

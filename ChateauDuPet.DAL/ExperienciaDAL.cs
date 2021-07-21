@@ -125,5 +125,119 @@ namespace ChateauDuPet.DAL
             }
         }
 
+
+
+        //Selecionar
+        public ExperienciaDTO SelecionaExp(int IdProfissional)
+        {
+            try
+            {
+                Conectar();
+                cmd = new SqlCommand("SELECT * FROM Certificado  WHERE IdProfissional = @v1", conn);
+                cmd.Parameters.AddWithValue("@v1", IdProfissional);
+                dr = cmd.ExecuteReader();
+
+                ExperienciaDTO obj = new ExperienciaDTO();
+                while (dr.Read())
+                {
+                    obj.IdExperiencia = Convert.ToInt32(dr["IdExperiencia"]);
+                    obj.Cargo = dr["DsCargo"].ToString();
+                    obj.Empresa = dr["DsEmpresa"].ToString();
+                    obj.TipoContrato = dr["DsTipoContrato"].ToString();
+                    obj.Localidade = dr["DsLocalidade"].ToString();
+                    obj.DataInicio = dr["DataInicio"].ToString();
+                    obj.DataFinal = dr["DataFinal"].ToString();
+                    obj.FKProfissional = Convert.ToInt32(dr["FKProfissional"]);
+
+                  
+                }
+                return obj;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro ao selecionar Experiencia" + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+        public List<ExperienciaDTO> FiltroExpID(int idProfissional)
+        {
+            try
+            {
+                Conectar();
+                cmd = new SqlCommand("SELECT * FROM Experiencia  WHERE FKProfissional = @v1", conn);
+                cmd.Parameters.AddWithValue("@v1", idProfissional);
+                dr = cmd.ExecuteReader();
+
+                List<ExperienciaDTO> Listar = new List<ExperienciaDTO>();
+
+                while (dr.Read())
+                {
+                    ExperienciaDTO obj = new ExperienciaDTO();
+                    obj.IdExperiencia = Convert.ToInt32(dr["IdExperiencia"]);
+                    obj.Cargo = dr["DsCargo"].ToString();
+                    obj.Empresa = dr["DsEmpresa"].ToString();
+                    obj.TipoContrato = dr["DsTipoContrato"].ToString();
+                    obj.Localidade = dr["DsLocalidade"].ToString();
+                    obj.DataInicio = dr["DataInicio"].ToString();
+                    obj.DataFinal = dr["DataFinal"].ToString();
+                    obj.FKProfissional = Convert.ToInt32(dr["FKProfissional"]);
+
+                    Listar.Add(obj);
+                }
+                return Listar;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao Listar Experiencia!" + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+
+
+
+        public List<ExperienciaDTO> FiltroExp()
+        {
+            try
+            {
+                Conectar();
+                cmd = new SqlCommand("SELECT * FROM Experiencia ", conn);
+
+                dr = cmd.ExecuteReader();
+
+                List<ExperienciaDTO> Listar = new List<ExperienciaDTO>();
+                while (dr.Read())
+                {
+                    ExperienciaDTO obj = new ExperienciaDTO();
+                    obj.IdExperiencia = Convert.ToInt32(dr["IdExperiencia"]);
+                    obj.Cargo = dr["DsCargo"].ToString();
+                    obj.Empresa = dr["DsEmpresa"].ToString();
+                    obj.TipoContrato = dr["DsTipoContrato"].ToString();
+                    obj.Localidade = dr["DsLocalidade"].ToString();
+                    obj.DataInicio = dr["DataInicio"].ToString();
+                    obj.DataFinal = dr["DataFinal"].ToString();
+                    obj.FKProfissional = Convert.ToInt32(dr["FKProfissional"]);
+
+                    Listar.Add(obj);
+                }
+                return Listar;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao Listar Experiencia !" + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+
     }
 }

@@ -20,20 +20,21 @@
         </asp:Repeater>
     <asp:Repeater ID="rptPro" runat="server">
                 <ItemTemplate>
-
-                    <div class="card" style="width: 18rem;">
-                        <a href="Perfil-Profissional.aspx?id=<%# DataBinder.Eval(Container.DataItem, "IdProfissional") %>">
-                            <img class="card-img-top" src="<%# DataBinder.Eval(Container.DataItem, "UrlImage").ToString().Replace("~", ".") %>" alt="Card image cap">
-                        </a>
-                        <div class="card-body">
-                            <a href="Album.aspx?id=<%# DataBinder.Eval(Container.DataItem, "IdProfissional") %>">
-                                <h5 class="card-title"><%# DataBinder.Eval(Container.DataItem, "Nome") %></h5>
-                            </a>
-                            <p class="card-text">
+                    
+          <div class="row ">
+            <div class="col-lg-4 ">
+                        <a href="Perfil-Profissional.aspx?id=<%# DataBinder.Eval(Container.DataItem, "IdProfissional") %>"> </a>
+                            <img src="<%# DataBinder.Eval(Container.DataItem, "UrlImage").ToString().Replace("~", ".") %>"  class="bd-placeholder-img rounded-circle" Width="140" Height="140" />
+                        
+                        
+                                <h5 ><%# DataBinder.Eval(Container.DataItem, "Nome") %></h5>
+                         
+                            <p  >
                                 <%# DataBinder.Eval(Container.DataItem, "Biografia") %>  
-                                -  <%# DataBinder.Eval(Container.DataItem, "FormacaoEscolar") %>
                             </p>
-                            <span class="badge badge-info"><%# DataBinder.Eval(Container.DataItem, "User") %></span>
+                            <span class="badge badge-info"><%# DataBinder.Eval(Container.DataItem, "User") %> </span>
+                     <a class="btn btn-primary"  href="Perfil-Profissional.aspx?id=<%# DataBinder.Eval(Container.DataItem, "IdProfissional") %>">Ver mais</a>
+
                         </div>
                     </div>
 
@@ -75,6 +76,31 @@
     </div>
   </div>
 </div>
+
+          <div class="row ">
+            <div class="col-lg-4 ">
+                <asp:Image runat="server" ImageUrl="~/Imagens/undraw_female_avatar_w3jk.svg" class="bd-placeholder-img rounded-circle" Width="140" Height="140" />
+
+                <h2>@Renata Silva </h2>
+                <p>Começei a pouco tempo na plataforma mas já estou tendo retorno, realmente Munto bom!</p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <asp:Image runat="server" ImageUrl="~/Imagens/undraw_male_avatar_323b.svg" class="bd-placeholder-img rounded-circle" Width="140" Height="140" />
+                <h2>@Carlos Souza</h2>
+                <p>Sem palavras Sistema Top!!</p>
+            </div>
+            <div class="col-lg-4">
+                <asp:Image runat="server" ImageUrl="~/Imagens/undraw_female_avatar_w3jk.svg" class="bd-placeholder-img rounded-circle" Width="140" Height="140" />
+
+                <h2>@Ricardo</h2>
+                <p>Após o cadastro, recebi ligações de várias empresas solicitando minha participação no processo Seletivo, obrigado Chateau! </p>
+
+            </div>
+       <br />
+        </div> 
+
+
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Understood</button>

@@ -102,28 +102,7 @@
         </div>
 <%--        <hr class="featurette-divider">--%>
 
-        <div class="row ">
-            <div class="col-lg-4 ">
-                <asp:Image runat="server" ImageUrl="~/Imagens/undraw_female_avatar_w3jk.svg" class="bd-placeholder-img rounded-circle" Width="140" Height="140" />
-
-                <h2>@Renata Silva </h2>
-                <p>Começei a pouco tempo na plataforma mas já estou tendo retorno, realmente Munto bom!</p>
-            </div>
-            <!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <asp:Image runat="server" ImageUrl="~/Imagens/undraw_male_avatar_323b.svg" class="bd-placeholder-img rounded-circle" Width="140" Height="140" />
-                <h2>@Carlos Souza</h2>
-                <p>Sem palavras Sistema Top!!</p>
-            </div>
-            <div class="col-lg-4">
-                <asp:Image runat="server" ImageUrl="~/Imagens/undraw_female_avatar_w3jk.svg" class="bd-placeholder-img rounded-circle" Width="140" Height="140" />
-
-                <h2>@Ricardo</h2>
-                <p>Após o cadastro, recebi ligações de várias empresas solicitando minha participação no processo Seletivo, obrigado Chateau! </p>
-
-            </div>
-       <br />
-        </div> 
+       
        <br />
         <br />
         <h1 class="text-success" style="float: right; margin: -50px  50px 0  0"># Empresa</h1>
@@ -147,8 +126,8 @@
 
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-                <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+                <h2 class="featurette-heading">compatilhe </h2>
+                <p class="lead">Compartilhe suas v-agas,  </p>
             </div>
             <div class="col-md-5"> 
                 <img src="Imagens/undraw_Push_notifications_re_t84m (1).svg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" />
@@ -160,11 +139,11 @@
        <br />
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-                <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+                <h2 class="featurette-heading">Empresas tem acesso a milhares de ideias e projetos.</h2>
+                <p class="lead">Os profissionais que utilizam essa plataforma podem agregar suas ideias, projetos e ações à indústria pet.</p>
             </div>
             <div class="col-md-5">
-                <img src="Imagens/undraw_city_life_gnpr.svg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" />
+                <img src="Imagens/undraw_ideas_s70l.svg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" />
 
             </div>
         </div>

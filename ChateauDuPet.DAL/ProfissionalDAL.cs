@@ -44,14 +44,12 @@ namespace ChateauDuPet.DAL
 
 
 
-        public List<ProfissionalDTO> Filtrar()
+        public List<ProfissionalDTO> FiltrarP()
         {
             try
             {
                 Conectar();
-                cmd = new SqlCommand("Select idProfissional,NmProfissional,DsEmail,NroCPF,NroTelefone," +
-                            "DsBiografia,DtNascimento,FormacaoEscolar,Sexo,DsEndereco,NroEndereco,DsComplemento,DsCEP," +
-                            "DsBairro,DsCidade,DsUF,UrlImage,DsUser from profissional", conn);
+                cmd = new SqlCommand("Select  * from profissional order by nmProfissional", conn);
                 dr = cmd.ExecuteReader();
                 List<ProfissionalDTO> Listar = new List<ProfissionalDTO>();
                 while (dr.Read())
@@ -65,7 +63,7 @@ namespace ChateauDuPet.DAL
                     obj.Biografia = dr["DsBiografia"].ToString();
                     obj.Nascimento = dr["DtNascimento"].ToString();
                     obj.FormacaoEscolar = dr["FormacaoEscolar"].ToString();
-                    obj.Sexo = dr["Sexo"].ToString();
+                    obj.Sexo = dr["dsSexo"].ToString();
                     obj.Endereco = dr["DsEndereco"].ToString();
                     obj.NroEndereco = dr["NroEndereco"].ToString();
                     obj.Complemento = dr["DsComplemento"].ToString();
@@ -114,7 +112,7 @@ namespace ChateauDuPet.DAL
                     obj.Biografia = dr["DsBiografia"].ToString();
                     obj.Nascimento = dr["DtNascimento"].ToString();
                     obj.FormacaoEscolar = dr["FormacaoEscolar"].ToString();
-                    obj.Sexo = dr["Sexo"].ToString();
+                    obj.Sexo = dr["dsSexo"].ToString();
                     obj.Endereco = dr["DsEndereco"].ToString();
                     obj.NroEndereco = dr["NroEndereco"].ToString();
                     obj.Complemento = dr["DsComplemento"].ToString();
@@ -258,27 +256,25 @@ namespace ChateauDuPet.DAL
                 if (dr.Read())
                 {
                     obj.IdProfissional = Convert.ToInt32(dr["IdProfissional"]);
-                    obj.Nome = Convert.ToString(dr["NmProfissional"]);
-                    obj.Email = Convert.ToString(dr["DsEmail"]);
-                    obj.CPF = Convert.ToString(dr["NroCPF"]);
-                    obj.Senha = Convert.ToString(dr["SenhaProfissional"]);
-                    obj.Telefone = Convert.ToString(dr["NroTelefone"]);
-                    obj.Biografia = Convert.ToString(dr["DsBiografia"]);
-                    obj.Nascimento = Convert.ToString(dr["DtNascimento"]);
-                    obj.FormacaoEscolar = Convert.ToString(dr["FormacaoEscolar"]);
-                    obj.Sexo = Convert.ToString(dr["DsSexo"]);
-                    obj.Endereco = Convert.ToString(dr["DsEndereco"]);
-                    obj.NroEndereco = Convert.ToString(dr["NroEndereco"]);
-                    obj.Complemento = Convert.ToString(dr["DsComplemento"]);
-                    obj.CEP = Convert.ToString(dr["[DsCEP"]);
-                    obj.Bairro = Convert.ToString(dr["DsBairro"]);
-                    obj.Cidade = Convert.ToString(dr["DsCidade"]);
-                    obj.UF = Convert.ToString(dr["DsUF"]);
-                    obj.Termos = Convert.ToDateTime(dr["DtTermos"]);
-                    obj.Privacidade = Convert.ToDateTime(dr["Dsprivacidade"]);
-                    obj.UrlImage = Convert.ToString(dr["urlimage"]);
+                    obj.Nome = dr["NmProfissional"].ToString();
+                    obj.Email =dr["DsEmail"].ToString();
+                    obj.CPF = dr["NroCPF"].ToString();
+                    obj.Senha = dr["SenhaProfissional"].ToString();
+                    obj.Telefone = dr["NroTelefone"].ToString();
+                    obj.Biografia = dr["DsBiografia"].ToString();
+                    obj.Nascimento = dr["DtNascimento"].ToString();
+                    obj.FormacaoEscolar = dr["FormacaoEscolar"].ToString();
+                    obj.Sexo = dr["DsSexo"].ToString();
+                    obj.Endereco = dr["DsEndereco"].ToString();
+                    obj.NroEndereco = dr["NroEndereco"].ToString();
+                    obj.Complemento = dr["DsComplemento"].ToString();
+                    obj.CEP = dr["DsCEP"].ToString();
+                    obj.Bairro = dr["DsBairro"].ToString();
+                    obj.Cidade = dr["DsCidade"].ToString();
+                    obj.UF = dr["DsUF"].ToString();
+                    obj.UrlImage = dr["urlimage"].ToString();
                     obj.FKTipoUser = Convert.ToInt32(dr["FkTipoUSer"]);
-                    obj.User = Convert.ToString(dr["DsUSer"]);
+                    obj.User = dr["DsUSer"].ToString();
 
 
                 }

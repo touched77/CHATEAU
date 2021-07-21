@@ -1,4 +1,4 @@
-﻿using ChateauDuPet.DAL;
+﻿                                                                                                           using ChateauDuPet.DAL;
 using ChateauDuPet.DTO;
 using System;
 using System.Collections.Generic;
@@ -37,9 +37,9 @@ namespace ChateauDuPet.BLL
         }
 
         //selecionar
-        public ProfissionalDTO SelecionarPro(int objSeleciona)
+        public ProfissionalDTO SelecionarPro(int IdProfissional)
         {
-            return objDAL.Selecionar(objSeleciona);
+            return objDAL.Selecionar(IdProfissional);
         }
 
 
@@ -50,7 +50,7 @@ namespace ChateauDuPet.BLL
 
         public List<ProfissionalDTO> FiltarP()
         {
-            return objDAL.Filtrar();
+            return objDAL.FiltrarP();
         }
     
         public List<ProfissionalDTO> FiltrarID(int idprofissional)

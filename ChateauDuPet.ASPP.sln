@@ -18,14 +18,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chateau.DTO", "..\chateau-DESKTOP\Chateau.DTO\Chateau.DTO.csproj", "{A8722136-22F6-4C1D-87C5-8A244E8E57F2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DESKTOP", "DESKTOP", "{0AD787BF-9D72-4C7F-8FE8-C0DCB0C273A7}"
-	ProjectSection(SolutionItems) = preProject
-		..\chateau-DESKTOP\Chateau.BLL\Chateau.BLL.csproj = ..\chateau-DESKTOP\Chateau.BLL\Chateau.BLL.csproj
-		..\chateau-DESKTOP\Chateau.BLL\Chateaubll.cs = ..\chateau-DESKTOP\Chateau.BLL\Chateaubll.cs
-		..\chateau-DESKTOP\Chateau.BLL\Session.cs = ..\chateau-DESKTOP\Chateau.BLL\Session.cs
-		..\chateau-DESKTOP\Chateau.BLL\UsuarioBLL.cs = ..\chateau-DESKTOP\Chateau.BLL\UsuarioBLL.cs
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chateau.DAL", "..\chateau-DESKTOP\Chateau.DAL\Chateau.DAL.csproj", "{66FF117F-D255-4489-90DF-9F2B2A21DEBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chateau.BLL", "..\..\..\..\AppData\Local\Temp\Rar$DRa13568.47874\chateau-DESKTOP-master\Chateau.BLL\Chateau.BLL.csproj", "{0D448511-7E11-45A4-8A09-DACAFA4E7112}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +61,10 @@ Global
 		{66FF117F-D255-4489-90DF-9F2B2A21DEBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66FF117F-D255-4489-90DF-9F2B2A21DEBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66FF117F-D255-4489-90DF-9F2B2A21DEBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D448511-7E11-45A4-8A09-DACAFA4E7112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D448511-7E11-45A4-8A09-DACAFA4E7112}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D448511-7E11-45A4-8A09-DACAFA4E7112}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D448511-7E11-45A4-8A09-DACAFA4E7112}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +73,7 @@ Global
 		{39A09D5C-2A28-43A7-ADB1-9673454BC286} = {0AD787BF-9D72-4C7F-8FE8-C0DCB0C273A7}
 		{A8722136-22F6-4C1D-87C5-8A244E8E57F2} = {0AD787BF-9D72-4C7F-8FE8-C0DCB0C273A7}
 		{66FF117F-D255-4489-90DF-9F2B2A21DEBB} = {0AD787BF-9D72-4C7F-8FE8-C0DCB0C273A7}
+		{0D448511-7E11-45A4-8A09-DACAFA4E7112} = {0AD787BF-9D72-4C7F-8FE8-C0DCB0C273A7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9F0179F-E944-4712-8DE5-EECFF1E2D779}

@@ -41,5 +41,19 @@ namespace ChateauDuPet.BLL
         {
             return objDAL.Autenticar(objEmailE, objSenhaE);
         }
+        public List<EmpresaDTO> FiltarP()
+        {
+            return objDAL.Filtro();
+        }
+    
+        public List<EmpresaDTO> FiltrarID(int idEmpresa)
+        {
+           return objDAL.FiltroID(idEmpresa);
+        }
+        //selecionar
+        public EmpresaDTO SelecionarID  (int IdEmpresa)
+        {
+            return objDAL.Selecionar(IdEmpresa);
+        }
     }
 }

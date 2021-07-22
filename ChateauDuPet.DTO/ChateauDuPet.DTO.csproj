@@ -46,6 +46,7 @@
     <Compile Include="CertificadoDTO.cs" />
     <Compile Include="EmailDTO.cs" />
     <Compile Include="EmpresaDTO.cs" />
+    <Compile Include="EnderecoDTO.cs" />
     <Compile Include="ExperienciaDTO.cs" />
     <Compile Include="ProfissionalDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

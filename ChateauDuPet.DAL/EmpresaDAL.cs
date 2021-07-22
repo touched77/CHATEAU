@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace ChateauDuPet.DAL
 {
-   public class EmpresaDAL:Conexao
+    public class EmpresaDAL : Conexao
     {
-        
+
         //inserir - create
         public void Cadastrar(EmpresaDTO objCad)
         {
@@ -24,9 +24,9 @@ namespace ChateauDuPet.DAL
                 cmd.Parameters.AddWithValue("@v4", objCad.Telefone);
                 cmd.Parameters.AddWithValue("@v5", objCad.SenhaEmpresa);
                 cmd.Parameters.AddWithValue("@v6", objCad.Nascimento);
-                cmd.Parameters.AddWithValue("@v7", objCad.Sexo); 
+                cmd.Parameters.AddWithValue("@v7", objCad.Sexo);
                 cmd.Parameters.AddWithValue("@v8", objCad.Termos);
-                cmd.Parameters.AddWithValue("@v9", objCad.Privacidade); 
+                cmd.Parameters.AddWithValue("@v9", objCad.Privacidade);
                 cmd.Parameters.AddWithValue("@v10", objCad.FKTipoUser);
                 cmd.Parameters.AddWithValue("@11", objCad.User);
 
@@ -50,7 +50,7 @@ namespace ChateauDuPet.DAL
             try
             {
                 Conectar();
-                cmd = new SqlCommand("SELECT DsEmail, SenhaEmpresa, FKTipoUser FROM Empresa WHERE DsEmail=@v1 AND SenhaEmpresa=@v2", conn);
+                cmd = new SqlCommand("SELECT DsEmail, SenhaEmpresa, FKTipoUser idempresa FROM Empresa WHERE DsEmail=@v1 AND SenhaEmpresa=@v2", conn);
                 cmd.Parameters.AddWithValue("@v1", objEmailE);
                 cmd.Parameters.AddWithValue("@v2", objSenhaE);
                 dr = cmd.ExecuteReader();
@@ -62,6 +62,7 @@ namespace ChateauDuPet.DAL
                     obj.Email = dr["DsEmail"].ToString();
                     obj.SenhaEmpresa = dr["SenhaEmpresa"].ToString();
                     obj.FKTipoUser = Convert.ToInt32(dr["FKTipoUser"]);
+                    obj.FKTipoUser = Convert.ToInt32(dr["idempresa"]);
                 }
                 return obj;
             }
@@ -107,7 +108,7 @@ namespace ChateauDuPet.DAL
                     obj.NomeFantasia = dr["DsNomeFantasia"].ToString();
                     obj.RazaoSocial = dr["DsRazaoSocial"].ToString();
                     obj.DataAbertura = dr["DsDataAbertura"].ToString();
-                    obj.Termos = Convert.ToDateTime(dr ["DtTermos"]);
+                    obj.Termos = Convert.ToDateTime(dr["DtTermos"]);
                     obj.Privacidade = Convert.ToDateTime(dr["DsPrivacidade"]);
                     obj.UrlImage = dr["UrlImage"].ToString();
                     obj.FKTipoUser = Convert.ToInt32(dr["FKTipoUser"]);
@@ -153,7 +154,7 @@ namespace ChateauDuPet.DAL
                 cmd.Parameters.AddWithValue("@v17", objEdita.DataAbertura);
                 cmd.Parameters.AddWithValue("@v18", objEdita.Termos);
                 cmd.Parameters.AddWithValue("@v19", objEdita.Privacidade);
-                cmd.Parameters.AddWithValue("@v20", objEdita.UrlImage) ;
+                cmd.Parameters.AddWithValue("@v20", objEdita.UrlImage);
                 cmd.Parameters.AddWithValue("@v21", objEdita.FKTipoUser);
                 cmd.Parameters.AddWithValue("@v22", objEdita.IdEmpresa);
 
@@ -188,6 +189,159 @@ namespace ChateauDuPet.DAL
                 Desconectar();
             }
         }
+
+        public EmpresaDTO Selecionar(int idEmpresa)
+        {
+            try
+            {
+
+                Conectar();
+                cmd = new SqlCommand("SELECT * FROM empresa WHERE IdEmpresa = @v1", conn);
+                cmd.Parameters.AddWithValue("@v1", idEmpresa);
+                dr = cmd.ExecuteReader();
+
+                EmpresaDTO obj = new EmpresaDTO();
+                if (dr.Read())
+                {
+                    obj.IdEmpresa = Convert.ToInt32(dr["IdEmpresa"]);
+                    obj.Recrutador = dr["NmRecrutador"].ToString();
+                    obj.CPF = dr["NroCPF"].ToString();
+                    obj.Email = dr["DsEmail"].ToString();
+                    obj.Telefone = dr["NroTelefone"].ToString();
+                    obj.SenhaEmpresa = dr["SenhaEmpresa"].ToString();
+                    obj.Nascimento = dr["DtNascimento"].ToString();
+                    obj.Sexo = dr["DsSexo"].ToString();
+                    obj.Endereco = dr["DsEndereco"].ToString();
+                    obj.Complemento = dr["DsComplemento"].ToString();
+                    obj.CEP = dr["DsCep"].ToString();
+                    obj.Bairro = dr["DsBairro"].ToString();
+                    obj.Cidade = dr["DsCidade"].ToString();
+                    obj.UF = dr["DsUF"].ToString();
+                    obj.CNPJ = dr["NroCNPJ"].ToString();
+                    obj.NomeFantasia = dr["DsNomeFantasia"].ToString();
+                    obj.RazaoSocial = dr["DsRazaoSocial"].ToString();
+                    obj.DataAbertura = dr["DsDataAbertura"].ToString();
+                    obj.Termos = Convert.ToDateTime(dr["DtTermos"]);
+                    obj.Privacidade = Convert.ToDateTime(dr["DsPrivacidade"]);
+                    obj.UrlImage = dr["UrlImage"].ToString();
+                    obj.FKTipoUser = Convert.ToInt32(dr["FKTipoUser"]);
+                }
+                return obj;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro ao selecionar Empresa" + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
         
+
+        public List<EmpresaDTO> Filtro()
+        {
+            try
+            {
+                Conectar();
+                cmd = new SqlCommand("Select * from empresa order by NmRecrutador", conn);
+
+                dr = cmd.ExecuteReader();
+                List<EmpresaDTO> Lista = new List<EmpresaDTO>();
+
+                while (dr.Read())
+                {
+                    EmpresaDTO obj = new EmpresaDTO();
+                    obj.IdEmpresa = Convert.ToInt32(dr["IdEmpresa"]);
+                    obj.Recrutador = dr["NmRecrutador"].ToString();
+                    obj.CPF = dr["NroCPF"].ToString();
+                    obj.Email = dr["DsEmail"].ToString();
+                    obj.Telefone = dr["NroTelefone"].ToString();
+                    obj.SenhaEmpresa = dr["SenhaEmpresa"].ToString();
+                    obj.Nascimento = dr["DtNascimento"].ToString();
+                    obj.Sexo = dr["DsSexo"].ToString();
+                    obj.Endereco = dr["DsEndereco"].ToString();
+                    obj.Complemento = dr["DsComplemento"].ToString();
+                    obj.CEP = dr["DsCep"].ToString();
+                    obj.Bairro = dr["DsBairro"].ToString();
+                    obj.Cidade = dr["DsCidade"].ToString();
+                    obj.UF = dr["DsUF"].ToString();
+                    obj.CNPJ = dr["NroCNPJ"].ToString();
+                    obj.NomeFantasia = dr["DsNomeFantasia"].ToString();
+                    obj.RazaoSocial = dr["DsRazaoSocial"].ToString();
+                    obj.DataAbertura = dr["DsDataAbertura"].ToString();
+                    obj.Termos = Convert.ToDateTime(dr["DtTermos"]);
+                    obj.Privacidade = Convert.ToDateTime(dr["DsPrivacidade"]);
+                    obj.UrlImage = dr["UrlImage"].ToString();
+                    obj.FKTipoUser = Convert.ToInt32(dr["FKTipoUser"]);
+
+                    Lista.Add(obj);
+
+                }
+                return Lista;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao Filtrar!" + ex.Message);
+
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+
+        public List<EmpresaDTO> FiltroID(int idEmpresa)
+        {
+            try
+            {
+                Conectar();
+                cmd = new SqlCommand("Select * from empresa order by NmRecrutador", conn);
+                cmd.Parameters.AddWithValue("@v1", idEmpresa);
+                dr = cmd.ExecuteReader();
+                List<EmpresaDTO> Lista = new List<EmpresaDTO>();
+
+                while (dr.Read())
+                {
+                    EmpresaDTO obj = new EmpresaDTO();
+                    obj.IdEmpresa = Convert.ToInt32(dr["IdEmpresa"]);
+                    obj.Recrutador = dr["NmRecrutador"].ToString();
+                    obj.CPF = dr["NroCPF"].ToString();
+                    obj.Email = dr["DsEmail"].ToString();
+                    obj.Telefone = dr["NroTelefone"].ToString();
+                    obj.SenhaEmpresa = dr["SenhaEmpresa"].ToString();
+                    obj.Nascimento = dr["DtNascimento"].ToString();
+                    obj.Sexo = dr["DsSexo"].ToString();
+                    obj.Endereco = dr["DsEndereco"].ToString();
+                    obj.Complemento = dr["DsComplemento"].ToString();
+                    obj.CEP = dr["DsCep"].ToString();
+                    obj.Bairro = dr["DsBairro"].ToString();
+                    obj.Cidade = dr["DsCidade"].ToString();
+                    obj.UF = dr["DsUF"].ToString();
+                    obj.CNPJ = dr["NroCNPJ"].ToString();
+                    obj.NomeFantasia = dr["DsNomeFantasia"].ToString();
+                    obj.RazaoSocial = dr["DsRazaoSocial"].ToString();
+                    obj.DataAbertura = dr["DsDataAbertura"].ToString();
+                    obj.Termos = Convert.ToDateTime(dr["DtTermos"]);
+                    obj.Privacidade = Convert.ToDateTime(dr["DsPrivacidade"]);
+                    obj.UrlImage = dr["UrlImage"].ToString();
+                    obj.FKTipoUser = Convert.ToInt32(dr["FKTipoUser"]);
+
+                    Lista.Add(obj);
+                }
+                return Lista;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao Filtrar!" + ex.Message);
+
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
     }
 }

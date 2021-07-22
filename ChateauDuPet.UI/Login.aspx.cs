@@ -35,7 +35,8 @@ namespace ChateauDuPet.UI
 
                 if (objModelo != null)
                 {
-                    
+                            Sessao.EmailUser = txtEmail.Text.Trim();
+
 
                     Response.Redirect("MainPro.aspx");
 
@@ -52,7 +53,8 @@ namespace ChateauDuPet.UI
                 objModeloExp = objValidaExp.AutenticarEmpresa(objEmailE, objSenhaE);
                 if (objModeloExp != null)
                 {
-                    
+                            Sessao.EmailUser = txtEmail.Text.Trim();
+
                     Response.Redirect("MainEmpre.aspx");
                    
                 }
@@ -66,7 +68,9 @@ namespace ChateauDuPet.UI
 
                 objModeloExp = objValidaExp.AutenticarAdministrativo(objEmailA, objSenhaA);
                 if (objModeloExp != null)
-                { 
+                {
+                    Sessao.EmailUser = txtEmail.Text.Trim();
+
                     Response.Redirect("MainADM.aspx");
 
                    

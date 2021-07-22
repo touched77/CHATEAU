@@ -15,13 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChateauDuPet.SITE", "Chatea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chateau.UI", "..\chateau-DESKTOP\ChateauBanco.UI\Chateau.UI.csproj", "{39A09D5C-2A28-43A7-ADB1-9673454BC286}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chateau.DTO", "..\chateau-DESKTOP\Chateau.DTO\Chateau.DTO.csproj", "{A8722136-22F6-4C1D-87C5-8A244E8E57F2}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DESKTOP", "DESKTOP", "{0AD787BF-9D72-4C7F-8FE8-C0DCB0C273A7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chateau.DAL", "..\chateau-DESKTOP\Chateau.DAL\Chateau.DAL.csproj", "{66FF117F-D255-4489-90DF-9F2B2A21DEBB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chateau.BLL", "..\..\..\..\AppData\Local\Temp\Rar$DRa13568.47874\chateau-DESKTOP-master\Chateau.BLL\Chateau.BLL.csproj", "{0D448511-7E11-45A4-8A09-DACAFA4E7112}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,18 +47,6 @@ Global
 		{39A09D5C-2A28-43A7-ADB1-9673454BC286}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39A09D5C-2A28-43A7-ADB1-9673454BC286}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39A09D5C-2A28-43A7-ADB1-9673454BC286}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A8722136-22F6-4C1D-87C5-8A244E8E57F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A8722136-22F6-4C1D-87C5-8A244E8E57F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A8722136-22F6-4C1D-87C5-8A244E8E57F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A8722136-22F6-4C1D-87C5-8A244E8E57F2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{66FF117F-D255-4489-90DF-9F2B2A21DEBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66FF117F-D255-4489-90DF-9F2B2A21DEBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66FF117F-D255-4489-90DF-9F2B2A21DEBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66FF117F-D255-4489-90DF-9F2B2A21DEBB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D448511-7E11-45A4-8A09-DACAFA4E7112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D448511-7E11-45A4-8A09-DACAFA4E7112}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D448511-7E11-45A4-8A09-DACAFA4E7112}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D448511-7E11-45A4-8A09-DACAFA4E7112}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

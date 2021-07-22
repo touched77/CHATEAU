@@ -17,18 +17,22 @@ namespace ChateauDuPet.DTO
         public string Nascimento { get; set; }
         public string Sexo { get; set; }
         //Recrutador acima\\
+        public string NroEndereco { get; set; }
         public string Endereco { get; set; }
         public string Complemento { get; set; }
         public string CEP { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string UF { get; set; }
+        //
         public string CNPJ { get; set; }
         public string NomeFantasia { get; set; }
         public string RazaoSocial { get; set; }
         public string DataAbertura { get; set; }
+        
         public DateTime Termos { get; set; }
         public DateTime Privacidade { get; set; }
+        
         public string UrlImage { get; set; }
         public int FKTipoUser { get; set; }
         public string User { get; set; }

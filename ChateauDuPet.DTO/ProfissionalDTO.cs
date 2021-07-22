@@ -18,6 +18,7 @@ namespace ChateauDuPet.DTO
         public string Nascimento { get; set; }
         public string FormacaoEscolar { get; set; }
         public string Sexo { get; set; }
+        //
         public string Endereco { get; set; }
         public string NroEndereco { get; set; }
         public string Complemento { get; set; }
@@ -25,6 +26,7 @@ namespace ChateauDuPet.DTO
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string UF { get; set; }
+        //
         public DateTime Termos { get; set; }
         public DateTime Privacidade { get; set; }
         public string UrlImage { get; set; }

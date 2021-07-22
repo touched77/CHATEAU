@@ -30,6 +30,12 @@ namespace ChateauDuPet.BLL
             get { return Sessao._IdEmpresa; }
             set { Sessao._IdEmpresa = value; }
         }
-       
+
+        private static string _EmailUser;
+        public static  string EmailUser
+        {
+            get { return Sessao._EmailUser; }
+            set { Sessao._EmailUser = value; }
+        }
     }
 }

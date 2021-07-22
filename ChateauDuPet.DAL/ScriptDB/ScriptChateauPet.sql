@@ -1,5 +1,5 @@
 ﻿  Create database ChateauDuPetASP
-  SELECT DsEmail, SenhaEmpresa, FKTipoUser idempresa FROM Empresa WHERE DsEmail=@v1 AND SenhaEmpresa=00
+  SELECT NmRecrutador, DsEmail, SenhaEmpresa, FKTipoUser idempresa FROM Empresa WHERE NmRecrutador='samuel' AND SenhaEmpresa=00
   select * from Empresa
 use ChateauDuPetASP
 select * From TipoUser

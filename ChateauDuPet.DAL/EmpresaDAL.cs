@@ -61,8 +61,7 @@ namespace ChateauDuPet.DAL
                     obj = new EmpresaDTO();
                     obj.Email = dr["DsEmail"].ToString();
                     obj.SenhaEmpresa = dr["SenhaEmpresa"].ToString();
-                    obj.FKTipoUser = Convert.ToInt32(dr["FKTipoUser"]);
-                    obj.IdEmpresa = Convert.ToInt32(dr["idempresa"]);
+                    obj.IdEmpresa = Convert.ToInt32(dr["idEmpresa"]);
                 }
                 return obj;
             }

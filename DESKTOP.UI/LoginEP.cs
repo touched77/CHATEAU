@@ -84,11 +84,11 @@ namespace ChateauBanco.UI
                     EmpresaBLL objValidaExp = new EmpresaBLL();
 
                     objModeloExp = objValidaExp.AutenticarEmpresa(objEmailE,objSenhaE);
-                    objModeloExp.IdEmpresa = Sessao.IdEmpresa;
-                    Sessao.EmailUser = objModeloExp.Email;
+                     
                     if (objModeloExp != null)
-                    { 
-                        
+                    {
+                        objModeloExp.IdEmpresa = Sessao.IdEmpresa;
+                        Sessao.EmailUser = objModeloExp.Email;
                         MainEmpresa obj2 = new MainEmpresa();
                         obj2.Show();
                         this.Visible = false;

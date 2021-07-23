@@ -70,6 +70,12 @@
     <Compile Include="MainAdm.Designer.cs">
       <DependentUpon>MainAdm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainADMcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainADMcs.Designer.cs">
+      <DependentUpon>MainADMcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainAdm.resx">
       <DependentUpon>MainAdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainADMcs.resx">
+      <DependentUpon>MainADMcs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainEmpresa.resx">
       <DependentUpon>MainEmpresa.cs</DependentUpon>

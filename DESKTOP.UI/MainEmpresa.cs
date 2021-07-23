@@ -20,9 +20,11 @@ namespace ChateauBanco.UI
             EmpresaDTO objDTO = new EmpresaDTO();
             EmpresaBLL objBLL = new EmpresaBLL();
 
-            //Sessao.IdProfissional  = objBLL.SelecionarID(int IdEmpresa);
-            
+            objBLL.SelecionarID(Sessao.IdEmpresa);
 
+            gbPerfil.Visible = false;
+            gbCandidatos.Visible = false;
+            gbCadastroV.Visible = false;
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -31,19 +33,18 @@ namespace ChateauBanco.UI
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
-        { 
-
+        {  
             VagaBLL objCadastrarVaga = new VagaBLL();
             VagaDTO objDTO = new VagaDTO();
 
             objDTO.Vaga = txtTitulo.Text;
-            objDTO.Experiencia = cbExperiencia.SelectedItem.ToString();
-            objDTO.Registro = cbRegistro.SelectedItem.ToString();
+            objDTO.Experiencia = cbExperiencia.ToString();
+            objDTO.Registro = cbRegistro.ToString();
             objDTO.Descricao = txtdescricao.Text;
-            objDTO.Sexo = cbSexo.SelectedItem.ToString();
+            objDTO.Sexo = cbSexo.ToString();
             objDTO.Validade = cbValidade.Text;
             objDTO.DataPublicacao = DateTime.Now;
-            //objDTO.FKEmpresa = Convert.ToInt32(Sessao.IdProfissional());
+            objDTO.FKEmpresa = Convert.ToInt32(Sessao.IdEmpresa);
 
 
 
@@ -62,6 +63,7 @@ namespace ChateauBanco.UI
 
         public void Limpar()
         {
+
             txtTitulo.Text = string.Empty;
             txtdescricao.Text = string.Empty;
             cbExperiencia.SelectedItem = null;
@@ -72,16 +74,54 @@ namespace ChateauBanco.UI
 
         private void btnCadastrarVagas_Click(object sender, EventArgs e)
         {
-            Limpar();
-            gbCadastroV.Visible = true;
             txtTitulo.Focus();
 
-            txtTitulo.Visible = true;
-            txtdescricao.Visible = true;
-            cbExperiencia.Visible = true;
-            cbRegistro.Visible = true;
-            cbSexo.Visible = true;
-            cbValidade.Visible = true;
+            gbCandidatos.Visible = false;
+            gbPerfil.Visible = false;
+            gbCadastroV.Visible = true;
+
+
+
+
+        }
+
+        private void gbCandidatos_Enter(object sender, EventArgs e)
+        {
+            gbPerfil.Visible = false;
+            gbCadastroV.Visible = false;
+            gbCandidatos.Visible = true;
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox13_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnPerfil_Click(object sender, EventArgs e)
+        {
+            gbCadastroV.Visible = false;
+            gbCandidatos.Visible = false;
+            gbPerfil.Visible = true;
+        }
+
+        private void BtnCandidatos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainEmpresa_Load(object sender, EventArgs e)
+        {
 
         }
     }

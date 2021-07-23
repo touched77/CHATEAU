@@ -122,6 +122,7 @@ namespace ChateauBanco.UI
             this.gBox1.TabIndex = 61;
             this.gBox1.TabStop = false;
             this.gBox1.Text = "Editar";
+            this.gBox1.Enter += new System.EventHandler(this.gBox1_Enter);
             // 
             // textComplemento
             // 

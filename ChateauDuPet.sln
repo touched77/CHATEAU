@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChateauDuPet.SITE", "Chatea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DESKTOP.UI", "DESKTOP.UI\DESKTOP.UI.csproj", "{B49FC4B0-0D3A-45B7-8FA9-54B02B2B278C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChateauDuPet.Android", "ProjetoIntegrador\ChateauDuPet\ChateauDuPet\ChateauDuPet.Android\ChateauDuPet.Android.csproj", "{BF694393-93E6-4473-B3B7-D932B4B4F3FD}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChateauDuPet", "ProjetoIntegrador\ChateauDuPet\ChateauDuPet\ChateauDuPet\ChateauDuPet.csproj", "{A7C9A9E1-1467-4A85-9836-FFA10579E0FC}"
 EndProject
 Global
@@ -49,12 +47,6 @@ Global
 		{B49FC4B0-0D3A-45B7-8FA9-54B02B2B278C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B49FC4B0-0D3A-45B7-8FA9-54B02B2B278C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B49FC4B0-0D3A-45B7-8FA9-54B02B2B278C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BF694393-93E6-4473-B3B7-D932B4B4F3FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF694393-93E6-4473-B3B7-D932B4B4F3FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF694393-93E6-4473-B3B7-D932B4B4F3FD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{BF694393-93E6-4473-B3B7-D932B4B4F3FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF694393-93E6-4473-B3B7-D932B4B4F3FD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BF694393-93E6-4473-B3B7-D932B4B4F3FD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{A7C9A9E1-1467-4A85-9836-FFA10579E0FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A7C9A9E1-1467-4A85-9836-FFA10579E0FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7C9A9E1-1467-4A85-9836-FFA10579E0FC}.Release|Any CPU.ActiveCfg = Release|Any CPU

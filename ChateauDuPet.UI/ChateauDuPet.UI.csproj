@@ -94,6 +94,7 @@
     <Content Include="bootstrapPag\bootstrap.min.css" />
     <Content Include="bootstrapPag\bootstrap.rtl.css" />
     <Content Include="bootstrapPag\bootstrap.rtl.min.css" />
+    <Content Include="CandidaturaPro.aspx" />
     <Content Include="Clientes.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -117,6 +118,7 @@
     <Content Include="css\Serviços.css" />
     <Content Include="css\Sobre .css" />
     <Content Include="css\w3.css" />
+    <Content Include="EditarPerfil.aspx" />
     <Content Include="Empresa\Vagas.aspx" />
     <Content Include="Imagens\-1-Recuperado.png" />
     <Content Include="Imagens\15.png" />
@@ -149,6 +151,7 @@
     <Content Include="Imagens\undraw_add_friends_re_3xte.svg" />
     <Content Include="Imagens\undraw_Agreement_re_d4dv.svg" />
     <Content Include="Imagens\undraw_city_life_gnpr.svg" />
+    <Content Include="Imagens\undraw_Connected_re_lmq2.svg" />
     <Content Include="Imagens\undraw_Co_workers_re_1i6i.png" />
     <Content Include="Imagens\undraw_Co_workers_re_1i6i.svg" />
     <Content Include="Imagens\undraw_Dog_walking_re_l61p %281%29.svg" />
@@ -165,10 +168,12 @@
     <Content Include="Imagens\undraw_Mobile_payments_re_7udl.svg" />
     <Content Include="Imagens\undraw_online_cv_qy9w.svg" />
     <Content Include="Imagens\undraw_People_search_re_5rre.svg" />
+    <Content Include="Imagens\undraw_Personal_email_re_4lx7.svg" />
     <Content Include="Imagens\undraw_Playful_cat_re_bxiu.svg" />
     <Content Include="Imagens\undraw_Push_notifications_re_t84m %281%29.svg" />
     <Content Include="Imagens\undraw_Push_notifications_re_t84m.svg" />
     <Content Include="Imagens\undraw_real_time_collaboration_c62i.svg" />
+    <Content Include="Imagens\undraw_Security_on_re_e491 %281%29.svg" />
     <Content Include="Imagens\undraw_Security_on_re_e491.svg" />
     <Content Include="Imagens\undraw_Sharing_articles_re_jnkp.svg" />
     <Content Include="Imagens\undraw_Social_growth_re_tjy9.svg" />
@@ -176,11 +181,14 @@
     <Content Include="Imagens\undraw_Swipe_profiles_re_tvqm %281%29.svg" />
     <Content Include="Imagens\undraw_Swipe_profiles_re_tvqm.svg" />
     <Content Include="Imagens\undraw_Walking_outside_re_56xo.svg" />
+    <Content Include="Imagens\undraw_Wall_post_re_y78d.svg" />
     <Content Include="Imagens\undraw_welcome_cats_thqn.svg" />
     <Content Include="Imagens\wavesOpacity.svg" />
     <Content Include="Index.aspx" />
     <Content Include="JavaScript.js" />
     <Content Include="jquery-3.6.0.min.js" />
+    <Content Include="ListEmpresa.aspx" />
+    <Content Include="ListProfissional.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="LogoChateau.png" />
     <Content Include="Empresa\CSS-Empresa.css" />
@@ -208,6 +216,9 @@
     <Content Include="MainEmpre.aspx" />
     <Content Include="MainPro.aspx" />
     <Content Include="Mensagens.aspx" />
+    <Content Include="Perfil-Empresa-Adm.aspx" />
+    <Content Include="Perfil-Profissional-adm.aspx" />
+    <Content Include="Perfil-User.aspx" />
     <Content Include="Profissional\Mensagens.aspx" />
     <Content Include="Perfil-Profissional.aspx" />
     <Content Include="Profissional\Profissional.css" />
@@ -332,6 +343,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CandidaturaPro.aspx.cs">
+      <DependentUpon>CandidaturaPro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CandidaturaPro.aspx.designer.cs">
+      <DependentUpon>CandidaturaPro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Clientes.aspx.cs">
       <DependentUpon>Clientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -374,6 +392,13 @@
     <Compile Include="DefultProfissional.Master.designer.cs">
       <DependentUpon>DefultProfissional.Master</DependentUpon>
     </Compile>
+    <Compile Include="EditarPerfil.aspx.cs">
+      <DependentUpon>EditarPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarPerfil.aspx.designer.cs">
+      <DependentUpon>EditarPerfil.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Empresa\Vagas.aspx.cs">
       <DependentUpon>Vagas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -387,6 +412,20 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListEmpresa.aspx.cs">
+      <DependentUpon>ListEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListEmpresa.aspx.designer.cs">
+      <DependentUpon>ListEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListProfissional.aspx.cs">
+      <DependentUpon>ListProfissional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListProfissional.aspx.designer.cs">
+      <DependentUpon>ListProfissional.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -443,6 +482,27 @@
     </Compile>
     <Compile Include="PagADM\ListarEmpresa.Master.designer.cs">
       <DependentUpon>ListarEmpresa.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil-Empresa-Adm.aspx.cs">
+      <DependentUpon>Perfil-Empresa-Adm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfil-Empresa-Adm.aspx.designer.cs">
+      <DependentUpon>Perfil-Empresa-Adm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil-Profissional-adm.aspx.cs">
+      <DependentUpon>Perfil-Profissional-adm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfil-Profissional-adm.aspx.designer.cs">
+      <DependentUpon>Perfil-Profissional-adm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil-User.aspx.cs">
+      <DependentUpon>Perfil-User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfil-User.aspx.designer.cs">
+      <DependentUpon>Perfil-User.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profissional\Mensagens.aspx.cs">
       <DependentUpon>Mensagens.aspx</DependentUpon>

@@ -24,6 +24,15 @@ namespace ChateauDuPet.UI
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
 
         /// <summary>
+        /// Controle listNav.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView listNav;
+
+        /// <summary>
         /// Controle form1.
         /// </summary>
         /// <remarks>

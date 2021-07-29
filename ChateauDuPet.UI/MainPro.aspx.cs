@@ -14,7 +14,14 @@ namespace ChateauDuPet.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-              
+
+            ProfissionalBLL SelecionaBLL = new ProfissionalBLL();
+            ProfissionalDTO SelecinaDTO = new ProfissionalDTO();
+            int idprofissional = Sessao.IdProfissional;
+            SelecinaDTO = SelecionaBLL.SelecionarPro(Sessao.IdProfissional);
+
+            txtNome.Text = SelecinaDTO.Nome;
+
 
 
             int idVagaM = Convert.ToInt32(Request.QueryString["id"]);
@@ -22,8 +29,8 @@ namespace ChateauDuPet.UI
 
             VagaDTO objDTO = new VagaDTO();
 
-            CardVaga.DataSource = objVagaBLL.FiltrarVaga();
-            CardVaga.DataBind();
+            rptVaga1.DataSource = objVagaBLL.FiltrarVaga();
+            rptVaga1.DataBind();
 
 
             //request no parametro da query string

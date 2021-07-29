@@ -32,10 +32,12 @@ namespace ChateauDuPet.UI
                 ProfissionalBLL objValida = new ProfissionalBLL();
 
                 objModelo = objValida.AutenticarProfissional(objEmailP, objSenhaP);
-
                 if (objModelo != null)
                 {
-                    
+
+                    Sessao.IdProfissional = objModelo.IdProfissional;
+                    Sessao.EmailUser = objModelo.Email;
+
 
                     Response.Redirect("MainPro.aspx");
 
@@ -52,7 +54,10 @@ namespace ChateauDuPet.UI
                 objModeloExp = objValidaExp.AutenticarEmpresa(objEmailE, objSenhaE);
                 if (objModeloExp != null)
                 {
-                    
+
+                      Sessao.IdEmpresa = objModeloExp.IdEmpresa;
+                    Sessao.EmailUser = objModeloExp.Email;
+
                     Response.Redirect("MainEmpre.aspx");
                    
                 }
@@ -66,7 +71,9 @@ namespace ChateauDuPet.UI
 
                 objModeloExp = objValidaExp.AutenticarAdministrativo(objEmailA, objSenhaA);
                 if (objModeloExp != null)
-                { 
+                {
+                    Sessao.UserAdm = objModeloExp.NomeAdmin;
+                    Sessao.EmailUser = objModeloExp.EmailAdm;
                     Response.Redirect("MainADM.aspx");
 
                    

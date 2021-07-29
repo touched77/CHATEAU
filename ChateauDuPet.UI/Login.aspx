@@ -40,16 +40,16 @@
              
 
             
-<main id="" class="form-signin container  " style="width:500px;"><br />
+<main id="" class="form-signin container  " tabindex="-1" style="width:500px;"><br />
      <asp:Image runat="server"   Cssclass="mb-4 " ImageUrl="/Imagens/pp.png"  width="200" height="200"/>
   <div class="form-floating">
    
-        <asp:Label runat="server" Text="Email" CssClass="lead " />
-        <asp:TextBox ID="txtEmail" runat="server"  CssClass="form-control "  MaxLength="100"  TextMode="Email" />
+        <asp:Label runat="server" Text="Email"  />
+        <asp:TextBox ID="txtEmail" runat="server"  CssClass="form-control " TabIndex="1"  MaxLength="100"  TextMode="Email" />
         <asp:RequiredFieldValidator ID="rfvEmail" ControlToValidate="txtEmail"   runat="server" ErrorMessage="Campo Email é obrigatório!" ForeColor="red" TabIndex="1"/>
         <br />
         <asp:Label runat="server" Text="Senha" />
-        <asp:TextBox ID="txtSenha" runat="server"  CssClass="form-control " MaxLength="15"  TabIndex="2" TextMode="Password"/>
+        <asp:TextBox ID="txtSenha" runat="server"  CssClass="form-control " MaxLength="2"  TabIndex="2" TextMode="Password"/>
         <asp:RequiredFieldValidator ID="RfvSenha" ControlToValidate="txtSenha"  runat="server" ErrorMessage="Campo Senha é obrigatório!" ForeColor="red"/>
         <br />
         <asp:DropDownList ID="DDLList" runat="server" CssClass="form-select  "  TabIndex="3">
@@ -61,8 +61,10 @@
         
       <br />
     <asp:RequiredFieldValidator runat="server" id="Validacao" Cssclass="Card" ControlToValidate="DDLList"/>
-    <asp:Button ID="btnEntrar" runat="server" TabIndex="3" Text="Entrar" CssClass="w-100 btn btn-lg btn-primary " OnClick="BtnEntrar_Click" />
-    <p class="mt-5 mb-3 text-muted">&copy; 2020 - 2021 @CHATEAUDUPET</p>    <a  runat="server" href="Cadasro.aspx"  class="mt-5 mb-3 link-danger" > Cadastre-se!</a>
+
+      <br /><br />
+    <asp:Button ID="btnEntrar" runat="server" TabIndex="3" Text="Entrar" CssClass=" btn btn-lg btn-primary " OnClick="BtnEntrar_Click" />
+    <p class="mt-5 mb-3 text-muted">&copy; 2020 - 2021 @CHATEAUDUPET</p>    <a  runat="server" href="Cadastro.aspx"  class="mt-5 mb-3 link-danger" > Cadastre-se!</a>
      </div>
          
         </main>

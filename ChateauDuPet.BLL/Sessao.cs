@@ -11,11 +11,11 @@ namespace ChateauDuPet.BLL
 {
     public static class Sessao
     {
-        private static string _NomeUsuario;
-        public static string NomeUsuario
+        private static string _UserAdm;
+        public static string UserAdm
         {
-            get { return Sessao._NomeUsuario; }
-            set { Sessao._NomeUsuario = value; }
+            get { return Sessao._UserAdm; }
+            set { Sessao._UserAdm = value; }
         }
 
         private static int _IdProfissional;

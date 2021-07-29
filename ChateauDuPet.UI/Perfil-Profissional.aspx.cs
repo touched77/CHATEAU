@@ -13,6 +13,31 @@ namespace ChateauDuPet.UI.MainProfissional
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            ProfissionalBLL SelecionaBLL = new ProfissionalBLL();
+            ProfissionalDTO SelecinaDTO = new ProfissionalDTO();
+
+            SelecinaDTO = SelecionaBLL.SelecionarPro(Sessao.IdProfissional);
+
+
+            txtNome.Text = SelecinaDTO.Nome;
+            lblEmail.Text = SelecinaDTO.Email;
+            lblTel.Text = SelecinaDTO.Telefone;
+            lblBiografiaPro.Text = SelecinaDTO.Biografia;
+            imagePro.ImageUrl = SelecinaDTO.UrlImage.Replace("~", ".");
+            lblFormacaoEscolar.Text = SelecinaDTO.FormacaoEscolar;
+            lblSexo.Text = SelecinaDTO.Sexo;
+            lblEndereco.Text = SelecinaDTO.Endereco;
+            lblNumero.Text = SelecinaDTO.NroEndereco;
+            lblComplemento.Text = SelecinaDTO.Complemento;
+            lblCep.Text = SelecinaDTO.CEP;
+            lblBairro.Text = SelecinaDTO.Bairro;
+            lblCidade.Text = SelecinaDTO.Cidade;
+            lblUF.Text = SelecinaDTO.UF;
+            lbluser.Text = SelecinaDTO.User;
+
+
+
             int idProfissional = Convert.ToInt32(Request.QueryString["id"]);
 
             ProfissionalBLL objBLL = new ProfissionalBLL();

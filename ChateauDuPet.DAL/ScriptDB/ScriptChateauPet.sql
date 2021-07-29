@@ -1,8 +1,9 @@
 ﻿  Create database ChateauDuPetASP
   SELECT NmRecrutador, DsEmail, SenhaEmpresa, FKTipoUser idempresa FROM Empresa WHERE DsEmail='medeiros0441@gmail.com' AND SenhaEmpresa=00
-  select * from Empresa
-use ChateauDuPetASP
-select * From TipoUser
+  select * from Empresa; 
+  delete from Vaga
+  drop  table Empresa 
+select * From Administrativo
 
                                   -- CRIANDO TABELAS E SEGUIDAMENTE SEUS DEVIDOS INSERTS --
 
@@ -208,7 +209,7 @@ CREATE TABLE [dbo].[Empresa]
      FOREIGN KEY (FKTipoUser) REFERENCES [TipoUser](IdTipoUser),
 );
 SELECT DsEmail, SenhaEmpresa, FKTipoUser FROM Empresa WHERE DsEmail=@v3 AND SenhaUsuario=@v5
-INSERT INTO [Empresa] VALUES ('Felipe','23669856899','Felipesalvadoresdobem@gmail.com','955668647','230316','03-09-2001','Masculino','Rua Dom Miguel','Comercial 32','08180000','Tatuapé','Sao Paulo','SP','14.844.253/0002-37','Salvadores do bem','Salvadores do bem','01-01-2001','01-01-2005','01-01-2005','~/Images/slvdbem.jpg',1);
+INSERT INTO [Empresa] VALUES ('Felipe','23669856899','Felipesalvadoresdobem@gmail.com','955668647','230316','03-09-2001','Masculino','Rua Dom Miguel','Comercial 32','08180000','Tatuapé','Sao Paulo','SP','14.844.253/0002-37','Salvadores do bem','Salvadores do bem','01-01-2001','01-01-2005','01-01-2005','~/Images/slvdbem.jpg',1,2);
 INSERT INTO [Empresa] VALUES ('Marcilia','55699866355','Marcilia22med@gmail.com','955668643','090321','01-09-2001','Feminino','Rua Augusta','Sem Complemento','15862158','Centro','Sao Paulo','SP','14.844.253/0002-20','Linha voadora Med','Linha voadora Med','02-03-2004','05-06-2007','05-06-2007','~/Images/mclsmed.jpg',1);
 INSERT INTO [Empresa] VALUES ('Kathleen','56812348835','Kathms13@gmail.com','955668655','010502','01-09-1995','Feminino','Rua Teles','Comercial 12','18069080','Tatuape','Sao Paulo','SP','14.844.253/0001-15','MedPet LTDA','MedPet LTDA','02-03-2005','05-06-2006','05-06-2006','~/Images/petkath.jpg',1);
 INSERT INTO [Empresa] VALUES ('Gabriely','33685458886','gabycac21@gmail.com','955668333','420420','08-03-2001','Feminino','Rua Terraseca','Sem Complemento','15862158','Centro','Sao Paulo','SP','14.844.253/0001-50','aoInves Raio X Med','aoInves Raio X Med','01-03-1999','05-06-2010','05-06-2011','~/Images/gbsxxx.jpg',1);

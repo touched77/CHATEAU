@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;  
+using System.Windows.Forms;
+using ChateauDuPet.BLL;
+using ChateauDuPet.DTO;
 
 namespace ChateauBanco.UI
 {
@@ -43,10 +45,10 @@ namespace ChateauBanco.UI
 
             // chamando metodos 
             codigo = Convert.ToInt32(txtId.Text);
-            MainProfissional objPesquisa = new CadastroProfDTO(); // metodo
-            UsuarioBLL objPesqBLL = new UsuarioBLL(); //metodo
-            objPesquisa = objPesquisa.SelecionarUser(codigo);
-            if (objPesquisa.NmProfissional != null)
+            ProfissionalDTO objPesquisa = new ProfissionalDTO(); // metodo
+            ProfissionalBLL objPesqBLL = new ProfissionalBLL(); //metodo
+            objPesquisa = objPesqBLL.SelecionarPro (codigo);
+            if (objPesquisa.Nome != null)
             {
                 //habilitando componentes 
 

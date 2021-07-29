@@ -22,7 +22,7 @@ namespace ChateauDuPet.UI
             try
             {
 
-                if (cbTermos.Checked == cbPolitica.Checked)
+                if (cbTermos.Checked && cbPolitica.Checked)
                 {
 
                     if (DLLTipoUSer.SelectedItem.ToString() == "Profissional")
@@ -78,7 +78,7 @@ namespace ChateauDuPet.UI
                 }
                 else
                 {
-                    lblMensagem.Text = "Selecione a os campos acima!";
+                    lblMensagem.Text = "Selecione os campos acima!";
 
                 }
             }

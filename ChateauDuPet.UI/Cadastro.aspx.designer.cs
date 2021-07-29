@@ -123,6 +123,15 @@ namespace ChateauDuPet.UI
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTelefone;
 
         /// <summary>
+        /// Controle DDLSexo.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DDLSexo;
+
+        /// <summary>
         /// Controle txtEmail.
         /// </summary>
         /// <remarks>
@@ -132,13 +141,13 @@ namespace ChateauDuPet.UI
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// Controle RequiredFieldValidator1.
+        /// Controle RequiredFieldValidator5.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
 
         /// <summary>
         /// Controle gevEmailValido.
@@ -150,15 +159,6 @@ namespace ChateauDuPet.UI
         protected global::System.Web.UI.WebControls.RegularExpressionValidator gevEmailValido;
 
         /// <summary>
-        /// Controle DDLSexo.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DDLSexo;
-
-        /// <summary>
         /// Controle senha.
         /// </summary>
         /// <remarks>
@@ -168,6 +168,15 @@ namespace ChateauDuPet.UI
         protected global::System.Web.UI.WebControls.TextBox senha;
 
         /// <summary>
+        /// Controle RequiredFieldValidator6.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
+
+        /// <summary>
         /// Controle senhaC.
         /// </summary>
         /// <remarks>
@@ -175,6 +184,15 @@ namespace ChateauDuPet.UI
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox senhaC;
+
+        /// <summary>
+        /// Controle RequiredFieldValidator7.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
 
         /// <summary>
         /// Controle cbPolitica.

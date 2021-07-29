@@ -9,6 +9,7 @@ namespace ChateauDuPet.DTO
    public class AdministrativoDTO
     {
         public int IdAdministrativo { get; set; }
+        public string EmailAdm { get; set; }
         public string NomeAdmin { get; set; }
         public string SenhaAdmin { get; set; }
         public string UrlImage { get; set; }

@@ -11,17 +11,44 @@ namespace ChateauDuPet.UI
 {
 
 
-    public partial class MainPro
+    public partial class Perfil_User
     {
 
         /// <summary>
-        /// Controle rptVaga1.
+        /// Controle DataAniversario.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptVaga1;
+        protected global::System.Web.UI.WebControls.Label DataAniversario;
+
+        /// <summary>
+        /// Controle lblFormacaoEscolar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFormacaoEscolar;
+
+        /// <summary>
+        /// Controle lblSexo.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSexo;
+
+        /// <summary>
+        /// Controle imagePro.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imagePro;
 
         /// <summary>
         /// Controle txtNome.
@@ -33,21 +60,21 @@ namespace ChateauDuPet.UI
         protected global::System.Web.UI.WebControls.Label txtNome;
 
         /// <summary>
-        /// Controle CardVaga.
+        /// Controle lbluser.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater CardVaga;
+        protected global::System.Web.UI.WebControls.Label lbluser;
 
         /// <summary>
-        /// Controle rptPro.
+        /// Controle lblBiografiaPro.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptPro;
+        protected global::System.Web.UI.WebControls.Label lblBiografiaPro;
     }
 }

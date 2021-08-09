@@ -128,7 +128,7 @@ namespace ChateauDuPet.DAL
             try
             {
                 Conectar();
-                cmd = new SqlCommand("SELECT * FROM Certificado  WHERE IdProfissional = @v1", conn);
+                cmd = new SqlCommand("SELECT * FROM Certificado  WHERE FKProfissional = @v1", conn);
                 cmd.Parameters.AddWithValue("@v1", IdProfissional);
                 dr = cmd.ExecuteReader();
 

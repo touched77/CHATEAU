@@ -15,21 +15,21 @@ namespace ChateauDuPet.UI
     {
 
         /// <summary>
-        /// Controle pro.
+        /// Controle Image2.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image pro;
+        protected global::System.Web.UI.WebControls.Image Image2;
 
         /// <summary>
-        /// Controle Image1.
+        /// Controle Image3.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.Image Image3;
     }
 }

@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Defult.Master" AutoEventWireup="true" CodeBehind="Cadastro.aspx.cs" Inherits="ChateauDuPet.UI.Cadastro" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+  
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
     
@@ -55,7 +56,7 @@
             
   <div class="col-md-2">
                         <label class="form-label">CPF</label>
-                        <asp:TextBox runat="server" CssClass=" form-control Cpf" ID="txtCpf" MaxLength="11" TabIndex="5"  />
+                        <asp:TextBox runat="server" CssClass=" form-control  cpf" ID="txtCpf" MaxLength="11" TabIndex="5"   />
                         <asp:RequiredFieldValidator ID="rfvCpf" runat="server" ControlToValidate="txtCpf"  ErrorMessage="Campo CPF é obrigatório" ForeColor="red" />
                                        </div>
   <div class="col-md-2">
@@ -90,18 +91,22 @@
             <div class="col-md-3">
 
                         <label id="lblSenha" class="form-label">Senha *</label>
-                        <asp:TextBox runat="server" Class="form-control senha" ID="senha" TabIndex="9" TextMode="Password" />
-                                               <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="Senha"  ErrorMessage="Campo Senha é obrigatório" ForeColor="red" />
-
-                        
+                        <asp:TextBox runat="server"  CssClass="form-control senha" ID="senha"       TabIndex="9"  TextMode="Password" />
+                                         <span     id="SenhaRetorno"  ></span>    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="senha"  ErrorMessage="Campo Senha é obrigatório" ForeColor="red" />
+  
                             </div> 
             <div class="col-md-3">  
                         <label id="lblSenhaa" class="form-label">Confirmar Senha *</label>
-                        <asp:TextBox runat="server"  CssClass="form-control senhaC"  ID="senhaC" TabIndex="10" TextMode="Password" />
+                        <asp:TextBox runat="server"   CssClass="form-control senhaC"  ID="senhaC" TabIndex="10" TextMode="Password" />
                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="senhaC"  ErrorMessage="Campo Senha é obrigatório" ForeColor="red" />
 
                     </div>  
-            
+             <div class="col-md-4 ms-auto">
+
+   <asp:Label runat="server" ID="lblMensagem"   CssClass="alert alert-danger col-md-4" Visible="False"/> 
+       <asp:Label runat="server" ID="lblMensagemCadastrado"  CssClass="alert alert-success col-md-4" Visible="False"/>
+
+       </div></div>
   <div class="col-12">
                         <div class="form-check">
                             <asp:CheckBox runat="server" ID="cbPolitica" TabIndex="11" />
@@ -111,11 +116,10 @@
                             <asp:Label runat="server" CssClass="form-check-label" ID="txtTermos"><a class="link" data-bs-target="#modalTermos" data-bs-toggle="modal" > Aceito</a>  os termos de uso. </asp:Label>
                             <br /> 
                         </div>
-       </div>
+      
   <div class="col-12">
       
       <div class="col-md-4 ms-auto">
-                            <asp:Label runat="server" ID="lblMensagem" ForeColor="Red" />
                             <br />
                             <br />
                             <asp:Button runat="server" ID="BtnCancelar" CssClass="btn" Width="100px" OnClick="BtnCancelar_Click"  TabIndex="15"  Text="Cancelar" />
@@ -123,5 +127,4 @@
             </div></div>
             </div>
     </main>
-
 </asp:Content>

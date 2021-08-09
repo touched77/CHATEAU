@@ -46,8 +46,8 @@
                 <div class="slide-items">
                     <div class="Roleta">
                     </div>
-                    <img src="./Imagens/undraw_Social_networking_re_i1ex.png" alt="Img 2">
-                    <img src="./Imagens/undraw_Social2_networking_re_i1ex.png" alt="Img 3">
+                    <img src="Imagens/1624082007356.jpg" alt="Img 2">
+                    <img src="Imagens/1624081878901.jpg" alt="Img 3">
                     <img src="/Imagens/" alt="Img 4">
                 </div>
                 <nav class="slide-nav">
@@ -93,7 +93,7 @@
         <br />
         <asp:Label runat="server" Text="Mensagem" AssociatedControlID="txtMensagem" CssClass="text-light lead" />
         <asp:TextBox ID="txtMensagem" CssClass="form-control" runat="server" Width="90%" Height="120px" TextMode="MultiLine" />
-        <asp:RequiredFieldValidator ID="rfvMensagem" runat="server" ControlToValidate="txtMensagem" ErrorMessage="Campo Mensagem é obrigatório" ForeColor="Yel" />
+        <asp:RequiredFieldValidator ID="rfvMensagem" runat="server" ControlToValidate="txtMensagem" ErrorMessage="Campo Mensagem é obrigatório" ForeColor="Yellow" />
 
         <br /><br />
         <asp:Button ID="BtnEnviar" runat="server" Text="Enviar" CssClass="Btn btn-secondary" OnClick="BtnEnviar_Click" />

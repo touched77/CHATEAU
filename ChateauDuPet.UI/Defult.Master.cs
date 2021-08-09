@@ -14,6 +14,13 @@ namespace ChateauDuPet.UI
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (Sessao.EmailUser == null)
+            {
+                Sessao.IdAdministrativo = 0;
+                Sessao.IdProfissional = 0;
+                Sessao.IdEmpresa = 0;
+                Sessao.EmailUser = null;
+            }
 
         }
           

@@ -1,10 +1,11 @@
-﻿using ChateauDuPet.DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ChateauDuPet.DTO;
+
 
 namespace ChateauDuPet.DAL
 {
@@ -44,6 +45,8 @@ namespace ChateauDuPet.DAL
             }
         }
 
+
+
         //Autenticar
         public EmpresaDTO Autenticar(string objEmailE, string objSenhaE)
         {
@@ -62,6 +65,85 @@ namespace ChateauDuPet.DAL
                     obj.Email = dr["DsEmail"].ToString();
                     obj.SenhaEmpresa = dr["SenhaEmpresa"].ToString();
                     obj.IdEmpresa = Convert.ToInt32(dr["idEmpresa"]);
+                }
+                return obj;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao Autenticar Empresa!" + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+
+        public EmpresaDTO AutenticaEmail(string objEmail)
+        {
+            try
+            {
+                Conectar();
+                cmd = new SqlCommand("SELECT DsEmail,  FROM Empresa WHERE DsEmail=@v1", conn);
+                cmd.Parameters.AddWithValue("@v1", objEmail);
+                dr = cmd.ExecuteReader();
+
+                EmpresaDTO obj = null;
+                if (dr.Read())
+                {
+                    obj = new EmpresaDTO();
+                    obj.Email = dr["DsEmail"].ToString();
+                }
+                return obj;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao Autenticar Empresa!" + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+        public EmpresaDTO AutenticaUser(string objUser)
+        {
+            try
+            {
+                Conectar();
+                cmd = new SqlCommand("SELECT dsUser FROM Empresa WHERE DsUser=@v1", conn);
+                cmd.Parameters.AddWithValue("@v1", objUser);
+                dr = cmd.ExecuteReader();
+
+                EmpresaDTO obj = null;
+                if (dr.Read())
+                {
+                    obj = new EmpresaDTO();
+                    obj.User =  dr["DsUser"].ToString();
+                }
+                return obj;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao Autenticar Empresa!" + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+        public EmpresaDTO AutenticaCPF(string objCPF)
+        {
+            try
+            {
+                Conectar();
+                cmd = new SqlCommand("SELECT NroCPF FROM Empresa WHERE NroCPF=@v1", conn);
+                cmd.Parameters.AddWithValue("@v1", objCPF);
+                dr = cmd.ExecuteReader();
+
+                EmpresaDTO obj = null;
+                if (dr.Read())
+                {
+                    obj = new EmpresaDTO();
+                    obj.CPF = dr["NroCPF"].ToString();
                 }
                 return obj;
             }
@@ -98,7 +180,7 @@ namespace ChateauDuPet.DAL
                     obj.Nascimento = dr["DtNascimento"].ToString();
                     obj.Sexo = dr["DsSexo"].ToString();
                     obj.Endereco = dr["DsEndereco"].ToString();
-                    obj.Complemento = dr["DsComplemento"].ToString();
+                    obj.Complemento = dr["DsComp lemento"].ToString();
                     obj.CEP = dr["DsCep"].ToString();
                     obj.Bairro = dr["DsBairro"].ToString();
                     obj.Cidade = dr["DsCidade"].ToString();

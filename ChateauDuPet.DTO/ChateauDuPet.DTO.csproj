@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AdministrativoDTO.cs" />
     <Compile Include="AutenticaDTO.cs" />
+    <Compile Include="CandidatosDTO.cs" />
     <Compile Include="CertificadoDTO.cs" />
     <Compile Include="EmailDTO.cs" />
     <Compile Include="EmpresaDTO.cs" />

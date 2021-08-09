@@ -8,8 +8,11 @@
        
         
         <div class="row mb-2">
-            <div class="col-md-6"> 
-                <asp:Image runat="server" ID="pro" ImageUrl="imagens/undraw_mobile_login_ikmv.svg" class="" Width="200" Height="200"></asp:Image>
+             <div class="container">
+  <div class="row g-2">
+    <div class="col-2 ">
+      <div class="p-2 "> 
+          <asp:Image runat="server" ID="Image2" ImageUrl="imagens/undraw_mobile_login_ikmv.svg"  class="" Width="200" Height="200"/>
                 <h2>Profissional</h2>
 
                 <ul class=" list-unstyled ">
@@ -43,13 +46,11 @@
 
                 </ul>
 
-                <button type="button" class="btn   btn-outline-danger">Plano Grátuito</button>
-            </div>
-            <!-- /.col-lg-4 -->
-            
-  
-            <div class="col-md-6">
-                <asp:Image runat="server" ID="Image1" ImageUrl="~/Imagens/undraw_People_search_re_5rre.svg" class="bd-placeholder-img   bi bi-coin" Width="200" Height="200"></asp:Image>
+                <button type="button" class="btn   btn-outline-danger">Plano Grátuito</button></div>
+    </div>
+    <div class="col-2">
+      <div class="p-2 ms-auto"> 
+          <asp:Image runat="server" ID="Image3" ImageUrl="~/Imagens/undraw_People_search_re_5rre.svg" class="bd-placeholder-img   bi bi-coin" Width="200" Height="200"></asp:Image>
 
                 <h2>Empresas</h2>
                 <ul class=" list-unstyled ">
@@ -81,9 +82,11 @@
 
                     </li>
                 </ul>
-                <button type="button" class="btn  btn-outline-success">Plano Grátuito</button>
-
-            </div>
+                <button type="button" class="btn  btn-outline-danger">Plano Grátuito</button>
+</div>
+    </div> 
+  </div>
+          
             <!-- /.col-lg-4 -->
         </div>
             <hr class="featurette-divider">
@@ -91,35 +94,36 @@
         <div class="row">
       <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> 
          <img src="Imagens/undraw_Security_on_re_e491 (1).svg" width="280" height="150" />
-            <h3 class="h5 mb-1">Headers</h3>
+            <h3 class="h5 mb-1">Privacidade</h3>
        
-        <p class="text-muted">Display your branding, navigation, search, and more with these header components</p>
+        <p class="text-muted">com a  intenção de prever perfil f</p>
       </div>
     
   
       <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
       <img src="Imagens/undraw_Wall_post_re_y78d.svg"  width="280" height="150" />
-          <h3 class="h5 mb-1">Conecção</h3>
+          <h3 class="h5 mb-1">Perfil</h3>
        
-        <p class="text-muted">Set the stage on your homepage with heroes that feature clear calls to action.</p>
+        <p class="text-muted">Personalize su perfil, Empresas etarao sempre  visalizando seu Curriculo mantenha sempre atulizado para obter mais retorno.</p>
       </div>
     
   
       <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> 
          <img src="Imagens/undraw_Connected_re_lmq2.svg"  width="280" height="150" />
-            <h3 class="h5 mb-1">Features</h3>
+            <h3 class="h5 mb-1">Comunidade</h3>
    
-        <p class="text-muted">Explain the features, benefits, or other details in your marketing content.</p>
+        <p class="text-muted">Conecte-se, são várias empresas que compartilham vagas para profissionais e estudantes, compartilhe suas experiência, Cetificados. </p>
       </div>
     
   
       <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
          <img src="Imagens/undraw_Personal_email_re_4lx7.svg"  width="280" height="150" />
 
-          <h3 class="h5 mb-1">Sidebars</h3>
+          <h3 class="h5 mb-1"></h3>
        
         <p class="text-muted"></p>
       </div>
     </div> 
+    </div>
     </div>
 </asp:Content>

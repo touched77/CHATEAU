@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AdministrativoDAL.cs" />
     <Compile Include="AutenticaDAL.cs" />
+    <Compile Include="CandidatosDAL.cs" />
     <Compile Include="CertificadoDAL.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="EmpresaDAL.cs" />

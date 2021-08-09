@@ -15,66 +15,39 @@ namespace ChateauDuPet.UI
     {
 
         /// <summary>
-        /// Controle DataAniversario.
+        /// Controle rptPerfil.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label DataAniversario;
+        protected global::System.Web.UI.WebControls.Repeater rptPerfil;
 
         /// <summary>
-        /// Controle lblFormacaoEscolar.
+        /// Controle rptEndereco.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFormacaoEscolar;
+        protected global::System.Web.UI.WebControls.Repeater rptEndereco;
 
         /// <summary>
-        /// Controle lblSexo.
+        /// Controle rptCurso.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSexo;
+        protected global::System.Web.UI.WebControls.Repeater rptCurso;
 
         /// <summary>
-        /// Controle imagePro.
+        /// Controle rptExperiencia.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imagePro;
-
-        /// <summary>
-        /// Controle txtNome.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtNome;
-
-        /// <summary>
-        /// Controle lbluser.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbluser;
-
-        /// <summary>
-        /// Controle lblBiografiaPro.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBiografiaPro;
+        protected global::System.Web.UI.WebControls.Repeater rptExperiencia;
     }
 }

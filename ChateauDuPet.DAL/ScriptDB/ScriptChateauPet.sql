@@ -1,11 +1,19 @@
 ﻿  Create database ChateauDuPetASP
   SELECT NmRecrutador, DsEmail, SenhaEmpresa, FKTipoUser idempresa FROM Empresa WHERE DsEmail='medeiros0441@gmail.com' AND SenhaEmpresa=00
-  select * from Empresa; 
-  delete from Vaga
-  drop  table Empresa 
-select * From Administrativo
 
+
+  SELECT * FROM Profissional WHERE DsEmail='medeiros0441@gmail.com'
+  SELECT * FROM Profissional WHERE DsEmail='medeiros0441@gmail.com'
+  select * from Administrativo ; 
+  select * from  Experiencia; 
+  select * from  Candidatos; 
+  delete Experiencia where FKProfissional=5  
+  delete profissional where DsEmail='medeiros0441@gmail.com' 
+  drop table profissional 
+  select  * From profissional where dsemail='medeiros0442@gmail.com'
+SELECT DsEmail  FROM Profissional WHERE DsEmail=  'medeiros0441@gmail.com'  SELECT  DsUser FROM Profissional WHERE    DsUser='medeiros0441'  SELECT NroCPF FROM Profissional WHERE   NroCPF='00000000000'  
                                   -- CRIANDO TABELAS E SEGUIDAMENTE SEUS DEVIDOS INSERTS --
+SELECT * from Profissional where DsEmail ='medeiros0441@gmail.com'and  DsUser='medeiros0441' and NroCPF='00000000000' 
 
 CREATE TABLE [dbo].[TipoUser]
 (
@@ -146,9 +154,8 @@ CREATE TABLE [dbo].[Experiencia]
     
 );
 
-INSERT INTO [Experiencia] VALUES ('Tosador de cachorros','Salvores do bem','CLT','São Paulo','2010-01-15','2020-01-15',3);
-INSERT INTO [Experiencia] VALUES ('Medico de avês','Linha voadora Med','CLT','São Paulo','2015-01-15','2020-01-15',4);
-INSERT INTO [Experiencia] VALUES ('Auxiliar veterinario ','MedPet LTDA','CLT','São Paulo','2011-01-15','2021-01-15',5);
+INSERT INTO [Experiencia] VALUES ('Tosador de cachorros','Salvores do bem','CLT','São Paulo','2010-01-15','2020-01-15',24);
+INSERT INTO [Experiencia] VALUES ('Auxiliar veterinario ','MedPet LTDA','CLT','São Paulo','2011-01-15','2021-01-15',24);
 INSERT INTO [Experiencia] VALUES ('Tecnico de Raio X','aoInves Raio X Med','CLT','São Paulo','2015-01-15','2017-01-15',6);
 
 -- Consulte Experinecia para ver a Experiencia de cada Profissional --
@@ -171,8 +178,8 @@ CREATE TABLE [dbo].[Certificado]
     FOREIGN KEY (FKProfissional) REFERENCES [Profissional](IdProfissional),
 );
 
- INSERT INTO [Certificado] VALUES ('Medico Veterinario','SENAC','2017-01-01','2020-01-01','A formação conta com atividades práticas e disciplinas teóricas na área da Saúde Pequenas cirurgias, consultas e exames são alguns dos exemplos',3);
- INSERT INTO [Certificado] VALUES ('Institutos de pesquisa','UNIP','2015-01-01','2019-01-01','A formação conta com atividades práticas e disciplinas teóricas na área da pesquisa',4);
+ INSERT INTO [Certificado] VALUES ('Medico Veterinario','SENAC','2017-01-01','2020-01-01','A formação conta com atividades práticas e disciplinas teóricas na área da Saúde Pequenas cirurgias, consultas e exames são alguns dos exemplos',24);
+ INSERT INTO [Certificado] VALUES ('Institutos de pesquisa','UNIP','2015-01-01','2019-01-01','A formação conta com atividades práticas e disciplinas teóricas na área da pesquisa',24);
  INSERT INTO [Certificado] VALUES ('Cirurgiao de peixes','Sumare','2011-01-01','2018-01-01','A formação conta com atividades na área cirúrgica o médico veterinário trabalha especificamente com operações em diversos tipos de animais como o peixe',5);
  INSERT INTO [Certificado] VALUES ('Cirurgiao de carnívoros','Anhanguera','2010-01-01','2015-01-01','A formação conta com atividades na área cirúrgica o médico veterinário trabalha especificamente com operações em diversos tipos de animais',6);
 
@@ -219,7 +226,7 @@ INSERT INTO [Empresa] VALUES ('Gabriely','33685458886','gabycac21@gmail.com','95
 Select * FROM Empresa
 
 -----------------------------------------------------------------------
-drop table vaga
+drop table Empresa
 
 CREATE TABLE [dbo].[Vaga]
 (
@@ -237,14 +244,30 @@ CREATE TABLE [dbo].[Vaga]
        
 );
 
- INSERT INTO [Vaga] VALUES ('Médico Veterinário','No minimo 1 ano','CLT','responsável por cuidar e tratar bichos tanto de pequeno quanto de grande porte, podendo atender animais domésticos, como gato e cachorro, e também os silvestres','Indiferente','1 Mês','06-02-2021',1,2);
- INSERT INTO [Vaga] VALUES ('Zootécnico','No minimo 1 ano','CLT','deve estar apto para planejar e coordenar a criação de bovinos, suínos, ovinos e aves','Indiferente','1 Mês','06-02-2021',3);
+ INSERT into Vaga   (NmVaga  ,
+    DsExperiencia,
+    DsTipoRegistro,
+    DsDescricao, 
+    DsSexo, 
+    Validade, 
+    DataPublicacao,
+    FKEmpresa)
+
+ VALUES ('Médico Veterinário','No minimo 1 ano','CLT','responsável por cuidar e tratar bichos tanto de pequeno quanto de grande porte, podendo atender animais domésticos,como gato e cachorro, e também os silvestres','Indiferente','1 Mês','06-02-2021',2);
+
+
+ INSERT INTO [Vaga] VALUES ('Zootécnico','No minimo 1 ano','CLT','deve estar apto para planejar e coordenar a criação de bovinos, suínos, ovinos e aves','Indiferente','1 Mês','06-02-2021',2,2);
  INSERT INTO [Vaga] VALUES ('Ecologista ','No minimo 2 ano','CLT','deve prezar pela manutenção dos ecossistemas e das cadeias alimentares','Indiferente','1 Mês','06-02-2021',4);
  INSERT INTO [Vaga] VALUES ('Oceanógrafo','No minimo 2 ano','CLT','preparados para lidar com as diferentes espécies do mar','Indiferente','1 Mês','06-02-2021',5);
 
 -- Consulte Vaga para ver as Vagas Publicadas --
+select * from Vaga  where FKCandidatos=2
+Select Profissional, Candidatos  where idprofissional =2
+  SELECT * FROM Profissional join Candidatos  on IdProfissional=IdProfissional where  FKVaga=2
 
-SELECT * FROM Vaga join Empresa on idEmpresa=NmRecrutador where idempresa=1
+SELECT * FROM Candidatos join Profissional on IdProfissional=IdProfissional where idempresa=2
+SELECT * FROM Vaga join Profissional on IdProfissional=FKCandidatos where IdProfissional=24
+SELECT * FROM Vaga   where FKEmpresa=2
  
 ------------------------------------------------
  drop table Candidatos
@@ -259,9 +282,14 @@ CREATE TABLE [dbo].[Candidatos]
    foreign key (idProfissional) references  [Profissional](IdProfissional),
     FOREIGN KEY (FKvaga) REFERENCES Vaga (idvaga)
 );
+ select * from Empresa
+ select * from Vaga
  select * from candidatos 
-insert  into Candidatos (idprofissional,DsData,IdVaga,idEmpresa) values (6,28/08/2000,1,2);
-insert  into Candidatos (idprofissional,DsData,IdVaga,idEmpresa) values (1,28/08/2000,1,1);
+insert  into Candidatos (idprofissional,DsData,FKVaga,idEmpresa) values (24,28/08/2000,1,2);
+insert  into Candidatos (idprofissional,DsData,IdVaga,idEmpresa) values (24,28/08/2000,1,2);
+Select * from Vaga where FKCandidatos =2
+select * from Candidatos  join Profissional on IdProfissional=IdProfissional where IdProfissional=24
+Select * from Candidatos where idProfissional =24
 select * from Candidatos
 
  select * from  Candidatos  join  profissional on IdProfissional=NmProfissional

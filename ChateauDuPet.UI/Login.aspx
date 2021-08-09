@@ -40,7 +40,7 @@
              
 
             
-<main id="" class="form-signin container  " tabindex="-1" style="width:500px;"><br />
+<main id="" class=" container  " tabindex="-1" style="width:500px;"><br />
      <asp:Image runat="server"   Cssclass="mb-4 " ImageUrl="/Imagens/pp.png"  width="200" height="200"/>
   <div class="form-floating">
    
@@ -49,7 +49,7 @@
         <asp:RequiredFieldValidator ID="rfvEmail" ControlToValidate="txtEmail"   runat="server" ErrorMessage="Campo Email é obrigatório!" ForeColor="red" TabIndex="1"/>
         <br />
         <asp:Label runat="server" Text="Senha" />
-        <asp:TextBox ID="txtSenha" runat="server"  CssClass="form-control " MaxLength="2"  TabIndex="2" TextMode="Password"/>
+        <asp:TextBox ID="txtSenha" runat="server"   CssClass="form-control " MaxLength="15" TabIndex="2" TextMode="Password"/>
         <asp:RequiredFieldValidator ID="RfvSenha" ControlToValidate="txtSenha"  runat="server" ErrorMessage="Campo Senha é obrigatório!" ForeColor="red"/>
         <br />
         <asp:DropDownList ID="DDLList" runat="server" CssClass="form-select  "  TabIndex="3">

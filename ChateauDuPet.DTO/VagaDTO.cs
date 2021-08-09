@@ -17,5 +17,6 @@ namespace ChateauDuPet.DTO
         public string Validade { get; set; }
         public DateTime DataPublicacao { get; set; }
         public int FKEmpresa { get; set; }
+        public int FKCandidatos { get; set; }
     }
 }

@@ -1,10 +1,11 @@
-﻿using ChateauDuPet.DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ChateauDuPet.DTO;
+
 
 namespace ChateauDuPet.DAL
 {
@@ -54,7 +55,8 @@ namespace ChateauDuPet.DAL
                 while (dr.Read())
                 {
                     VagaDTO obj = new VagaDTO();
-                    obj.Vaga = Convert.ToString(dr["IdVaga"]);
+                    obj.IdVaga = Convert.ToInt32(dr["IdVaga"]);
+                    obj.Vaga = Convert.ToString(dr["NmVaga"]);
                     obj.Experiencia = dr["DsExperiencia"].ToString();
                     obj.Registro = dr["DsTipoRegistro"].ToString();
                     obj.Descricao = dr["DsDescricao"].ToString();
@@ -62,6 +64,7 @@ namespace ChateauDuPet.DAL
                     obj.Validade= dr["Validade"].ToString();
                     obj.DataPublicacao = Convert.ToDateTime(dr["DataPublicacao"]);
                     obj.FKEmpresa = Convert.ToInt32(dr["FKEmpresa"]);
+                    obj.FKCandidatos = Convert.ToInt32(dr["FKCandidatos"]);
                     
                     Lista.Add(obj);
                 }
@@ -83,7 +86,7 @@ namespace ChateauDuPet.DAL
             try
             {
                 Conectar();
-                cmd = new SqlCommand("SELECT * FROM Vaga WHERE IdVaga = @v9", conn);
+                cmd = new SqlCommand("SELECT * FROM Vaga WHERE IdV", conn);
                 cmd.Parameters.AddWithValue("@v9", IdVaga);
                 dr = cmd.ExecuteReader();
 

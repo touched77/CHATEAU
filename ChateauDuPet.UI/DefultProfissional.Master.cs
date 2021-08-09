@@ -10,29 +10,46 @@ namespace ChateauDuPet.UI
 {
     public partial class DefultProfissional : System.Web.UI.MasterPage
     {
+        int idProfissional = Sessao.IdProfissional;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            if (Sessao.EmailUser == null)
+            if (Sessao.IdProfissional != 0)
             {
-                Response.Redirect("~/Login.aspx");
+                int idProfissional = Sessao.IdProfissional;
+                string EmailProfissional = Sessao.EmailUser;
 
+                if (!IsPostBack)
+                {
+                    MenuPro();
+                }
             }
 
-            int IDPro = Convert.ToInt32(Sessao.IdProfissional);
+             
 
-            int idProfissional = Convert.ToInt32(Request.QueryString["id"]);
+        }
+        public void MenuPro()
+        { 
+            ProfissionalBLL SelecionaBLL = new ProfissionalBLL();
+            ProfissionalDTO SelecinaDTO = new ProfissionalDTO();
 
-            ProfissionalBLL objProPefil = new ProfissionalBLL();
-
-            ProfissionalDTO profissionalDTO = new ProfissionalDTO();
-            listNav.DataSource = objProPefil.FiltarP();
-            listNav.DataBind();
-
+            rptMenu.DataSource = SelecionaBLL.FiltrarID(idProfissional);
+            rptMenu.DataBind(); 
         }
 
         protected void btnVermais_Click(object sender, EventArgs e)
         {
+
+        }
+
+        protected void Sair_Click(object sender, EventArgs e)
+        {
+            if (Sessao.IdProfissional > 0 )
+            {
+                Sessao.IdProfissional = 0;
+                Sessao.EmailUser = null;
+                Response.Redirect("~/Index.aspx");
+            }
 
         }
     }

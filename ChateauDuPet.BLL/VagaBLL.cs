@@ -1,10 +1,11 @@
-﻿using ChateauDuPet.DAL;
-using ChateauDuPet.DTO;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ChateauDuPet.DAL;
+using ChateauDuPet.DTO;
 
 namespace ChateauDuPet.BLL
 {

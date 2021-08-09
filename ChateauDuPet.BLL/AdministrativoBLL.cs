@@ -47,5 +47,11 @@ namespace ChateauDuPet.BLL
         {
             return objDAL.Filtrar();
         }
+
+        //Filtrar
+        public List<AdministrativoDTO> FiltrarAdministrativoID(int idOperador)
+        {
+            return objDAL.FiltrarID(idOperador);
+        }
     }
 }

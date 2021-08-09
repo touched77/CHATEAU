@@ -43,13 +43,14 @@
   <ItemGroup>
     <Compile Include="AdministrativoBLL.cs" />
     <Compile Include="AutenticaBLL.cs" />
+    <Compile Include="CandidatosBLL.cs" />
     <Compile Include="CertificadoBLL.cs" />
     <Compile Include="EmailBLL.cs" />
     <Compile Include="EmpresaBLL.cs" />
     <Compile Include="ExperienciaBLL.cs" />
     <Compile Include="ProfissionalBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sessao.cs" />
+    <Compile Include="Session.cs" />
     <Compile Include="TipoUserBLL.cs" />
     <Compile Include="VagaBLL.cs" />
   </ItemGroup>

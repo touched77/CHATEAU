@@ -178,5 +178,39 @@ namespace ChateauDuPet.DAL
                 Desconectar();
             }
         }
+        //Filtrar
+        public List<AdministrativoDTO> FiltrarID(int idOperador)
+        {
+            try
+            {
+                Conectar();
+                cmd = new SqlCommand("SELECT * FROM Administrativo where IdAdministrativo=@v1", conn);
+                cmd.Parameters.AddWithValue("@v1", idOperador);
+
+                dr = cmd.ExecuteReader();
+                List<AdministrativoDTO> Lista = new List<AdministrativoDTO>();
+                while (dr.Read())
+                {
+                    AdministrativoDTO obj = new AdministrativoDTO();
+                    obj.IdAdministrativo = Convert.ToInt32(dr["IdVaga"]);
+                    obj.NomeAdmin = dr["NmVaga"].ToString();
+                    obj.SenhaAdmin = dr["DsExperiencia"].ToString();
+                    obj.UrlImage = dr["DsTipoRegistro"].ToString();
+                    obj.FKTipoUser = Convert.ToInt32(dr["DsDescricao"]);
+                    ;
+
+                    Lista.Add(obj);
+                }
+                return Lista;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao Filtrar Admin!" + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
     }
 }

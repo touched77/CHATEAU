@@ -36,7 +36,22 @@ namespace ChateauDuPet.BLL
             return objDAL.Autenticar(objEmailP, objSenhaP);
         }
 
+        //autentica Cadastro
+        public ProfissionalDTO AutenticaEmailBLL(string objEmail)
+        {
+            return objDAL.AutenticaEmail(objEmail);
+        }
+        public ProfissionalDTO AutenticaUserBLL(string objUser)
+        {
+            return objDAL.AutenticaUser(objUser);
+        }
+        public ProfissionalDTO AutenticaCPFBLL(string objCPF)
+        {
+            return objDAL.AutenticaCPF(objCPF);
+        } 
+        
         //selecionar
+    
         public ProfissionalDTO SelecionarPro(int IdProfissional)
         {
             return objDAL.Selecionar(IdProfissional);
